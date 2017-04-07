@@ -71,7 +71,7 @@
             "lat": 48.87567248598795,
             "long": 2.289444164481448
         },
-        "lines": ["1", "2", "6"]
+        "lines": ["1"]
     }, {
         "name": "Franklin-Roosevelt",
         "address": "Montaigne (60 avenue) - 75108",
@@ -1078,7 +1078,7 @@
             "lat": 48.87672946890669,
             "long": 2.393146031767842
         },
-        "lines": ["11"]
+        "lines": ["11", "7B"]
     },
     {
         "name": "Goncourt (Hôpital Saint-Louis)",
@@ -1249,7 +1249,7 @@
             "lat": 48.83299169177581,
             "long": 2.3366828966443496
         },
-        "lines": ["4"]
+        "lines": ["6"]
     },{
         "name": "Villejuif-Paul Vaillant Couturier (Hôpital Paul Brousse)",
         "address": "Maxime Gorky (boulevard, côté pair) - 94076",
@@ -2412,15 +2412,6 @@
         "position": {
             "lat": 48.880790122828465,
             "long": 2.374155126662647
-        },
-        "lines": ["7B"]
-    },
-    {
-        "name": "Place des Fêtes",
-        "address": "Fêtes (place des, rue Compans) - 75119",
-        "position": {
-            "lat": 48.8772239477293,
-            "long": 2.392765050250897
         },
         "lines": ["7B"]
     }

@@ -35,6 +35,8 @@ class StationListViewController: UIViewController, UITableViewDataSource, UITabl
         
         self.stationsTableView.rowHeight = UITableViewAutomaticDimension
         self.stationsTableView.estimatedRowHeight = 80
+        self.stationsTableView.setNeedsLayout()
+        self.stationsTableView.layoutIfNeeded()
         // Do any additional setup after loading the view.
     }
 
@@ -65,7 +67,13 @@ class StationListViewController: UIViewController, UITableViewDataSource, UITabl
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationVC = segue.destination as? StationDetailViewController {
             let selectedStationIndex = self.stationsTableView.indexPathForSelectedRow
-            destinationVC.station = self.stations[(selectedStationIndex?.row)!]
+            let stationToPass : Station
+            if self.searchController.isActive && self.searchController.searchBar.text != "" {
+                stationToPass = filteredStations[selectedStationIndex!.row]
+            } else {
+                stationToPass = stations[selectedStationIndex!.row]
+            }
+            destinationVC.station = stationToPass
         }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
@@ -77,6 +85,7 @@ class StationListViewController: UIViewController, UITableViewDataSource, UITabl
         
 //        self.navigationController?.navigationBar.isHidden = true
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+//        self.navigationController?.setToolbarHidden(true, animated: true)
         
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
