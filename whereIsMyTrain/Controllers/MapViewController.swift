@@ -43,7 +43,7 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
         
         readStation()
         
-        centerView(at: self.locationManager.location!, radius: 0.04)
+        centerView(at: self.locationManager.location!, radius: 0.1)
         self.locationManager.stopUpdatingLocation()
         
         addStationsAnnotations()
@@ -102,7 +102,6 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
     
     func addStationAnnotation(_ station: Station) {
         let stationAnnotation = StationAnnotation(station)
-        
         self.mapView.addAnnotation(stationAnnotation)
     
     }
@@ -127,6 +126,7 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
                     latitude : annotation.station.latitude,
                     longitude: annotation.station.longitude),
                 animated: true)
+            drawLines(for: annotation.station)
         }
     }
     
@@ -135,8 +135,70 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
             print("station : \(annotation.title)")
             view.image = #imageLiteral(resourceName: "marker-normal")
         }
+        self.mapView.removeOverlays(self.mapView.overlays)
     }
     
+    func drawLines(for station: Station){
+        let slugStationName = station.name
+            .replacingOccurrences(of: " ", with: "+")
+            .replacingOccurrences(of: "-", with: "+")
+            .folding(options: [.diacriticInsensitive], locale: .current)
+            .lowercased()
+        
+        
+        let lines = station.lines?.allObjects as! [Line]
+        for line in lines {
+            var stationOrdered = [Station]()
+            RATPHelper.getRATPStations(for: line) {
+                json in
+                let stations = json["result"]["stations"].arrayValue
+                for stationJson in stations {
+                    if let index = self.stations.index(where: {$0.slugName == stationJson["slug"].stringValue}) {
+                        stationOrdered.append(self.stations[index])
+                    }
+                }
+                print("Draw Line \(line.id)")
+                self.drawLine(from: stationOrdered, line: line)
+            }
+        }
+        
+        print(slugStationName)
+    }
+    
+    func drawLine(from stations : [Station], line : Line) {
+        var mapPoints = [MKMapPoint]()
+        for station in stations {
+                mapPoints.append(
+                    MKMapPointForCoordinate(CLLocationCoordinate2D(
+                        latitude: station.latitude,
+                        longitude: station.longitude)
+                ))
+        }
+//        let polyLine = MKPolyline(points: mapPoints, count: mapPoints.count)
+        let polyLine = RATPPolyline(points: mapPoints, count: mapPoints.count)
+        polyLine.line = line
+        print("ADD Polyline et \(mapPoints.count)")
+        self.mapView.add(polyLine)
+    }
+    
+    
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        print("Renderrer For !!")
+        if overlay is RATPPolyline {
+            let ratpPolyline = overlay as! RATPPolyline
+            print("Polyline !!")
+            let polylinerenderer = MKPolylineRenderer(overlay: overlay)
+            if let line = ratpPolyline.line {
+                polylinerenderer.strokeColor = RATPHelper.getLineColor(from: line.id)
+                polylinerenderer.lineWidth = 4
+            } else {
+                polylinerenderer.strokeColor = UIColor.black
+            }
+            return polylinerenderer
+        } else {
+            return MKOverlayRenderer(overlay: overlay)
+        }
+    }
     // MARK: - CoreData Methods
     
     

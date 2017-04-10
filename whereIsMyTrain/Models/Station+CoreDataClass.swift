@@ -13,6 +13,16 @@ import SwiftyJSON
 
 public class Station: NSManagedObject {
     
+    var slugName : String {
+        get {
+            return self.name
+                .replacingOccurrences(of: " ", with: "+")
+                .replacingOccurrences(of: "-", with: "+")
+                .folding(options: [.diacriticInsensitive], locale: .current)
+                .lowercased()
+        }
+    }
+    
     /*
      {
      "name": "Nation",

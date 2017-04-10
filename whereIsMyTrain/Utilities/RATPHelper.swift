@@ -70,7 +70,19 @@ struct RATPHelper {
             sens            : nil,
             completion)
     }
-   
+    
+    
+    public static func getRATPStations(for line : Line, _ completion : @escaping (JSON) -> Void) {
+        getRATPInfos(
+            endPoint        : baseEndPoint,
+            requestType     : .stations,
+            transportType   : .metros,
+            lineCode        : line.id,
+            station         : nil,
+            sens            : nil,
+            completion)
+    }
+    
     
     public static func getLineColor(from id: String) -> UIColor{
         switch id {
