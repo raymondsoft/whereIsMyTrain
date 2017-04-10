@@ -122,7 +122,11 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
         if let annotation = view.annotation as? StationAnnotation {
             print("station : \(annotation.title)")
             view.image = #imageLiteral(resourceName: "marker-fav")
-            self.mapView.setCenter(CLLocationCoordinate2D(latitude: annotation.station.latitude, longitude: annotation.station.longitude), animated: true)
+            self.mapView.setCenter(
+                CLLocationCoordinate2D(
+                    latitude : annotation.station.latitude,
+                    longitude: annotation.station.longitude),
+                animated: true)
         }
     }
     

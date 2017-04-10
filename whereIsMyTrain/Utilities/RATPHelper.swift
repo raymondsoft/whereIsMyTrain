@@ -70,7 +70,7 @@ struct RATPHelper {
             sens            : nil,
             completion)
     }
-    
+   
     
     public static func getLineColor(from id: String) -> UIColor{
         switch id {
