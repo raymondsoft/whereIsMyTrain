@@ -59,6 +59,97 @@ struct RATPHelper {
             completion)
     }
     
+    public static func getRATPTraffic(station : String,line : String, _ completion : @escaping (JSON) -> Void) {
+        getRATPInfos(
+            endPoint        : baseEndPoint,
+            requestType     : .traffic,
+            transportType   : .metros,
+            lineCode        : line,
+            station         : nil,
+            sens            : nil,
+            completion)
+    }
+    
+    
+    public static func getLineColor(from id: String) -> UIColor{
+        switch id {
+        case "1":
+            return UIColor(rgbHex: 0xFFCD00)
+        case "2":
+            return UIColor(rgbHex: 0x003CA6)
+        case "3":
+            return UIColor(rgbHex: 0x837902)
+        case "3B":
+            return UIColor(rgbHex: 0x6EC4E8)
+        case "4":
+            return UIColor(rgbHex: 0xCF009E)
+        case "5":
+            return UIColor(rgbHex: 0xFF7E2E)
+        case "6":
+            return UIColor(rgbHex: 0x6ECA97)
+        case "7":
+            return UIColor(rgbHex: 0xFA9ABA)
+        case "7B":
+            return UIColor(rgbHex: 0x6ECA97)
+        case "8":
+            return UIColor(rgbHex: 0xE19BDF)
+        case "9":
+            return UIColor(rgbHex: 0xB6BD00)
+        case "10":
+            return UIColor(rgbHex: 0xC9910D)
+        case "11":
+            return UIColor(rgbHex: 0x704B1C)
+        case "12":
+            return UIColor(rgbHex: 0x007852)
+        case "13":
+            return UIColor(rgbHex: 0x6EC4E8)
+        case "14":
+            return UIColor(rgbHex: 0x62259D)
+        default:
+            return UIColor(rgbHex: 0x000000)
+        }
+    }
+    
+    
+    
+    public static func getLineInnerColor(from id: String) -> UIColor{
+        switch id {
+        case "1":
+            return UIColor(rgbHex: 0x000000)
+        case "2":
+            return UIColor(rgbHex: 0xFFFFFF)
+        case "3":
+            return UIColor(rgbHex: 0xFFFFFF)
+        case "3B":
+            return UIColor(rgbHex: 0x000000)
+        case "4":
+            return UIColor(rgbHex: 0xFFFFFF)
+        case "5":
+            return UIColor(rgbHex: 0x000000)
+        case "6":
+            return UIColor(rgbHex: 0x000000)
+        case "7":
+            return UIColor(rgbHex: 0x000000)
+        case "7B":
+            return UIColor(rgbHex: 0x000000)
+        case "8":
+            return UIColor(rgbHex: 0x000000)
+        case "9":
+            return UIColor(rgbHex: 0x000000)
+        case "10":
+            return UIColor(rgbHex: 0x000000)
+        case "11":
+            return UIColor(rgbHex: 0xFFFFFF)
+        case "12":
+            return UIColor(rgbHex: 0xFFFFFF)
+        case "13":
+            return UIColor(rgbHex: 0x000000)
+        case "14":
+            return UIColor(rgbHex: 0xFFFFFF)
+        default:
+            return UIColor(rgbHex: 0xFFFFFF)
+        }
+    }
 }
 
 enum RATPWay : String {

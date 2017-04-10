@@ -29,6 +29,8 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
         
         self.scheduleTableView.delegate = self
         self.scheduleTableView.dataSource = self
+        self.scheduleTableView.allowsSelection = false
+        
         self.scheduleTableView.estimatedRowHeight = 68
         self.scheduleTableView.rowHeight = UITableViewAutomaticDimension
         
@@ -98,7 +100,12 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
                 departures.append(departureJson["message"].stringValue)
             }
             
-            self.stationSchedules.append(StationSchedule(lineCode: lineId, destination: destination, departures: departures))
+            RATPHelper.getRATPTraffic(station: self.station.name, line: lineId) {
+                json in
+                let traffic = json["result"]["title"].stringValue
+                self.stationSchedules.append(StationSchedule(lineCode: lineId, destination: destination, departures: departures, traffic: traffic))
+            }
+            
         }
         RATPHelper.getRATPSchedule(station: self.station.name, line: lineId, way: .retour) {
             json in
@@ -112,7 +119,11 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
                 print(departureJson["message"].stringValue)
             }
             
-            self.stationSchedules.append(StationSchedule(lineCode: lineId, destination: destination, departures: departures))
+            RATPHelper.getRATPTraffic(station: self.station.name, line: lineId) {
+                json in
+                let traffic = json["result"]["title"].stringValue
+                self.stationSchedules.append(StationSchedule(lineCode: lineId, destination: destination, departures: departures, traffic: traffic))
+            }
         }
         
         
@@ -126,13 +137,18 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let reuseIdentifier = "StationScheduleCell"
+//        let reuseIdentifier = "StationScheduleCell"
+        let reuseIdentifier = "StationScheduleCellAlternative"
+        
         let scheduleCell = self.scheduleTableView.dequeueReusableCell(withIdentifier: reuseIdentifier) as? StationScheduleTableViewCell ?? StationScheduleTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: reuseIdentifier)
         
         scheduleCell.build(from: self.stationSchedules[indexPath.row])
-        
         return scheduleCell
     }
-    
-    
+    /*
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        print("heightForRowAt")
+        return 100.0
+    }
+    */
 }

@@ -31,7 +31,8 @@ class MapViewController: UIViewController {
 //        readStation()
 //        readLines()
 //        deleteAll()
-//        readStationsFromJson()
+        //        readStationsFromJson()
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
         
     }
     

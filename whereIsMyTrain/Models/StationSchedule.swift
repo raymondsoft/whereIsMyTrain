@@ -13,6 +13,7 @@ struct StationSchedule {
     var lineCode : String
     var destination : String
     var departures : [String]
+    var traffic : String
 //    var firstDeparture : String
 //    var secondDeparture : String
     
