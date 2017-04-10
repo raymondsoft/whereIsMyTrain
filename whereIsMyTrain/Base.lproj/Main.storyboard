@@ -22,14 +22,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="r7x-sz-mMi">
-                                <rect key="frame" x="30" y="35" width="315" height="547"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="r7x-sz-mMi">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="r7x-sz-mMi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="NSY-oA-1vo"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="r7x-sz-mMi" secondAttribute="bottom" id="UCf-D0-6as"/>
+                            <constraint firstItem="r7x-sz-mMi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="VMq-sy-rf4"/>
+                            <constraint firstItem="r7x-sz-mMi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="u1O-qd-COn"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="OFu-7d-XeU"/>
+                    <connections>
+                        <outlet property="mapView" destination="r7x-sz-mMi" id="MUn-As-wN7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -11,15 +11,23 @@ import SwiftyJSON
 import MapKit
 import CoreData
 
-class MapViewController: UIViewController {
+class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapViewDelegate {
+    
+    @IBOutlet weak var mapView: MKMapView!
+    
     
     var stations = [Station]()
     
+    let locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.mapView.delegate = self
+        requestLocationAccess()
         
         // Do any additional setup after loading the view.
     }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -27,15 +35,51 @@ class MapViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-//        print("ViewWillAppear")
-//        readStation()
-//        readLines()
-//        deleteAll()
-        //        readStationsFromJson()
+        
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         
+        self.initUserLocation()
+        self.mapView.showsUserLocation = true
+        
+        readStation()
+        
+        centerView(at: self.locationManager.location!, radius: 0.04)
+        self.locationManager.stopUpdatingLocation()
+        
+        addStationsAnnotations()
     }
     
+    
+    func initUserLocation() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        //        locationManager.requestLocation()
+        locationManager.requestWhenInUseAuthorization()
+        self.mapView.showsUserLocation = true
+        locationManager.startUpdatingLocation()
+    }
+    
+    func centerView(at location: CLLocation, radius: Double) {
+        print("CenterView")
+        let region = MKCoordinateRegion(center: location.coordinate, span: MKCoordinateSpan(latitudeDelta: radius, longitudeDelta: radius))
+        self.mapView.setRegion(region, animated: true)
+    }
+    
+    
+    func requestLocationAccess() {
+        let status = CLLocationManager.authorizationStatus()
+        
+        switch status {
+        case .authorizedAlways, .authorizedWhenInUse:
+            return
+            
+        case .denied, .restricted:
+            print("location access denied")
+            
+        default:
+            locationManager.requestWhenInUseAuthorization()
+        }
+    }
     
     /*
      // MARK: - Navigation
@@ -46,6 +90,50 @@ class MapViewController: UIViewController {
      // Pass the selected object to the new view controller.
      }
      */
+    
+    
+    // MARK: - ANNOTATIONS
+    
+    func addStationsAnnotations() {
+        for station in stations {
+            addStationAnnotation(station)
+        }
+    }
+    
+    func addStationAnnotation(_ station: Station) {
+        let stationAnnotation = StationAnnotation(station)
+        
+        self.mapView.addAnnotation(stationAnnotation)
+    
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is StationAnnotation {
+            let annotationView = self.mapView.dequeueReusableAnnotationView(withIdentifier: "stationAnnotation") ?? MKAnnotationView(annotation: annotation, reuseIdentifier: "stationAnnotation")
+            annotationView.image = #imageLiteral(resourceName: "marker-normal")
+            annotationView.canShowCallout = true
+            return annotationView
+        } else {
+            return nil
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        if let annotation = view.annotation as? StationAnnotation {
+            print("station : \(annotation.title)")
+            view.image = #imageLiteral(resourceName: "marker-fav")
+            self.mapView.setCenter(CLLocationCoordinate2D(latitude: annotation.station.latitude, longitude: annotation.station.longitude), animated: true)
+        }
+    }
+    
+    func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
+        if let annotation = view.annotation as? StationAnnotation {
+            print("station : \(annotation.title)")
+            view.image = #imageLiteral(resourceName: "marker-normal")
+        }
+    }
+    
+    // MARK: - CoreData Methods
     
     
     func readLines() {
@@ -77,7 +165,8 @@ class MapViewController: UIViewController {
         do {
             let stations = try context.fetch(Station.fetchRequest()) as? [Station]
             for station in stations! {
-                station.printDescription()
+//                station.printDescription()
+                self.stations.append(station)
             }
         }
         catch {

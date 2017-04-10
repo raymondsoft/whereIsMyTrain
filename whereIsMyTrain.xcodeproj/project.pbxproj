@@ -15,6 +15,7 @@
 		C8067FB51E97C9EE002F9385 /* RATPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8067FB41E97C9EE002F9385 /* RATPHelper.swift */; };
 		C8067FB91E97D292002F9385 /* StationSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8067FB81E97D292002F9385 /* StationSchedule.swift */; };
 		C8067FBB1E9B7F26002F9385 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8067FBA1E9B7F26002F9385 /* UIColor+hex.swift */; };
+		C824650B1E9BA0B100912BB6 /* StationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C824650A1E9BA0B100912BB6 /* StationAnnotation.swift */; };
 		C8ABF9CA1E96386500F8F80C /* Line+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ABF9C61E96386500F8F80C /* Line+CoreDataClass.swift */; };
 		C8ABF9CB1E96386500F8F80C /* Line+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ABF9C71E96386500F8F80C /* Line+CoreDataProperties.swift */; };
 		C8ABF9CC1E96386500F8F80C /* Station+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ABF9C81E96386500F8F80C /* Station+CoreDataClass.swift */; };
@@ -42,6 +43,7 @@
 		C8067FB41E97C9EE002F9385 /* RATPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RATPHelper.swift; sourceTree = "<group>"; };
 		C8067FB81E97D292002F9385 /* StationSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationSchedule.swift; sourceTree = "<group>"; };
 		C8067FBA1E9B7F26002F9385 /* UIColor+hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
+		C824650A1E9BA0B100912BB6 /* StationAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationAnnotation.swift; sourceTree = "<group>"; };
 		C8ABF9C61E96386500F8F80C /* Line+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Line+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C8ABF9C71E96386500F8F80C /* Line+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Line+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C8ABF9C81E96386500F8F80C /* Station+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Station+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				C8ABF9C81E96386500F8F80C /* Station+CoreDataClass.swift */,
 				C8ABF9C91E96386500F8F80C /* Station+CoreDataProperties.swift */,
 				C8067FB81E97D292002F9385 /* StationSchedule.swift */,
+				C824650A1E9BA0B100912BB6 /* StationAnnotation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				C8B0BBD51E9395BD00AC2EA6 /* ViewController.swift in Sources */,
 				C8ABF9CC1E96386500F8F80C /* Station+CoreDataClass.swift in Sources */,
 				C8067FB11E97C89C002F9385 /* StationScheduleTableViewCell.swift in Sources */,
+				C824650B1E9BA0B100912BB6 /* StationAnnotation.swift in Sources */,
 				C8B0BBD31E9395BD00AC2EA6 /* AppDelegate.swift in Sources */,
 				C8ABF9D41E966E7F00F8F80C /* StationTableViewCell.swift in Sources */,
 				C8067FB51E97C9EE002F9385 /* RATPHelper.swift in Sources */,
