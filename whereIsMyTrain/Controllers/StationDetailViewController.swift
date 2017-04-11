@@ -36,6 +36,9 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
         self.scheduleTableView.setNeedsLayout()
         self.scheduleTableView.layoutIfNeeded()
         
+        self.scheduleTableView.refreshControl = UIRefreshControl()
+        self.scheduleTableView.refreshControl?.addTarget(self, action: #selector(StationDetailViewController.buildSchedules), for: UIControlEvents.valueChanged)
+        
         // Do any additional setup after loading the view.
     }
     
@@ -64,7 +67,6 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
         
         self.title = self.station.name
         
-        self.stationSchedules.removeAll()
         buildSchedules()
         /*
         var lines = station.lines?.allObjects as! [Line]
@@ -80,15 +82,19 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
     
     func buildSchedules() {
         
+        self.scheduleTableView.refreshControl?.beginRefreshing()
+        
+        self.stationSchedules.removeAll()
         var lines = station.lines?.allObjects as! [Line]
         lines = lines.sorted(by: Line.sortLine)
         for line in lines {
-            buildSchedules(lineId: line.id)
+            buildSchedule(lineId: line.id)
         }
 //        self.stationSchedules.sort(by: {$0.lineCode < $1.lineCode})
+        self.scheduleTableView.refreshControl?.endRefreshing()
     }
     
-    func buildSchedules(lineId : String) {
+    func buildSchedule(lineId : String) {
         print("Calcul de la ligne n° \(lineId)")
         RATPHelper.getRATPSchedule(station: self.station.name, line: lineId, way: .aller) {
             json in
