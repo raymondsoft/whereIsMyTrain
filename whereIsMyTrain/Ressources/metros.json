@@ -1,2420 +1,2610 @@
 {
     "result": [{
-        "name": "Nation",
-        "address": "Nation (terre-plein face au 3 place de la) - 75112",
-        "position": {
-            "lat": 48.84811123157566,
-            "long": 2.3980040127977436
-        },
-        "lines": ["1", "2", "6", "9"]
-    }, {
-        "name": "Concorde",
-        "address": "Tuileries (jardin des, le long du jardin et face È la place Concorde) PARIS-08 - 75108",
-        "position": {
-            "lat": 48.86567809641779,
-            "long": 2.321193771801867
-        },
-        "lines": ["1", "8", "12"]
-    }, {
-        "name": "Bastille",
-        "address": "Roquette (rue de la) PARIS-11 - 75104",
-        "position": {
-            "lat": 48.85297567465423,
-            "long": 2.3692188244433434
-        },
-        "lines": ["1", "5","8"]
-    }, {
-        "name": "Louvre-Rivoli",
-        "address": "Amiral de Coligny (8 rue de l') - 75101",
-        "position": {
-            "lat": 48.86087985759375,
-            "long": 2.340973275817903
-        },
-        "lines": ["1"]
-    }, {
-        "name": "Bérault",
-        "address": "Paris (98 avenue de) - 94080",
-        "position": {
-            "lat": 48.84536875015732,
-            "long": 2.428244509620486
-        },
-        "lines": ["1"]
-    }, {
-        "name": "Champs-Elysées-Clémenceau",
-        "address": "Clémenceau (place) - 75108",
-        "position": {
-            "lat": 48.867744026068706,
-            "long": 2.3141227803741415
-        },
-        "lines": ["1", "13"]
-    }, {
-        "name": "Reuilly-Diderot",
-        "address": "Diderot (73 boulevard) - 75112",
-        "position": {
-            "lat": 48.8473528769588,
-            "long": 2.3858425400402448
-        },
-        "lines": ["1", "8"]
-    }, {
-        "name": "George V",
-        "address": "Champs-Elysées (118 avenue des) - 75108",
-        "position": {
-            "lat": 48.87204561942636,
-            "long": 2.3007691856449535
-        },
-        "lines": ["1"]
-    },
-    {
-        "name": "Argentine",
-        "address": "Grande Armée (37 avenue de la) - 75117",
-        "position": {
-            "lat": 48.87567248598795,
-            "long": 2.289444164481448
-        },
-        "lines": ["1"]
-    }, {
-        "name": "Franklin-Roosevelt",
-        "address": "Montaigne (60 avenue) - 75108",
-        "position": {
-            "lat": 48.869010427937624,
-            "long": 2.3102531808960265
-        },
-        "lines": ["1", "9"]
-    }, {
-        "name": "Palais-Royal (Musée du Louvre)",
-        "address": "Rivoli (terre-plein face au 93 rue de) - 75101",
-        "position": {
-            "lat": 48.8623718215243,
-            "long": 2.3365736007364304
-        },
-        "lines": ["1", "7"]
-    }, {
-        "name": "Pont de Neuilly",
-        "address": "Charles de Gaulle (209 avenue) - 92051",
-        "position": {
-            "lat": 48.88550610941816,
-            "long": 2.258527470197358
-        },
-        "lines": ["1"]
-    }, {
-        "name": "Saint-Mandé",
-        "address": "Paris (168 bis avenue de) - 94067",
-        "position": {
-            "lat": 48.84623825662077,
-            "long": 2.418999828109256
-        },
-        "lines": ["1"]
-    }, {
-        "name": "Château de Vincennes",
-        "address": "Paris (14 avenue de) - 94080",
-        "position": {
-            "lat": 48.84432514436857,
-            "long": 2.440552346211822
-        },
-        "lines": ["1"]
-    }, {
-        "name": "Esplanade de la Défense",
-        "address": "Sculpteurs (voie des) - 92062",
-        "position": {
-            "lat": 48.88835806016618,
-            "long": 2.249937212862802
-        },
-        "lines": ["1"]
-    }, {
-        "name": "Châtelet",
-        "address": "Victoria (7 avenue, 4 rue Saint-Martin) - 75101",
-        "position": {
-            "lat": 48.85856967247972,
-            "long": 2.347933245835307
-        },
-        "lines": ["1", "4", "7","11", "14"]
-    }, {
-        "name": "Porte Maillot",
-        "address": "Verdun (16 place de) - 75117",
-        "position": {
-            "lat": 48.87800617627899,
-            "long": 2.2824656400013326
-        },
-        "lines": ["1"]
-    }, {
-        "name": "Charles de Gaulle-Etoile",
-        "address": "Charles de Gaulle (place, avenue Hoche) - 75108",
-        "position": {
-            "lat": 48.8739310942679,
-            "long": 2.295127251650101
-        },
-        "lines": ["1", "2", "6"]
-    }, {
-        "name": "Tuileries",
-        "address": "Rivoli (210 rue de) - 75101",
-        "position": {
-            "lat": 48.86478016250008,
-            "long": 2.3290949544294275
-        },
-        "lines": ["1"]
-    }, {
-        "name": "Les Sablons (Jardin d'acclimatation)",
-        "address": "Charles de Gaulle (85 avenue) - 92051",
-        "position": {
-            "lat": 48.88129918549113,
-            "long": 2.2719151760177914
-        },
-        "lines": ["1"]
-    }, {
-        "name": "Porte de Vincennes",
-        "address": "Cours de Vincennes (99) - 75120",
-        "position": {
-            "lat": 48.847016518419125,
-            "long": 2.410816882334764
-        },
-        "lines": ["1"]
-    }, {
-        "name": "Gare de Lyon",
-        "address": "Gare SNCF - 75112",
-        "position": {
-            "lat": 48.84555978708341,
-            "long": 2.37344920496318
-        },
-        "lines": ["1", "14"]
-    }, {
-        "name": "Saint-Paul (Le Marais)",
-        "address": "Rivoli (terre plein face au 10 rue de) - 75104",
-        "position": {
-            "lat": 48.85513451823504,
-            "long": 2.3613343390676635
-        },
-        "lines": ["1"]
-    }, {
-        "name": "Hôtel de Ville",
-        "address": "Rivoli (70 rue de) - 75104",
-        "position": {
-            "lat": 48.857355927169515,
-            "long": 2.3520735668587185
-        },
-        "lines": ["1", "11"]
-    }, {
-        "name": "La Défense (Grande Arche)",
-        "address": "Carpeaux (rue, gare du RER La Défense) - 92062",
-        "position": {
-            "lat": 48.891826754836515,
-            "long": 2.237992043215619
-        },
-        "lines": ["1", "2", "6"]
-    }, {
-        "name": "Victor Hugo",
-        "address": "Victor Hugo (4 place, angle avec l'avenue Raymond Poincarré) - 75116",
-        "position": {
-            "lat": 48.869864912484076,
-            "long": 2.285226207250439
-        },
-        "lines": ["2"]
-    }, {
-        "name": "Pigalle",
-        "address": "Carpeaux (rue, gare du RER La Défense) - 92062",
-        "position": {
-            "lat": 48.88242252841757,
-            "long": 2.337254682101535
-        },
-        "lines": ["2", "12"]
-    }, {
-        "name": "La Chapelle",
-        "address": "Chapelle (entrée sous viaduc face au 35 boulevard de la) - 75110",
-        "position": {
-            "lat": 48.884388698358165,
-            "long": 2.3592765642767297
-        },
-        "lines": ["2"]
-    }, {
-        "name": "Philippe Auguste",
-        "address": "Mont-Louis (19 rue de, 131 avenue Philippe Auguste) - 75111",
-        "position": {
-            "lat": 48.85837884146994,
-            "long": 2.3897347327397043
-        },
-        "lines": ["2"]
-    },
-    {
-        "name": "Place de Clichy",
-        "address": "Carpeaux (rue, gare du RER La Défense) - 92062",
-        "position": {
-            "lat": 48.88345565159549,
-            "long": 2.3273749934103556
-        },
-        "lines": ["2", "13"]
-    }, 
-    {
-        "name": "Père-Lachaise",
-        "address": "République (avenue de la) - 75111",
-        "position": {
-            "lat": 48.86316120506396,
-            "long": 2.3872604001843536
-        },
-        "lines": ["2"]
-    }, 
-    {
-        "name": "Porte Dauphine",
-        "address": "Foch (avenue, côté impair) - 75116",
-        "position": {
-            "lat": 48.87179221641751,
-            "long": 2.27486996119569
-        },
-        "lines": ["2"]
-    },
-    {
-        "name": "Belleville",
-        "address": "Villette (terre-plein face au 1 boulevard de la) - 75119",
-        "position": {
-            "lat": 48.87228732058717,
-            "long": 2.3767376773224687
-        },
-        "lines": ["2", "11"]
-    }, {
-        "name": "Colonel Fabien",
-        "address": "Villette (terre-plein face au 83 boulevard de la) - 75110",
-        "position": {
-            "lat": 48.87818498179219,
-            "long": 2.237992043215619
-        },
-        "lines": ["2"]
-    }, {
-        "name": "Villiers",
-        "address": "Carpeaux (rue, gare du RER La Défense) - 92062",
-        "position": {
-            "lat": 48.88132429394468,
-            "long": 2.3165967615088174
-        },
-        "lines": ["2", "3"]
-    }, {
-        "name": "Blanche",
-        "address": "Clichy (terre-plein face au 59 boulevard de) - 75118",
-        "position": {
-            "lat": 48.88377051883179,
-            "long": 2.332485148274094
-        },
-        "lines": ["2"]
-    }, {
-        "name": "Stalingrad",
-        "address": "Villette (244/171 boulevard de la) - 75119",
-        "position": {
-            "lat": 48.88418929420877,
-            "long": 2.367030441974567
-        },
-        "lines": ["2","5","7"]
-    }, {
-        "name": "Anvers",
-        "address": "Rochechouart (68 boulevard) - 75118",
-        "position": {
-            "lat": 48.882871690180586,
-            "long": 2.344163572800391
-        },
-        "lines": ["2"]
-    }, {
-        "name": "Monceau",
-        "address": "République Dominicaine (1 place de la) - 75108",
-        "position": {
-            "lat": 48.88057689074842,
-            "long": 2.309415946164807
-        },
-        "lines": ["2"]
-    }, {
-        "name": "Rome",
-        "address": "Batignolles (60 boulevard des) - 75117",
-        "position": {
-            "lat": 48.856426348325236,
-            "long": 2.394554257654992
-        },
-        "lines": ["2"]
-    }, {
-        "name": "Avron",
-        "address": "Charonne (terre-plein face au 35 boulevard de) - 75111",
-        "position": {
-            "lat": 48.851193819213286,
-            "long": 2.398239140823123
-        },
-        "lines": ["2"]
-    },
-    {
-        "name": "Ménilmontant",
-        "address": "Carpeaux (rue, gare du RER La Défense) - 92062",
-        "position": {
-            "lat": 48.891826754836515,
-            "long": 2.237992043215619
-        },
-        "lines": ["2"]
-    }, {
-        "name": "Courcelles",
-        "address": "Courcelles (53 boulevard de) - 75108",
-        "position": {
-            "lat": 48.87927215163157,
-            "long": 2.303298546682486
-        },
-        "lines": ["2"]
-    }, {
-        "name": "Couronnes",
-        "address": "Belleville (37 boulevard de) - 75111",
-        "position": {
-            "lat": 48.86932916949657,
-            "long": 2.3805363661617247
-        },
-        "lines": ["2"]
-    }, {
-        "name": "Alexandre-Dumas",
-        "address": "Charonne (111 boulevard de, 180 rue de Charonne et 1 rue de Bagnolet) - 75111",
-        "position": {
-            "lat": 48.856426348325236,
-            "long": 2.394554257654992
-        },
-        "lines": ["2"]
-    }, {
-        "name": "Ternes",
-        "address": "Ternes (place des) - 75117",
-        "position": {
-            "lat": 48.87822804050767,
-            "long": 2.2981214325821844
-        },
-        "lines": ["2"]
-    }, {
-        "name": "Félix Faure",
-        "address": "Félix Faure (place) - 75115",
-        "position": {
-            "lat": 48.84282456767407,
-            "long": 2.2922249662205156
-        },
-        "lines": ["8"]
-    },
-    {
-        "name": "Faidherbe-Chaligny",
-        "address": "Montreuil (205 rue de) - 75111",
-        "position": {
-            "lat": 48.85006766800271,
-            "long": 2.3844287707416316
-        },
-        "lines": ["8"]
-    }, {
-        "name": "Daumesnil",
-        "address": "Reuilly (118 rue de) - 75112",
-        "position": {
-            "lat": 48.83968214020875,
-            "long": 2.3955841703466554
-        },
-        "lines": ["6", "8"]
-    }, {
-        "name": "Montgallet",
-        "address": "Reuilly (68 rue de, rue Montgallet) - 75112",
-        "position": {
-            "lat": 48.844142731120996,
-            "long": 2.389625012848426
-        },
-        "lines": ["8"]
-    }, {
-        "name": "Porte Dorée",
-        "address": "Poniatowsky (95 boulevard) - 75112",
-        "position": {
-            "lat": 48.83549725282465,
-            "long": 2.4061852122149348
-        },
-        "lines": ["8"]
-    }, {
-        "name": "Michel Bizot",
-        "address": "Daumesnil (253 avenue, 122 rue de Picpus) - 75112",
-        "position": {
-            "lat": 48.836991037652965,
-            "long": 2.402919606870042
-        },
-        "lines": ["8"]
-    }, {
-        "name": "La Motte-Picquet-Grenelle",
-        "address": "Pondichéry (25 rue de) - 75115",
-        "position": {
-            "lat": 48.848803206044934,
-            "long": 2.29769423466391
-        },
-        "lines": ["6", "8", "10"]
-    }, {
-        "name": "Commerce",
-        "address": "Commerce (21 place du) - 75115",
-        "position": {
-            "lat": 48.84461367199405,
-            "long": 2.293802980169146
-        },
-        "lines": ["8"]
-    }, {
-        "name": "La Tour-Maubourg",
-        "address": "La Tour Maubourg (boulevard de, côté impair et face au 60) - 75107",
-        "position": {
-            "lat": 48.85722786064964,
-            "long": 2.3097962258273563
-        },
-        "lines": ["8"]
-    }, {
-        "name": "Ecole Militaire",
-        "address": "Motte Picquet (44 avenue de la) - 75107",
-        "position": {
-            "lat": 48.85426092155411,
-            "long": 2.305439560539011
-        },
-        "lines": ["8"]
-    }, {
-        "name": "Pointe du Lac",
-        "address": "Route de Pompadour - 94028",
-        "position": {
-            "lat": 48.76811107638341,
-            "long": 2.46565028903882
-        },
-        "lines": ["8"]
-    }, {
-        "name": "Saint-Sébastien-Froissart",
-        "address": "Filles du Calvaire (6 boulevard des) - 75103",
-        "position": {
-            "lat": 48.86097499718719,
-            "long": 2.3672622950229414
-        },
-        "lines": ["8"]
-    }, {
-        "name": "Filles du Calvaire",
-        "address": "Temple (2 boulevard du) - 75103",
-        "position": {
-            "lat": 48.86307817635541,
-            "long": 2.36674588358473
-        },
-        "lines": ["8"]
-    }, {
-        "name": "Chemin Vert",
-        "address": "Beaumarchais (61 boulevard) - 75103",
-        "position": {
-            "lat": 48.85758654446453,
-            "long": 2.3680366949483758
-        },
-        "lines": ["8"]
-    }, {
-        "name": "Ledru-Rollin",
-        "address": "Ledru Rollin (87 rue) - 75112",
-        "position": {
-            "lat": 48.85119416536367,
-            "long": 2.3759317370128947
-        },
-        "lines": ["8"]
-    }, {
-        "name": "Bonne Nouvelle",
-        "address": "Poissonnière (8 boulevard) - 75109",
-        "position": {
-            "lat": 48.87057675358199,
-            "long": 2.348494293710928
-        },
-        "lines": ["8", "9"]
-    }, {
-        "name": "Grands Boulevards",
-        "address": "Poissonnière (32 boulevard) - 75109",
-        "position": {
-            "lat": 48.87157474359305,
-            "long": 2.3428950319846593
-        },
-        "lines": ["8", "9"]
-    }, {
-        "name": "Richelieu-Drouot",
-        "address": "Italiens (3 boulevard des) - 75109",
-        "position": {
-            "lat": 48.87200623896137,
-            "long": 2.339911390610416
-        },
-        "lines": ["8", "9"]
-    }, {
-        "name": "Porte de Charenton",
-        "address": "Poniatowsky (68 boulevard, angle avec la rue Ferdinand-de-Béhagle) - 75112",
-        "position": {
-            "lat": 48.83266034648216,
-            "long": 2.4004636384497804
-        },
-        "lines": ["8"]
-    }, {
-        "name": "Liberté",
-        "address": "Paris (150 rue de) - 94018",
-        "position": {
-            "lat": 48.82563711172796,
-            "long": 2.4074108054261223
-        },
-        "lines": ["8"]
-    }, {
-        "name": "Porte Dorée",
-        "address": "Poniatowsky (95 boulevard) - 75112",
-        "position": {
-            "lat": 48.83549725282465,
-            "long": 2.4061852122149348
-        },
-        "lines": ["8"]
-    }, {
-        "name": "Maisons-Alfort-Stade",
-        "address": "Général Leclerc (26/28 avenue du) - 94046",
-        "position": {
-            "lat": 48.808225347352376,
-            "long": 2.237992043215619
-        },
-        "lines": ["8"]
-    }, {
-        "name": "République",
-        "address": "Voltaire (1 boulevard, en face) - 75111",
-        "position": {
-            "lat": 48.86767151899055,
-            "long": 2.363329120776082
-        },
-        "lines": ["3", "5","8", "9", "11"]
-    }, {
-        "name": "Charenton-Ecoles",
-        "address": "Paris (91 rue de) - 94018",
-        "position": {
-            "lat": 48.821489819145576,
-            "long": 2.4138567623311062
-        },
-        "lines": ["8"]
-    }, {
-        "name": "Strasbourg-Saint-Denis",
-        "address": "Saint-Denis (9 rue, 114 boulevard de Sébastopol) - 75102",
-        "position": {
-            "lat": 48.869380780106006,
-            "long": 2.3540796521963494
-        },
-        "lines": ["8", "9"]
-    }, {
-        "name": "Ecole Vétérinaire de Maisons-Alfort",
-        "address": "General Leclerc (avenue du, cote pair) - 94046",
-        "position": {
-            "lat": 48.81507632012976,
-            "long": 2.4216317667306635
-        },
-        "lines": ["8"]
-    }, {
-        "name": "Invalides",
-        "address": "Université (rue de l') - 75107",
-        "position": {
-            "lat": 48.86109346762053,
-            "long": 2.3146433553464374
-        },
-        "lines": ["8", "13"]
-    }, {
-        "name": "Balard",
-        "address": "Victor (8 boulevard, angle avec l'avenue de la Porte de Sèvres côté pair) - 75115",
-        "position": {
-            "lat": 48.836814988805976,
-            "long": 2.2786833464502703
-        },
-        "lines": ["8"]
-    }, {
-        "name": "Créteil-L'Echat (Hôpital Henri Mondor)",
-        "address": "Eiffel (13 rue) - 94028",
-        "position": {
-            "lat": 48.79660129757846,
-            "long": 2.4495315243760767
-        },
-        "lines": ["8"]
-    }, {
-        "name": "Créteil-Université",
-        "address": "Ferdinand de Lesseps (rue, université et mail des Mêches) - 94028",
-        "position": {
-            "lat": 48.78972431608003,
-            "long": 2.450836106390663
-        },
-        "lines": ["8"]
-    },
-    {
-        "name": "Maisons-Alfort-Les Juilliottes",
-        "address": "Louis Pergaud (2 rue) - 94046",
-        "position": {
-            "lat": 48.80250044183061,
-            "long": 2.4461836185594534
-        },
-        "lines": ["8"]
-    },
-    {
-        "name": "Lourmel",
-        "address": "Félix Faure (41 avenue) - 75115",
-        "position": {
-            "lat": 48.83866812903008,
-            "long": 2.2822484883840986
-        },
-        "lines": ["8"]
-    },
-    {
-        "name": "Opéra",
-        "address": "Scribe (6 rue, angle avec le 2 rue Auber) - 75109",
-        "position": {
-            "lat": 48.87063108014849,
-            "long": 2.331737048361137
-        },
-        "lines": ["3","7","8"]
-    },
-    {
-        "name": "Madeleine",
-        "address": "Tronchet (2 rue, 3 rue Tronchet) - 75108",
-        "position": {
-            "lat": 48.86950712762907,
-            "long": 2.324680199591515
-        },
-        "lines": ["8", "12", "14"]
-    },
-    {
-        "name": "Créteil-Préfecture (Hôtel de Ville)",
-        "address": "Mont Mesly - 94028",
-        "position": {
-            "lat": 48.779757257844594,
-            "long": 2.4593142910788286
-        },
-        "lines": ["8"]
-    }, {
-        "name": "Maubert-Mutualité",
-        "address": "Saint-Germain (62 boulevard) - 75105",
-        "position": {
-            "lat": 48.849716940163574,
-            "long": 2.348925558491872
-        },
-        "lines": ["10"]
-    }, {
-        "name": "Sèvres-Babylone",
-        "address": "Velpeau (rue, face au Bon Marché) - 75107",
-        "position": {
-            "lat": 48.85093928843075,
-            "long": 2.3261146548222844
-        },
-        "lines": ["10"]
-    }, {
-        "name": "Michel-Ange-Auteuil",
-        "address": "Auteuil (55 rue d', angle avec le 1 rue Michel-Ange) - 75116",
-        "position": {
-            "lat": 48.847933946139044,
-            "long": 2.2648350771736747
-        },
-        "lines": ["9", "10"]
-    }, {
-        "name": "Vaneau",
-        "address": "Sèvres (97 rue de) - 75107",
-        "position": {
-            "lat": 48.84870084962003,
-            "long": 2.321239881938573
-        },
-        "lines": ["10"]
-    }, {
-        "name": "Eglise d'Auteuil",
-        "address": "Wilhem (20 rue) - 75116",
-        "position": {
-            "lat": 48.847883216579156,
-            "long": 2.270295892634314
-        },
-        "lines": ["10"]
-    }, {
-        "name": "Ségur",
-        "address": "Suffren (156 avenue de) - 75115",
-        "position": {
-            "lat": 48.84686470206919,
-            "long": 2.307268847578926
-        },
-        "lines": ["10"]
-    }, {
-        "name": "Javel-André-Citroen",
-        "address": "Emile Zola (2 avenue, 1 rue Emile Zola) - 75115",
-        "position": {
-            "lat": 48.84596388048408,
-            "long": 2.2778151263537714
-        },
-        "lines": ["10"]
-    }, {
-        "name": "Boulogne-Jean-Jaurès",
-        "address": "Jean Jaurès (23 boulevard) - 92012",
-        "position": {
-            "lat": 48.84228014352973,
-            "long": 2.238862975367271
-        },
-        "lines": ["10"]
-    },
-    {
-        "name": "Duroc",
-        "address": "Sèvres (88 rue de) - 75107",
-        "position": {
-            "lat": 48.846848768895974,
-            "long": 2.3169373108340854
-        },
-        "lines": ["10", "13"]
-    }, {
-        "name": "Cluny-La Sorbonne",
-        "address": "100 Boulevard Saint-Germain - 75105",
-        "position": {
-            "lat": 48.85079575570429,
-            "long": 2.3450308883652258
-        },
-        "lines": ["10"]
-    }, {
-        "name": "Mirabeau",
-        "address": "Versailles (63 avenue de) - 75116",
-        "position": {
-            "lat": 48.847084858904864,
-            "long": 2.273074914922012
-        },
-        "lines": ["10"]
-    }, {
-        "name": "Michel-Ange-Molitor",
-        "address": "Molitor (34 rue, angle avec le 37 rue Michel-Ange) - 75116",
-        "position": {
-            "lat": 48.84498448667992,
-            "long": 2.26232003903747
-        },
-        "lines": ["9", "10"]
-    }, {
-        "name": "Cardinal-Lemoine",
-        "address": "Monge (28 rue) - 75105",
-        "position": {
-            "lat": 48.84670586906026,
-            "long": 2.351335178972595
-        },
-        "lines": ["10"]
-    }, {
-        "name": "Mabillon",
-        "address": "Four (13 rue du) - 75106",
-        "position": {
-            "lat": 48.85284513365445,
-            "long": 2.335143718516068
-        },
-        "lines": ["10"]
-    }, {
-        "name": "Porte d'Auteuil",
-        "address": "Murat (5 boulevard) - 75116",
-        "position": {
-            "lat": 48.84822598041119,
-            "long": 2.257698885660922
-        },
-        "lines": ["10"]
-    }, {
-        "name": "Odéon",
-        "address": "Saint-Germain (93 boulevard, rue de l'Ecole de Médecine) - 75106",
-        "position": {
-            "lat": 48.85231488119486,
-            "long": 2.338861720336335
-        },
-        "lines": ["10"]
-    }, {
-        "name": "Gare d'Austerlitz",
-        "address": "SNCF/RER C grandes lignes et banlieue - 75113",
-        "position": {
-            "lat": 48.84371986136062,
-            "long": 2.3639162171627124
-        },
-        "lines": ["10"]
-    }, {
-        "name": "Avenue Emile-Zola",
-        "address": "Emile Zola (154 avenue) - 75115",
-        "position": {
-            "lat": 48.846852151949776,
-            "long": 2.2954488279344742
-        },
-        "lines": ["10"]
-    }, {
-        "name": "Boulogne Pont de Saint-Cloud",
-        "address": "Reine (135 route de la) - 92012",
-        "position": {
-            "lat": 48.84068016312195,
-            "long": 2.228313661724341
-        },
-        "lines": ["10"]
-    }, {
-        "name": "Charles Michels",
-        "address": "Entrepreneurs (36 rue des) - 75115",
-        "position": {
-            "lat": 48.8463629755008,
-            "long": 2.2856310658828742
-        },
-        "lines": ["10"]
-    }, {
-        "name": "Chardon-Lagache",
-        "address": "Chardon Lagache (11 rue) - 75116",
-        "position": {
-            "lat": 48.845104139567006,
-            "long": 2.266936059032254
-        },
-        "lines": ["10"]
-    }, {
-        "name": "Saint-Philippe du Roule",
-        "address": "Franklin D. Roosevelt (71 avenue, angle avec le 73 rue de la BoÍtie) - 75108",
-        "position": {
-            "lat": 48.8724706657937,
-            "long": 2.310769101230354
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Ranelagh",
-        "address": "Mozart (48 avenue, angle avec le 97 rue de Ranelagh) - 75116",
-        "position": {
-            "lat": 48.85550440300199,
-            "long": 2.269959178255765
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Alma-Marceau",
-        "address": "Président Wilson (4 avenue du) - 75116",
-        "position": {
-            "lat": 48.86429867104669,
-            "long": 2.301251410449929
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Robespierre",
-        "address": "Paris (185 rue de) - 93048",
-        "position": {
-            "lat": 48.855680808196944,
-            "long": 2.423659085483019
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Trocadéro",
-        "address": "Trocadéro et Onze-Novembre (place du, avenue Paul Doumer) - 75116",
-        "position": {
-            "lat": 48.8630891350352,
-            "long": 2.286840378494593
-        },
-        "lines": ["9"]
-    }, {
-        "name": "La Muette",
-        "address": "Mozart (5 avenue) - 75116",
-        "position": {
-            "lat": 48.85809504968323,
-            "long": 2.274096448110612
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Exelmans",
-        "address": "Exelmans (73 boulevard, angle avec le 64 rue Michel-Ange) - 75116",
-        "position": {
-            "lat": 48.84290697853592,
-            "long": 2.260144397880895
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Voltaire (Léon Blum)",
-        "address": "Voltaire (130 boulevard) - 75111",
-        "position": {
-            "lat": 48.85766372576006,
-            "long": 2.380036296795506
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Jasmin",
-        "address": "Mozart (85 avenue, angle avec le 47 rue Ribera) - 75116",
-        "position": {
-            "lat": 48.852438519222666,
-            "long": 2.267933923000950
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Mairie de Montreuil",
-        "address": "Rouget de l'Isle (1 boulevard) - 93048",
-        "position": {
-            "lat": 48.862280986339,
-            "long": 2.441827679127713
-        },
-        "lines": ["9"]
-    },
-    {
-        "name": "Billancourt",
-        "address": "Général Leclerc (88 bis avenue du) - 92012",
-        "position": {
-            "lat": 48.832087644282545,
-            "long": 2.238160776875514
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Porte de Saint-Cloud",
-        "address": "Porte de Saint-Cloud (place de la, angle avec le 98 boulevard Murat) - 75116",
-        "position": {
-            "lat": 48.837565334473624,
-            "long": 2.255591274447898
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Croix-de-Chavaux (Jacques Duclos)",
-        "address": "Paul Langevin (1 avenue) - 93048",
-        "position": {
-            "lat": 48.857999073258,
-            "long": 2.435866895674707
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Porte de Montreuil",
-        "address": "Porte de Montreuil (4 avenue de la) - 75120",
-        "position": {
-            "lat": 48.85337987781381,
-            "long": 2.410458187416353
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Miromesnil",
-        "address": "Percier (1 avenue, angle avec le 42 rue de la BoÍtie) - 75108",
-        "position": {
-            "lat": 48.87353214061607,
-            "long": 2.315578024866189
-        },
-        "lines": ["9", "13"]
-    }, {
-        "name": "Porte de Saint-Cloud",
-        "address": "Porte de Saint-Cloud (place de la, angle avec le 98 boulevard Murat) - 75116",
-        "position": {
-            "lat": 48.837565334473624,
-            "long": 2.255591274447898
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Saint-Augustin",
-        "address": "Haussmann (87 boulevard) - 75108",
-        "position": {
-            "lat": 48.87438676021276,
-            "long": 2.320727831964731
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Maraichers",
-        "address": "Pyrénées (67 bis rue des, en face) - 75120",
-        "position": {
-            "lat": 48.8526004024001,
-            "long": 2.406384989566139
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Buzenval",
-        "address": "Buzenval (51 rue de, angle avec le 35 rue d'Avron) - 75120",
-        "position": {
-            "lat": 48.851767474505195,
-            "long": 2.401181483872644
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Marcel Sembat",
-        "address": "Victor Hugo (123 avenue, angle avec le 108 avenue Edouard Vaillant) - 92012",
-        "position": {
-            "lat": 48.833808586980275,
-            "long": 2.243480614417395
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Oberkampf",
-        "address": "Voltaire (43 boulevard) - 75111",
-        "position": {
-            "lat": 48.86429994393239,
-            "long": 2.368762652800585
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Charonne",
-        "address": "Voltaire (188 boulevard) - 75111",
-        "position": {
-            "lat": 48.85464204744478,
-            "long": 2.385032193334828
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Rue des Boulets",
-        "address": "Voltaire (232 boulevard) - 75111",
-        "position": {
-            "lat": 48.8522227131835,
-            "long": 2.389115650927187
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Rue de la Pompe (Avenue Georges Mandel)",
-        "address": "Georges Mandel (56 avenue, angle avec le 86 rue de la Pompe) - 75116",
-        "position": {
-            "lat": 48.864253384403426,
-            "long": 2.277916762028845
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Havre-Caumartin",
-        "address": "Haussmann (boulevard, côté pair et vers la rue Caumartin) - 75109",
-        "position": {
-            "lat": 48.873425976534854,
-            "long": 2.328970973296564
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Pont de Sèvres",
-        "address": "Pont de Sèvres (204 rond-point du) - 92012",
-        "position": {
-            "lat": 48.829690338022736,
-            "long": 2.230528434192334
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Iéna",
-        "address": "Iéna (7 place d', angle avec le 10 avenue d'Iéna) - 75116",
-        "position": {
-            "lat": 48.864350199647255,
-            "long": 2.294045263783090
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Maraichers",
-        "address": "Pyrénées (67 bis rue des, en face) - 75120",
-        "position": {
-            "lat": 48.8526004024001,
-            "long": 2.406384989566139
-        },
-        "lines": ["9"]
-    }, {
-        "name": "Saint-Ambroise",
-        "address": "Voltaire (86 boulevard) - 75111",
-        "position": {
-            "lat": 48.86164742429928,
-            "long": 2.373147140772303
-        },
-        "lines": ["9"]
-    },
-    {
-        "name": "Jourdain",
-        "address": "Palestine (2 rue de) - 75120",
-        "position": {
-            "lat": 48.87524829462498,
-            "long": 2.389329434152641
-        },
-        "lines": ["11"]
-    },
-    {
-        "name": "Place des Fêtes",
-        "address": "Fêtes (place des, rue Compans) - 75119",
-        "position": {
-            "lat": 48.87672946890669,
-            "long": 2.393146031767842
-        },
-        "lines": ["11", "7B"]
-    },
-    {
-        "name": "Goncourt (Hôpital Saint-Louis)",
-        "address": "Parmentier (152 avenue) - 75110",
-        "position": {
-            "lat": 48.87001535524704,
-            "long": 2.3707687990214654
-        },
-        "lines": ["11"]
-    },
-    {
-        "name": "Pyrenees",
-        "address": "Simon Bolivar (4 avenue) - 75120",
-        "position": {
-            "lat": 48.87382117233675,
-            "long": 2.384886372197903
-        },
-        "lines": ["11"]
-    }, {
-        "name": "Porte des Lilas",
-        "address": "Sérurier (Boulevard) - 75120",
-        "position": {
-            "lat": 48.87723471669558,
-            "long": 2.4065268430480917
-        },
-        "lines": ["11"]
-    },
-    {
-        "name": "Rambuteau",
-        "address": "Grenier Saint-Lazare (3 rue) - 75104",
-        "position": {
-            "lat": 48.86119339564163,
-            "long": 2.3532869598707133
-        },
-        "lines": ["11"]
-    },
-    {
-        "name": "Mairie des Lilas",
-        "address": "Liberté (2 boulevard de la) - 93045",
-        "position": {
-            "lat": 48.880051061772676,
-            "long": 2.415660206064229
-        },
-        "lines": ["11"]
-    }, {
-        "name": "Telegraphe",
-        "address": "Belleville (rue de) - 75120",
-        "position": {
-            "lat": 48.87552244924565,
-            "long": 2.3986765111449513
-        },
-        "lines": ["11"]
-    },
-    {
-        "name": "Sentier",
-        "address": "Réaumur (97 rue) - 75102",
-        "position": {
-            "lat": 48.8673503814313,
-            "long": 2.3475672354150805
-        },
-        "lines": ["3"]
-    },{
-        "name": "Wagram",
-        "address": "Villiers (74 avenue de) - 75117",
-        "position": {
-            "lat": 48.87568150641968,
-            "long": 2.325591584819959
-        },
-        "lines": ["3"]
-    },{
-        "name": "Saint-Lazare",
-        "address": "Saint-Lazare (97 rue) - 75108",
-        "position": {
-            "lat": 48.8673503814313,
-            "long": 2.3475672354150805
-        },
-        "lines": ["11", "13", "14"]
-    },
-    {
-        "name": "Temple",
-        "address": "Temple (rue du, angle avec la rue Turbigo) - 75103",
-        "position": {
-            "lat": 48.866764167814516,
-            "long": 2.3615713270327316
-        },
-        "lines": ["3"]
-    },
-    {
-        "name": "Vavin",
-        "address": "Montparnasse (108 boulevard du) - 75106",
-        "position": {
-            "lat": 48.84205985758205,
-            "long": 2.328867050437212
-        },
-        "lines": ["4"]
-    },
-    {
-        "name": "Saint-Sulpice",
-        "address": "Rennes (69 rue de) - 75106",
-        "position": {
-            "lat": 48.8511463550549,
-            "long": 2.3309628563664644
-        },
-        "lines": ["4"]
-    },
-    {
-        "name": "Saint-Placide",
-        "address": "Rennes (127 rue de, angle avec le 81 rue Notre-Dame des Champs) - 75106",
-        "position": {
-            "lat": 48.84701184016864,
-            "long": 2.327055111355132
-        },
-        "lines": ["4"]
-    },
-    {
-        "name": "Réaumur-Sébastopol",
-        "address": "Saint-Denis (182 rue) - 75102",
-        "position": {
-            "lat": 48.86604666963103,
-            "long": 2.352620954015186
-        },
-        "lines": ["3","4"]
-    },{
-        "name": "Saint-Germain des Prés",
-        "address": "Saint-Germain (168 bis boulevard) - 75106",
-        "position": {
-            "lat": 48.85344723773834,
-            "long": 2.333046326044867
-        },
-        "lines": ["4"]
-    },{
-        "name": "Saint-Marcel",
-        "address": "Hôpital (boulevard de l', côté impair Salpêtrières) - 75113",
-        "position": {
-            "lat": 48.83944227892068,
-            "long": 2.3616402141234345
-        },
-        "lines": ["5"]
-    },{
-        "name": "Sèvres-Lecourbe",
-        "address": "Garibaldi (terre-plein face au 94 boulevard) - 75115",
-        "position": {
-            "lat": 48.838878378565504,
-            "long": 2.330678419288263
-        },
-        "lines": ["6"]
-    },{
-        "name": "Raspail",
-        "address": "Raspail (234 boulevard, 1 boulevard Edgar Quinet) - 75114",
-        "position": {
-            "lat": 48.85344723773834,
-            "long": 2.333046326044867
-        },
-        "lines": ["4","6"]
-    },{
-        "name": "Montparnasse-Bienvenue",
-        "address": "Raoul Dautry (place, SNCF Montparnasse) - 75114",
-        "position": {
-            "lat": 48.84187033630407,
-            "long": 2.3212283740035646
-        },
-        "lines": ["4","6","12","13"]
-    },
-    {
-        "name": "Saint-Jacques",
-        "address": "Saint-Jacques (terre-plein face au 46 boulevard) - 75114",
-        "position": {
-            "lat": 48.83299169177581,
-            "long": 2.3366828966443496
-        },
-        "lines": ["6"]
-    },{
-        "name": "Villejuif-Paul Vaillant Couturier (Hôpital Paul Brousse)",
-        "address": "Maxime Gorky (boulevard, côté pair) - 94076",
-        "position": {
-            "lat": 48.79599413239317,
-            "long": 2.3682314519156806
-        },
-        "lines": ["7"]
-    },{
-        "name": "Villejuif-Louis Aragon",
-        "address": "Maxime Gorky (boulevard, gare routière) - 94076",
-        "position": {
-            "lat": 48.786638011119834,
-            "long": 2.367110527381649
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Villejuif-Léo Lagrange",
-        "address": "Paris (53 avenue de) - 94076",
-        "position": {
-            "lat": 48.80376966328267,
-            "long":2.3639093063890435
-        },
-        "lines": ["7"]
-    },{
-        "name": "Tolbiac",
-        "address": "Italie (76 avenue d') - 75113",
-        "position": {
-            "lat": 48.82615945391136,
-            "long": 2.3570194661891253
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Sully-Morland",
-        "address": "Henri IV (8 boulevard) - 75104",
-        "position": {
-            "lat": 48.85079359474211,
-            "long": 2.3612369937142983
-        },
-        "lines": ["7"]
-    },{
-        "name": "Pernéty",
-        "address": "Raymond Losserand (72 rue) - 75114",
-        "position": {
-            "lat": 48.833933819810916,
-            "long": 2.31790897216328
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "Plaisance",
-        "address": "Alésia (211 rue d', 136 rue Raymond Losserand) - 75114",
-        "position": {
-            "lat": 48.83175809378841,
-            "long": 2.3138665498481625
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "Carrefour-Pleyel",
-        "address": "Boulevard Ornano - 93066",
-        "position": {
-            "lat": 48.9199435050834,
-            "long": 2.3439094197858905
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "Gabriel-Péri",
-        "address": "Gare routière - 92004",
-        "position": {
-            "lat": 48.916574835983226,
-            "long": 2.2943289646870606
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "Gaité",
-        "address": "Maine (avenue du, côté pair vers l'hôpital Léopol Bellan) - 75114",
-        "position": {
-            "lat": 48.838751821388634,
-            "long": 2.322509186224712
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "Saint-Denis-Universite",
-        "address": "Gare Routiere - 93066",
-        "position": {
-            "lat": 48.94611087248738,
-            "long": 2.3620451929905992
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "Brochant",
-        "address": "Brochant (47 rue, 129 avenue de Clichy) - 75117",
-        "position": {
-            "lat": 48.89062663302413,
-            "long": 2.320191121275328
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "Varenne",
-        "address": "Invalides (13 boulevard des,  côté du ministère du Travail) - 75107",
-        "position": {
-            "lat": 48.85639306919846,
-            "long": 2.3147543648102884
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "Malakoff-Plateau de Vanves",
-        "address": "Jean Bleuzen (85 rue) - 92020",
-        "position": {
-            "lat": 48.8224426939998,
-            "long": 2.2979321053287274
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "Mairie de Saint-Ouen",
-        "address": "République (place de la, mairie) - 93070",
-        "position": {
-            "lat": 48.91162168038383,
-            "long": 2.3337369648420916
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "Porte de Vanves",
-        "address": "Brune (9 boulevard) - 75114",
-        "position": {
-            "lat": 48.82776532658967,
-            "long": 2.3043123507630607
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "Garibaldi",
-        "address": "Gabriel Péri (avenue, rue Garibaldi) - 93070",
-        "position": {
-            "lat": 48.906382164226436,
-            "long": 2.3319104734589318
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "Porte de Saint-Ouen",
-        "address": "Saint-Ouen (153 avenue de) - 75118",
-        "position": {
-            "lat": 48.89751173277147,
-            "long": 2.329021647212208
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "Saint-Denis-Porte de Paris",
-        "address": "Légion d'Honneur (rue de la) - 93066",
-        "position": {
-            "lat": 48.92992666527093,
-            "long": 2.3561861491888694
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "Basilique de Saint-Denis",
-        "address": "Place du Cacquet - 93066",
-        "position": {
-            "lat": 48.936477492650496,
-            "long": 2.3596397453045825
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "Saint-Francois-Xavier",
-        "address": "Avenue de Villars - 75107",
-        "position": {
-            "lat": 48.8509825598235,
-            "long": 2.31442986460027
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "Malakoff-Rue Etienne Dolet",
-        "address": "Guy Môquet (87 rue) - 92020",
-        "position": {
-            "lat": 48.81470406056698,
-            "long": 2.2972847301706394
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "Les Agnettes",
-        "address": "Angle rue des Bas / Rue Louis Calmel - 92004",
-        "position": {
-            "lat": 48.92291633150906,
-            "long": 2.285963896576634
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "Asnieres-Gennevilliers Les Courtilles",
-        "address": "Angle Boulevard Pierre de Coubertin / Avenue Lucien Lanternier - 92004",
-        "position": {
-            "lat": 48.93029362287076,
-            "long": 2.2837606331952487
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "Guy-Môquet",
-        "address": "Saint-Ouen (86 avenue de) - 75118",
-        "position": {
-            "lat": 48.893009056051206,
-            "long": 2.3274958394904894
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "Liège",
-        "address": "Liège (terre-plein face au 21 rue de) - 75108",
-        "position": {
-            "lat": 48.87953716638082,
-            "long": 2.3268579472729614
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "Mairie de Clichy",
-        "address": "Martre (90 rue, 11 et 14 rue Landy) - 92024",
-        "position": {
-            "lat": 48.90400543242958,
-            "long": 2.3053681208668606
-        },
-        "lines": ["13"]
-    },
-
-    {
-        "name": "Châtillon Montrouge",
-        "address": "République (220 avenue de la) - 92020",
-        "position": {
-            "lat": 48.810283363510756,
-            "long": 2.3012888709759522
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "La Fourche",
-        "address": "Clichy (66 avenue de, 6 avenue de Saint-Ouen) - 75117",
-        "position": {
-            "lat": 48.8874368425293,
-            "long": 2.3257252220174083
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "Porte de Clichy",
-        "address": "Porte de Clichy (2 avenue de la) - 75117",
-        "position": {
-            "lat": 48.894436060297956,
-            "long": 2.313565665465226
-        },
-        "lines": ["13"]
-    },
-    {
-        "name": "Pyramides",
-        "address": "Rue de l'Echelle - 75101",
-        "Position": {
-            "lat": 48.86661383061701,
-            "lon": 2.3344075309487886
-        },
-        "lines": ["14"]
-    },
-    {
-        "name": "Cour Saint-Emilion",
-        "address": "Cour Chamonard - 75112",
-        "Position": {
-            "lat": 48.83331371557845,
-            "lon": 2.387299704383512
-        },
-        "lines": ["14"]
-    },
-    {
-        "name": "Bibliothèque-François Mitterrand",
-        "address": "Face au 62 rue du Chevaleret - 75113",
-        "Position": {
-            "lat": 48.829830695271106,
-            "lon": 2.376120009344837
-        },
-        "lines": ["14"]
-    },
-    {
-        "name": "Olympiades",
-        "address": "Rue de Tolbiac - 75113",
-        "Position": {
-            "lat": 48.82694828196076,
-            "lon": 2.367038433387592
-        },
-        "lines": ["14"]
-    },
-    {
-        "name": "Alésia",
-        "address": "Maine (230 avenue du) - 75114",
-        "position": {
-            "lat": 48.82806601968645,
-            "long": 2.326827420050836
-        },
-        "lines": ["4"]
-    },
-    {
-        "name": "Anatole-France",
-        "address": "Général Leclerc (place, côté pair et rue Anatole France et rue Voltaire) - 92044",
-        "position": {
-            "lat": 48.892018626328884,
-            "long": 2.2855174447944844
-        },
-        "lines": ["3"]
-    },
-    {
-        "name": "Arts-et-Métiers",
-        "address": "Vertus (rue des) - 75103",
-        "position": {
-            "lat": 48.865551863634785,
-            "long": 2.356108155120312
-        },
-        "lines": ["3", "11"]
-    },
-    {
-        "name": "Aubervilliers Pantin (4 Chemins)",
-        "address": "République (144 avenue de la) - 93001",
-        "position": {
-            "lat": 48.903898047529474,
-            "long": 2.3924800786724747
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Barbès-Rochechouart",
-        "address": "Rochechouart (2 boulevard de, vers le boulevard Barbès) - 75109",
-        "position": {
-            "lat": 48.883931769934414,
-            "long": 2.3493557085996466
-        },
-        "lines": ["2", "4"]
-    },
-    {
-        "name": "Bel-Air",
-        "address": "Picpus (34 boulevard de) - 75112",
-        "position": {
-            "lat": 48.84217782647567,
-            "long": 2.4011424343057484
-        },
-        "lines": ["6"]
-    },
-    {
-        "name": "Bercy",
-        "address": "Place du Bataillon du Pacifique - 75112",
-        "position": {
-            "lat": 48.84019224440348,
-            "long": 2.3794772572660587
-        },
-        "lines": ["6", "14"]
-    },
-    {
-        "name": "Bir-Hakeim (Grenelle)",
-        "address": "Nélaton (rue) - 75115",
-        "position": {
-            "lat": 48.854327218552356,
-            "long": 2.2888101037361173
-        },
-        "lines": ["6"]
-    },
-    {
-        "name": "Bobigny-Pablo-Picasso",
-        "address": "Préfecture Trésorerie - 93008",
-        "position": {
-            "lat": 48.907147312551565,
-            "long": 2.44945750453114
-        },
-        "lines": ["5"]
-    },
-    {
-        "name": "Bobigny-Pantin (Raymond Queneau)",
-        "address": "Paris (7 rue de, Bobigny Bus) - 93008",
-        "position": {
-            "lat": 48.895799232549,
-            "long": 2.4248572983975945
-        },
-        "lines": ["5"]
-    },
-    {
-        "name": "Boissière",
-        "address": "Kléber (57 avenue) - 75116",
-        "position": {
-            "lat": 48.86685615476034,
-            "long": 2.2900380734450088
-        },
-        "lines": ["6"]
-    },
-    {
-        "name": "Bourse",
-        "address": "Notre-Dame des Victoires (rue) - 75102",
-        "position": {
-            "lat": 48.86876179259638,
-            "long": 2.3406741288121005
-        },
-        "lines": ["3"]
-    },
-    {
-        "name": "Bréguet-Sabin",
-        "address": "Richard Lenoir (21 boulevard) - 75111",
-        "position": {
-            "lat": 48.856767949540505,
-            "long": 2.3707738583843816
-        },
-        "lines": ["5"]
-    },
-    {
-        "name": "Cadet",
-        "address": "La Fayette (terre-plein face au 65 rue) - 75109",
-        "position": {
-            "lat": 48.875825718038186,
-            "long": 2.343345124573273
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Cambronne",
-        "address": "Garibaldi (terre-plein face au 2 boulevard, côté pair) - 75115",
-        "position": {
-            "lat": 48.8476991081708,
-            "long": 2.302039143669263
-        },
-        "lines": ["6"]
-    },
-    {
-        "name": "Campo-Formio",
-        "address": "Hôpital (106/112 boulevard de l') - 75113",
-        "position": {
-            "lat": 48.835551216675434,
-            "long": 2.358752095191401
-        },
-        "lines": ["5"]
-    },
-    {
-        "name": "Censier-Daubenton",
-        "address": "Monge (96 rue) - 75105",
-        "position": {
-            "lat": 48.840594300001605,
-            "long": 2.351755612946688
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Château d'Eau",
-        "address": "Strasbourg (51/53 boulevard de) - 75110",
-        "position": {
-            "lat": 48.8724541509199,
-            "long": 2.3560561681302907
-        },
-        "lines": ["4"]
-    },
-    {
-        "name": "Château Rouge",
-        "address": "Château Rouge (48 place du) - 75118",
-        "position": {
-            "lat": 48.887086283050444,
-            "long": 2.3493700732513783
-        },
-        "lines": ["4"]
-    },
-    {
-        "name": "Château Landon",
-        "address": "Faubourg Saint-Martin (188 rue du) - 75110",
-        "position": {
-            "lat": 48.87845656683119,
-            "long": 2.3620537162488993
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Chaussée d'Antin (La Fayette)",
-        "address": "La Fayette (rue, face aux Galeries La Fayette) - 75109",
-        "position": {
-            "lat": 48.872985824665165,
-            "long": 2.33342622405285
-        },
-        "lines": ["7", "9"]
-    },
-    {
-        "name": "Chevaleret",
-        "address": "Vincent Auriol (terre-plein face au 79 boulevard) - 75113",
-        "position": {
-            "lat": 48.834578798425625,
-            "long": 2.366933899070918
-        },
-        "lines": ["6"]
-    },
-    {
-        "name": "Cité",
-        "address": "Louis Lepine (2 place) - 75104",
-        "position": {
-            "lat": 48.85568485028629,
-            "long": 2.3462029295287157
-        },
-        "lines": ["4"]
-    },
-    {
-        "name": "Corentin-Cariou",
-        "address": "Corentin Cariou (5 avenue) - 75119",
-        "position": {
-            "lat": 48.89468154198812,
-            "long": 2.382302193974242
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Crimée",
-        "address": "Flandre (117 rue de) - 75119",
-        "position": {
-            "lat": 48.89028877504466,
-            "long": 2.3767786489253644
-        },
-        "lines": ["7"]
-    }, {
-        "name": "Daumesnil (Félix Eboué)",
-        "address": "Reuilly (118 rue de) - 75112",
-        "position": {
-            "lat": 48.83937646312499,
-            "long": 2.3957880604156494
-        },
-        "lines": ["6", "8"]
-    }, 
-    {
-        "name": "Denfert-Rochereau",
-        "address": "Général Leclerc (4 avenue du, 2 rue Daguerre) - 75114",
-        "position": {
-            "lat": 48.83427681284463,
-            "long": 2.332203797304786
-        },
-        "lines": ["4", "6"]
-    }, 
-    {
-        "name": "Dugommier",
-        "address": "Reuilly (3 boulevard de, boulevard de Bercy) - 75112",
-        "position": {
-            "lat": 48.83887615167852,
-            "long": 2.3893473875702935
-        },
-        "lines": ["6"]
-    }, 
-    {
-        "name": "Dupleix",
-        "address": "Grenelle (terre-plein face au 65/68 boulevard de) - 75115",
-        "position": {
-            "lat": 48.850742650180216,
-            "long": 2.292463226824505
-        },
-        "lines": ["6"]
-    }, 
-    {
-        "name": "Edgar-Quinet",
-        "address": "Edgar Quinet (place, face au 11 boulevard Edgar Quinet) - 75114",
-        "position": {
-            "lat": 48.84056772620437,
-            "long": 2.326402815222764
-        },
-        "lines": ["6"]
-    },
-    {
-        "name": "Eglise de Pantin",
-        "address": "Jean Lolive (avenue, côté pair) - 93055",
-        "position": {
-            "lat": 48.89363252797401,
-            "long": 2.41290026603005
-        },
-        "lines": ["5"]
-    }, 
-    {
-        "name": "Etienne Marcel",
-        "address": "Turbigo (14 rue) - 75101",
-        "position": {
-            "lat": 48.86371036646956,
-            "long": 2.3489831961271017
-        },
-        "lines": ["4"]
-    }, 
-    {
-        "name": "Europe",
-        "address": "Madrid (1 rue de) - 75108",
-        "position": {
-            "lat": 48.87906043921274,
-            "long": 2.3229746324058937
-        },
-        "lines": ["3"]
-    }, 
-    {
-        "name": "Fort d'Aubervilliers",
-        "address": "Jean Jaurès (213 avenue) - 93001",
-        "position": {
-            "lat": 48.91405674514657,
-            "long": 2.403576334511007
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Gallieni (Parc de Bagnolet)",
-        "address": "Gare routière - 93006",
-        "position": {
-            "lat": 48.86326252650054,
-            "long": 2.415975368499958
-        },
-        "lines": ["3"]
-    },
-    {
-        "name": "Gambetta",
-        "address": "Père-Lachaise (avenue du, rue des Pyrénées) - 75120",
-        "position": {
-            "lat": 48.864953362603146,
-            "long": 2.398636747345926
-        },
-        "lines": ["3", "3B"]
-    },
-    {
-        "name": "Gare d'Austerlitz",
-        "address": "SNCF/RER C grandes lignes et banlieue - 75113",
-        "position": {
-            "lat": 48.84341422414371,
-            "long": 2.3641883928676424
-        },
-        "lines": ["5", "10"]
-    },
-    {
-        "name": "Gare de l'Est (Verdun)",
-        "address": "Strasbourg (terre plein face au 93 boulevard de) - 75110",
-        "position": {
-            "lat": 48.87669583602489,
-            "long": 2.3579925105504023
-        },
-        "lines": ["4", "5", "7"]
-    },
-    {
-        "name": "Gare du Nord",
-        "address": "Dunkerque (18 rue de, rue du Faubourg Saint-Denis) - 75110",
-        "position": {
-            "lat": 48.87974306422535,
-            "long": 2.3546008104722334
-        },
-        "lines": ["4", "5"]
-    },
-    {
-        "name": "Glacière",
-        "address": "Auguste Blanqui (terre-plein face au 124 boulevard) - 75113",
-        "position": {
-            "lat": 48.8308614053467,
-            "long": 2.344551433303418
-        },
-        "lines": ["6"]
-    },
-    {
-        "name": "Havre-Caumartin",
-        "address": "Haussmann (boulevard, côté pair et vers la rue Caumartin) - 75109",
-        "position": {
-            "lat": 48.8734618906704,
-            "long": 2.3284804844734768
-        },
-        "lines": ["3", "9"]
-    },
-    {
-        "name": "Hoche",
-        "address": "Jean Lolive (60 avenue, rue du Pré Saint-Gervais) - 93055",
-        "position": {
-            "lat": 48.891499383764256,
-            "long": 2.4031249606560765
-        },
-        "lines": ["5"]
-    },
-    {
-        "name": "Jacques-Bonsergent",
-        "address": "Magenta (30 boulevard de, place Jacques Bonsergent) - 75110",
-        "position": {
-            "lat": 48.87070082326957,
-            "long": 2.3605786355872773
-        },
-        "lines": ["5"]
-    },
-    {
-        "name": "Jaurès",
-        "address": "Villette (entrée sous viaduc face au 196 boulevard de la) - 75119",
-        "position": {
-            "lat": 48.88287621621258,
-            "long": 2.3705863361654225
-        },
-        "lines": ["2", "5", "7B"]
-    },
-    {
-        "name": "Jussieu",
-        "address": "Liné (39 rue) - 75105",
-        "position": {
-            "lat": 48.8459684322046,
-            "long": 2.3548073926942186
-        },
-        "lines": ["7", "10"]
-    },
-    {
-        "name": "Kléber",
-        "address": "Kléber (15 avenue) - 75116",
-        "position": {
-            "lat": 48.87130614908782,
-            "long": 2.2933310208962174
-        },
-        "lines": ["6"]
-    },
-    {
-        "name": "La Courneuve-8-Mai-1945",
-        "address": "Jean Jaurès (57 avenue) - 93027",
-        "position": {
-            "lat": 48.92051450668569,
-            "long": 2.410225779120198
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Laumière",
-        "address": "Laumière (43 avenue de) - 75119",
-        "position": {
-            "lat": 48.8849316105461,
-            "long": 2.379091246899838
-        },
-        "lines": ["5"]
-    }, {
-        "name": "Le Kremlin-Bicêtre",
-        "address": "Fontainebleau (92/96 avenue de) - 94043",
-        "position": {
-            "lat": 48.810385125129486,
-            "long": 2.3618306830911315
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Le Peletier",
-        "address": "Victoire (rue de la, angle avec la rue La Fayette) - 75109",
-        "position": {
-            "lat": 48.87496305802612,
-            "long": 2.3401567908492056
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Les Gobelins",
-        "address": "Gobelins (47 avenue des) - 75113",
-        "position": {
-            "lat": 48.83612743975252,
-            "long": 2.3520811178355734
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Les Halles",
-        "address": "Verrières (place des, Forum des Halles) - 75101",
-        "position": {
-            "lat": 48.862011970720516,
-            "long": 2.3464764519062062
-        },
-        "lines": ["4"]
-    },
-    {
-        "name": "Louis Blanc",
-        "address": "Faubourg Saint-Martin (234 rue du) - 75110",
-        "position": {
-            "lat": 48.88090042815109,
-            "long": 2.365107218264337
-        },
-        "lines": ["7", "7B"]
-    },
-    {
-        "name": "Louise Michel",
-        "address": "Louise Michel (30 rue) - 92044",
-        "position": {
-            "lat": 48.889269622246026,
-            "long": 2.2880551248039036
-        },
-        "lines": ["3"]
-    },
-    {
-        "name": "Mairie de Montrouge",
-        "address": "Rue Louis Rolland - 92049",
-        "position": {
-            "lat": 48.81846633711334,
-            "long": 2.319643218617825
-        },
-        "lines": ["4"]
-    },
-    {
-        "name": "Mairie d'Ivry",
-        "address": "Maurice Thorez (213 avenue) - 94041",
-        "position": {
-            "lat": 48.81121453549021,
-            "long": 2.383508928732683
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Maison Blanche",
-        "address": "Italie (162 avenue d') - 75113",
-        "position": {
-            "lat": 48.82287877506322,
-            "long": 2.358079894290851
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Malesherbes",
-        "address": "Villiers (48 avenue de, Musée Henner) - 75117",
-        "position": {
-            "lat": 48.88253647289218,
-            "long": 2.311009243005514
-        },
-        "lines": ["3"]
-    },
-    {
-        "name": "Marcadet-Poissonniers",
-        "address": "Poissonniers (69 rue des) - 75118",
-        "position": {
-            "lat": 48.891543930630554,
-            "long": 2.3493711153819112
-        },
-        "lines": ["4", "12"]
-    },
-    {
-        "name": "Mouton-Duvernet",
-        "address": "Général Leclerc (42 avenue du) - 75114",
-        "position": {
-            "lat": 48.832191599269656,
-            "long": 2.3304069926293205
-        },
-        "lines": ["4"]
-    },
-    {
-        "name": "Nationale",
-        "address": "Vincent Auriol (terre-plein face au 124/143 boulevard) - 75113",
-        "position": {
-            "lat": 48.832881288678834,
-            "long": 2.3619094080161975
-        },
-        "lines": ["6"]
-    },
-    {
-        "name": "Ourcq",
-        "address": "Jean Jaurès (161 avenue, rue des Ardennes) - 75119",
-        "position": {
-            "lat": 48.886618792376986,
-            "long": 2.3854841363848798
-        },
-        "lines": ["5"]
-    },
-    {
-        "name": "Parmentier",
-        "address": "République (48 avenue de la, 87 avenue Parmentier) - 75111",
-        "position": {
-            "lat": 48.86525985667316,
-            "long": 2.3747570817167682
-        },
-        "lines": ["3"]
-    },
-    {
-        "name": "Passy",
-        "address": "Alboni (rue d', square d'Alboni) - 75116",
-        "position": {
-            "lat": 48.857534382513876,
-            "long": 2.28559270581709
-        },
-        "lines": ["6"]
-    },
-    {
-        "name": "Pelleport",
-        "address": "Paul Signac (place, en face du 125 avenue Gambetta) - 75120",
-        "position": {
-            "lat": 48.868223442716754,
-            "long": 2.401147279604314
-        },
-        "lines": ["3B"]
-    },
-    {
-        "name": "Péreire",
-        "address": "Courcelles (184 rue de, angle avec le105 avenue de Villiers) - 75117",
-        "position": {
-            "lat": 48.8850310612536,
-            "long": 2.2971351115061647
-        },
-        "lines": ["3"]
-    },
-    {
-        "name": "Picpus",
-        "address": "Saint-Mandé (46 avenue de) - 75112",
-        "position": {
-            "lat": 48.84532311461395,
-            "long": 2.4017863137606863
-        },
-        "lines": ["6"]
-    },
-    {
-        "name": "Pierre et Marie Curie",
-        "address": "Pierre Curie (1 bis rue) - 94041",
-        "position": {
-            "lat": 48.81591718160038,
-            "long": 2.377878816483871
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Place d'Italie",
-        "address": "Vincent Auriol (182 boulevard) - 75113",
-        "position": {
-            "lat": 48.8312826555064,
-            "long": 2.3554558703645068
-        },
-        "lines": ["5", "6", "7"]
-    },
-    {
-        "name": "Place Monge (Jardin des Plantes)",
-        "address": "Navarre (13 rue de) - 75105",
-        "position": {
-            "lat": 48.843164692766834,
-            "long": 2.3521103624150967
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Poissonnière",
-        "address": "La Fayette (terre-plein face au 96/98 rue) - 75110",
-        "position": {
-            "lat": 48.877353095288015,
-            "long": 2.349381423952599
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Pont de Levallois-Bécon",
-        "address": "Baudin (rue, angle avec la rue Anatole France) - 92044",
-        "position": {
-            "lat": 48.89730990517954,
-            "long": 2.2807686428069003
-        },
-        "lines": ["3"]
-    },
-    {
-        "name": "Pont Neuf",
-        "address": "Louvre (quai du, angle avec le Pont Neuf) - 75101",
-        "position": {
-            "lat": 48.85853410228574,
-            "long": 2.3421172386659985
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Pont Marie (Cité des Arts)",
-        "address": "Hôtel de Ville (quai de l') - 75104",
-        "position": {
-            "lat": 48.85346358569476,
-            "long": 2.357383972809163
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Porte de Bagnolet",
-        "address": "Py (rue de la) - 75120",
-        "position": {
-            "lat": 48.864336535483645,
-            "long": 2.4088253760377283
-        },
-        "lines": ["3"]
-    },
-    {
-        "name": "Porte de Champerret",
-        "address": "Villiers (143 rue de) - 75117",
-        "position": {
-            "lat": 48.88573915969202,
-            "long": 2.2918606206755348
-        },
-        "lines": ["3"]
-    },
-    {
-        "name": "Porte de Choisy",
-        "address": "Masséna (130 boulevard, vers l'avenue de Choisy) - 75113",
-        "position": {
-            "lat": 48.81990244616168,
-            "long": 2.364965598290819
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Porte de Clignancourt",
-        "address": "Ornano (82 boulevard) - 75118",
-        "position": {
-            "lat": 48.89797017040717,
-            "long": 2.3439883834332904
-        },
-        "lines": ["4"]
-    }, {
-        "name": "Porte de la Villette",
-        "address": "Porte de la Villette (avenue de la, terminus PC) - 75119",
-        "position": {
-            "lat": 48.89752915689145,
-            "long": 2.3856442301273044
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Porte de Pantin",
-        "address": "Villette (parc de la, Zénith et Conservatoire) - 75119",
-        "position": {
-            "lat": 48.888583980971895,
-            "long": 2.3924228757185415
-        },
-        "lines": ["5"]
-    },
-    {
-        "name": "Porte d'Italie",
-        "address": "Masséna (boulevard, square Hélène Boucher) - 75113",
-        "position": {
-            "lat": 48.8187170251155,
-            "long": 2.360500832805366
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Porte d'Ivry",
-        "address": "Porte d'Ivry (53 avenue de la) - 75113",
-        "position": {
-            "lat": 48.82135736230755,
-            "long": 2.369308237223248
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Porte d'Orléans (Général Leclerc)",
-        "address": "Légion Etrangère (rue de la) - 75114",
-        "position": {
-            "lat": 48.82281706023495,
-            "long": 2.325072625148001
-        },
-        "lines": ["4"]
-    },
-    {
-        "name": "Quai de la Gare",
-        "address": "Gare (quai de la, quai d'Austerlitz) - 75113",
-        "position": {
-            "lat": 48.83761467578531,
-            "long": 2.373852115680497
-        },
-        "lines": ["6"]
-    },
-    {
-        "name": "Quai de la Rapée",
-        "address": "Rapée (quai de la, place Nazas) - 75112",
-        "position": {
-            "lat": 48.84596603240645,
-            "long": 2.3669131797383116
-        },
-        "lines": ["5"]
-    },
-    {
-        "name": "Quatre Septembre",
-        "address": "Quatre Septembre (20 rue du) - 75102",
-        "position": {
-            "lat": 48.86966057219203,
-            "long": 2.3363282816417112
-        },
-        "lines": ["3"]
-    },
-    {
-        "name": "Richard-Lenoir",
-        "address": "Richard Lenoir (65 boulevard) - 75111",
-        "position": {
-            "lat": 48.86068599199579,
-            "long": 2.372410931880202
-        },
-        "lines": ["5"]
-    },
-    {
-        "name": "Riquet",
-        "address": "Riquet (19 rue) - 75119",
-        "position": {
-            "lat": 48.8883932319013,
-            "long": 2.374433108884994
-        },
-        "lines": ["7"]
-    },
-    {
-        "name": "Rue Saint-Maur",
-        "address": "Servan (71 rue, rue Guillaume Bertrand) - 75111",
-        "position": {
-            "lat": 48.86408940574645,
-            "long": 2.3808997885521195
-        },
-        "lines": ["3"]
-    },
-    {
-        "name": "Saint-Fargeau",
-        "address": "Gambetta (112 avenue) - 75120",
-        "position": {
-            "lat": 48.871744824151975,
-            "long": 2.404162541569556
-        },
-        "lines": ["3B"]
-    },
-    {
-        "name": "Bolivar",
-        "address": "Simon Bolivar (125 avenue) - 75119",
-        "position": {
-            "lat": 48.880790122828465,
-            "long": 2.374155126662647
-        },
-        "lines": ["7B"]
-    },
-    {
-        "name": "Danube",
-        "address": "Rhin et Danube (9 place de) - 75119",
-        "position": {
-            "lat": 48.88195101817822,
-            "long": 2.3932606758573876
-        },
-        "lines": ["7B"]
-    },
-    {
-        "name": "Botzaris",
-        "address": "Botzaris (80 rue) - 75119",
-        "position": {
-            "lat": 48.87960708893313,
-            "long": 2.389415569653207
-        },
-        "lines": ["7B"]
-    }, 
-    {
-        "name": "Pré-Saint-Gervais",
-        "address": "Serrurier (52 boulevard) - 75119",
-        "position": {
-            "lat": 48.88015993211241,
-            "long": 2.3985866218697662
-        },
-        "lines": ["7B"]
-    }, 
-    {
-        "name": "Buttes-Chaumont",
-        "address": "Botzaris (28 rue) - 75119",
-        "position": {
-            "lat": 48.877803956007845,
-            "long": 2.3812110997359883
-        },
-        "lines": ["7B"]
-    }, 
-    {
-        "name": "Bolivar",
-        "address": "Simon Bolivar (125 avenue) - 75119",
-        "position": {
-            "lat": 48.880790122828465,
-            "long": 2.374155126662647
-        },
-        "lines": ["7B"]
-    }
-
-]
+               "name": "Nation",
+               "address": "Nation (terre-plein face au 3 place de la) - 75112",
+               "position": {
+               "lat": 48.84811123157566,
+               "long": 2.3980040127977436
+               },
+               "lines": ["1", "2", "6", "9"]
+               }, {
+               "name": "Concorde",
+               "address": "Tuileries (jardin des, le long du jardin et face È la place Concorde) PARIS-08 - 75108",
+               "position": {
+               "lat": 48.86567809641779,
+               "long": 2.321193771801867
+               },
+               "lines": ["1", "8", "12"]
+               }, {
+               "name": "Bastille",
+               "address": "Roquette (rue de la) PARIS-11 - 75104",
+               "position": {
+               "lat": 48.85297567465423,
+               "long": 2.3692188244433434
+               },
+               "lines": ["1", "5","8"]
+               }, {
+               "name": "Louvre-Rivoli",
+               "address": "Amiral de Coligny (8 rue de l') - 75101",
+               "position": {
+               "lat": 48.86087985759375,
+               "long": 2.340973275817903
+               },
+               "lines": ["1"]
+               }, {
+               "name": "Bérault",
+               "address": "Paris (98 avenue de) - 94080",
+               "position": {
+               "lat": 48.84536875015732,
+               "long": 2.428244509620486
+               },
+               "lines": ["1"]
+               }, {
+               "name": "Champs-Elysées-Clémenceau",
+               "address": "Clémenceau (place) - 75108",
+               "position": {
+               "lat": 48.867744026068706,
+               "long": 2.3141227803741415
+               },
+               "lines": ["1", "13"]
+               }, {
+               "name": "Reuilly-Diderot",
+               "address": "Diderot (73 boulevard) - 75112",
+               "position": {
+               "lat": 48.8473528769588,
+               "long": 2.3858425400402448
+               },
+               "lines": ["1", "8"]
+               }, {
+               "name": "George V",
+               "address": "Champs-Elysées (118 avenue des) - 75108",
+               "position": {
+               "lat": 48.87204561942636,
+               "long": 2.3007691856449535
+               },
+               "lines": ["1"]
+               },
+               {
+               "name": "Argentine",
+               "address": "Grande Armée (37 avenue de la) - 75117",
+               "position": {
+               "lat": 48.87567248598795,
+               "long": 2.289444164481448
+               },
+               "lines": ["1"]
+               }, {
+               "name": "Franklin-Roosevelt",
+               "address": "Montaigne (60 avenue) - 75108",
+               "position": {
+               "lat": 48.869010427937624,
+               "long": 2.3102531808960265
+               },
+               "lines": ["1", "9"]
+               }, {
+               "name": "Palais-Royal (Musée du Louvre)",
+               "address": "Rivoli (terre-plein face au 93 rue de) - 75101",
+               "position": {
+               "lat": 48.8623718215243,
+               "long": 2.3365736007364304
+               },
+               "lines": ["1", "7"]
+               }, {
+               "name": "Pont de Neuilly",
+               "address": "Charles de Gaulle (209 avenue) - 92051",
+               "position": {
+               "lat": 48.88550610941816,
+               "long": 2.258527470197358
+               },
+               "lines": ["1"]
+               }, {
+               "name": "Saint-Mandé",
+               "address": "Paris (168 bis avenue de) - 94067",
+               "position": {
+               "lat": 48.84623825662077,
+               "long": 2.418999828109256
+               },
+               "lines": ["1"]
+               }, {
+               "name": "Château de Vincennes",
+               "address": "Paris (14 avenue de) - 94080",
+               "position": {
+               "lat": 48.84432514436857,
+               "long": 2.440552346211822
+               },
+               "lines": ["1"]
+               }, {
+               "name": "Esplanade de la Défense",
+               "address": "Sculpteurs (voie des) - 92062",
+               "position": {
+               "lat": 48.88835806016618,
+               "long": 2.249937212862802
+               },
+               "lines": ["1"]
+               }, {
+               "name": "Châtelet",
+               "address": "Victoria (7 avenue, 4 rue Saint-Martin) - 75101",
+               "position": {
+               "lat": 48.85856967247972,
+               "long": 2.347933245835307
+               },
+               "lines": ["1", "4", "7","11", "14"]
+               }, {
+               "name": "Porte Maillot",
+               "address": "Verdun (16 place de) - 75117",
+               "position": {
+               "lat": 48.87800617627899,
+               "long": 2.2824656400013326
+               },
+               "lines": ["1"]
+               }, {
+               "name": "Charles de Gaulle-Etoile",
+               "address": "Charles de Gaulle (place, avenue Hoche) - 75108",
+               "position": {
+               "lat": 48.8739310942679,
+               "long": 2.295127251650101
+               },
+               "lines": ["1", "2", "6"]
+               }, {
+               "name": "Tuileries",
+               "address": "Rivoli (210 rue de) - 75101",
+               "position": {
+               "lat": 48.86478016250008,
+               "long": 2.3290949544294275
+               },
+               "lines": ["1"]
+               }, {
+               "name": "Les Sablons (Jardin d'acclimatation)",
+               "address": "Charles de Gaulle (85 avenue) - 92051",
+               "position": {
+               "lat": 48.88129918549113,
+               "long": 2.2719151760177914
+               },
+               "lines": ["1"]
+               }, {
+               "name": "Porte de Vincennes",
+               "address": "Cours de Vincennes (99) - 75120",
+               "position": {
+               "lat": 48.847016518419125,
+               "long": 2.410816882334764
+               },
+               "lines": ["1"]
+               }, {
+               "name": "Gare de Lyon",
+               "address": "Gare SNCF - 75112",
+               "position": {
+               "lat": 48.84555978708341,
+               "long": 2.37344920496318
+               },
+               "lines": ["1", "14"]
+               }, {
+               "name": "Saint-Paul (Le Marais)",
+               "address": "Rivoli (terre plein face au 10 rue de) - 75104",
+               "position": {
+               "lat": 48.85513451823504,
+               "long": 2.3613343390676635
+               },
+               "lines": ["1"]
+               }, {
+               "name": "Hôtel de Ville",
+               "address": "Rivoli (70 rue de) - 75104",
+               "position": {
+               "lat": 48.857355927169515,
+               "long": 2.3520735668587185
+               },
+               "lines": ["1", "11"]
+               }, {
+               "name": "La Défense (Grande Arche)",
+               "address": "Carpeaux (rue, gare du RER La Défense) - 92062",
+               "position": {
+               "lat": 48.891826754836515,
+               "long": 2.237992043215619
+               },
+               "lines": ["1"]
+               }, {
+               "name": "Victor Hugo",
+               "address": "Victor Hugo (4 place, angle avec l'avenue Raymond Poincarré) - 75116",
+               "position": {
+               "lat": 48.869864912484076,
+               "long": 2.285226207250439
+               },
+               "lines": ["2"]
+               }, {
+               "name": "Pigalle",
+               "address": "Carpeaux (rue, gare du RER La Défense) - 92062",
+               "position": {
+               "lat": 48.88242252841757,
+               "long": 2.337254682101535
+               },
+               "lines": ["2", "12"]
+               }, {
+               "name": "La Chapelle",
+               "address": "Chapelle (entrée sous viaduc face au 35 boulevard de la) - 75110",
+               "position": {
+               "lat": 48.884388698358165,
+               "long": 2.3592765642767297
+               },
+               "lines": ["2"]
+               }, {
+               "name": "Philippe Auguste",
+               "address": "Mont-Louis (19 rue de, 131 avenue Philippe Auguste) - 75111",
+               "position": {
+               "lat": 48.85837884146994,
+               "long": 2.3897347327397043
+               },
+               "lines": ["2"]
+               },
+               {
+               "name": "Place de Clichy",
+               "address": "Carpeaux (rue, gare du RER La Défense) - 92062",
+               "position": {
+               "lat": 48.88345565159549,
+               "long": 2.3273749934103556
+               },
+               "lines": ["2", "13"]
+               },
+               {
+               "name": "Père-Lachaise",
+               "address": "République (avenue de la) - 75111",
+               "position": {
+               "lat": 48.86316120506396,
+               "long": 2.3872604001843536
+               },
+               "lines": ["2"]
+               },
+               {
+               "name": "Porte Dauphine",
+               "address": "Foch (avenue, côté impair) - 75116",
+               "position": {
+               "lat": 48.87179221641751,
+               "long": 2.27486996119569
+               },
+               "lines": ["2"]
+               },
+               {
+               "name": "Belleville",
+               "address": "Villette (terre-plein face au 1 boulevard de la) - 75119",
+               "position": {
+               "lat": 48.87228732058717,
+               "long": 2.3767376773224687
+               },
+               "lines": ["2", "11"]
+               }, {
+               "name": "Colonel Fabien",
+               "address": "Villette (terre-plein face au 83 boulevard de la) - 75110",
+               "position": {
+               "lat": 48.877605,
+               "long": 2.370538
+               },
+               "lines": ["2"]
+               }, {
+               "name": "Villiers",
+               "address": "Carpeaux (rue, gare du RER La Défense) - 92062",
+               "position": {
+               "lat": 48.88132429394468,
+               "long": 2.3165967615088174
+               },
+               "lines": ["2", "3"]
+               }, {
+               "name": "Blanche",
+               "address": "Clichy (terre-plein face au 59 boulevard de) - 75118",
+               "position": {
+               "lat": 48.88377051883179,
+               "long": 2.332485148274094
+               },
+               "lines": ["2"]
+               }, {
+               "name": "Stalingrad",
+               "address": "Villette (244/171 boulevard de la) - 75119",
+               "position": {
+               "lat": 48.88418929420877,
+               "long": 2.367030441974567
+               },
+               "lines": ["2","5","7"]
+               }, {
+               "name": "Anvers",
+               "address": "Rochechouart (68 boulevard) - 75118",
+               "position": {
+               "lat": 48.882871690180586,
+               "long": 2.344163572800391
+               },
+               "lines": ["2"]
+               }, {
+               "name": "Monceau",
+               "address": "République Dominicaine (1 place de la) - 75108",
+               "position": {
+               "lat": 48.88057689074842,
+               "long": 2.309415946164807
+               },
+               "lines": ["2"]
+               }, {
+               "name": "Rome",
+               "address": "Batignolles (60 boulevard des) - 75117",
+               "position": {
+               "lat": 48.882401,
+               "long": 2.322003
+               },
+               "lines": ["2"]
+               }, {
+               "name": "Avron",
+               "address": "Charonne (terre-plein face au 35 boulevard de) - 75111",
+               "position": {
+               "lat": 48.851193819213286,
+               "long": 2.398239140823123
+               },
+               "lines": ["2"]
+               },
+               {
+               "name": "Ménilmontant",
+               "address": "Carpeaux (rue, gare du RER La Défense) - 92062",
+               "position": {
+               "lat": 48.866755,
+               "long": 2.383416
+               },
+               "lines": ["2"]
+               }, {
+               "name": "Courcelles",
+               "address": "Courcelles (53 boulevard de) - 75108",
+               "position": {
+               "lat": 48.87927215163157,
+               "long": 2.303298546682486
+               },
+               "lines": ["2"]
+               }, {
+               "name": "Couronnes",
+               "address": "Belleville (37 boulevard de) - 75111",
+               "position": {
+               "lat": 48.86932916949657,
+               "long": 2.3805363661617247
+               },
+               "lines": ["2"]
+               }, {
+               "name": "Alexandre-Dumas",
+               "address": "Charonne (111 boulevard de, 180 rue de Charonne et 1 rue de Bagnolet) - 75111",
+               "position": {
+               "lat": 48.856426348325236,
+               "long": 2.394554257654992
+               },
+               "lines": ["2"]
+               }, {
+               "name": "Ternes",
+               "address": "Ternes (place des) - 75117",
+               "position": {
+               "lat": 48.87822804050767,
+               "long": 2.2981214325821844
+               },
+               "lines": ["2"]
+               }, {
+               "name": "Félix Faure",
+               "address": "Félix Faure (place) - 75115",
+               "position": {
+               "lat": 48.84282456767407,
+               "long": 2.2922249662205156
+               },
+               "lines": ["8"]
+               },
+               {
+               "name": "Faidherbe-Chaligny",
+               "address": "Montreuil (205 rue de) - 75111",
+               "position": {
+               "lat": 48.85006766800271,
+               "long": 2.3844287707416316
+               },
+               "lines": ["8"]
+               }, {
+               "name": "Daumesnil",
+               "address": "Reuilly (118 rue de) - 75112",
+               "position": {
+               "lat": 48.83968214020875,
+               "long": 2.3955841703466554
+               },
+               "lines": ["6", "8"]
+               }, {
+               "name": "Montgallet",
+               "address": "Reuilly (68 rue de, rue Montgallet) - 75112",
+               "position": {
+               "lat": 48.844142731120996,
+               "long": 2.389625012848426
+               },
+               "lines": ["8"]
+               }, {
+               "name": "Porte Dorée",
+               "address": "Poniatowsky (95 boulevard) - 75112",
+               "position": {
+               "lat": 48.83549725282465,
+               "long": 2.4061852122149348
+               },
+               "lines": ["8"]
+               }, {
+               "name": "Michel Bizot",
+               "address": "Daumesnil (253 avenue, 122 rue de Picpus) - 75112",
+               "position": {
+               "lat": 48.836991037652965,
+               "long": 2.402919606870042
+               },
+               "lines": ["8"]
+               }, {
+               "name": "La Motte-Picquet-Grenelle",
+               "address": "Pondichéry (25 rue de) - 75115",
+               "position": {
+               "lat": 48.848803206044934,
+               "long": 2.29769423466391
+               },
+               "lines": ["6", "8", "10"]
+               }, {
+               "name": "Commerce",
+               "address": "Commerce (21 place du) - 75115",
+               "position": {
+               "lat": 48.84461367199405,
+               "long": 2.293802980169146
+               },
+               "lines": ["8"]
+               }, {
+               "name": "La Tour-Maubourg",
+               "address": "La Tour Maubourg (boulevard de, côté impair et face au 60) - 75107",
+               "position": {
+               "lat": 48.85722786064964,
+               "long": 2.3097962258273563
+               },
+               "lines": ["8"]
+               }, {
+               "name": "Ecole Militaire",
+               "address": "Motte Picquet (44 avenue de la) - 75107",
+               "position": {
+               "lat": 48.85426092155411,
+               "long": 2.305439560539011
+               },
+               "lines": ["8"]
+               }, {
+               "name": "Pointe du Lac",
+               "address": "Route de Pompadour - 94028",
+               "position": {
+               "lat": 48.76811107638341,
+               "long": 2.46565028903882
+               },
+               "lines": ["8"]
+               }, {
+               "name": "Saint-Sébastien-Froissart",
+               "address": "Filles du Calvaire (6 boulevard des) - 75103",
+               "position": {
+               "lat": 48.86097499718719,
+               "long": 2.3672622950229414
+               },
+               "lines": ["8"]
+               }, {
+               "name": "Filles du Calvaire",
+               "address": "Temple (2 boulevard du) - 75103",
+               "position": {
+               "lat": 48.86307817635541,
+               "long": 2.36674588358473
+               },
+               "lines": ["8"]
+               }, {
+               "name": "Chemin Vert",
+               "address": "Beaumarchais (61 boulevard) - 75103",
+               "position": {
+               "lat": 48.85758654446453,
+               "long": 2.3680366949483758
+               },
+               "lines": ["8"]
+               }, {
+               "name": "Ledru-Rollin",
+               "address": "Ledru Rollin (87 rue) - 75112",
+               "position": {
+               "lat": 48.85119416536367,
+               "long": 2.3759317370128947
+               },
+               "lines": ["8"]
+               }, {
+               "name": "Bonne Nouvelle",
+               "address": "Poissonnière (8 boulevard) - 75109",
+               "position": {
+               "lat": 48.87057675358199,
+               "long": 2.348494293710928
+               },
+               "lines": ["8", "9"]
+               }, {
+               "name": "Grands Boulevards",
+               "address": "Poissonnière (32 boulevard) - 75109",
+               "position": {
+               "lat": 48.87157474359305,
+               "long": 2.3428950319846593
+               },
+               "lines": ["8", "9"]
+               }, {
+               "name": "Richelieu-Drouot",
+               "address": "Italiens (3 boulevard des) - 75109",
+               "position": {
+               "lat": 48.87200623896137,
+               "long": 2.339911390610416
+               },
+               "lines": ["8", "9"]
+               }, {
+               "name": "Porte de Charenton",
+               "address": "Poniatowsky (68 boulevard, angle avec la rue Ferdinand-de-Béhagle) - 75112",
+               "position": {
+               "lat": 48.83266034648216,
+               "long": 2.4004636384497804
+               },
+               "lines": ["8"]
+               }, {
+               "name": "Liberté",
+               "address": "Paris (150 rue de) - 94018",
+               "position": {
+               "lat": 48.82563711172796,
+               "long": 2.4074108054261223
+               },
+               "lines": ["8"]
+               }, {
+               "name": "Porte Dorée",
+               "address": "Poniatowsky (95 boulevard) - 75112",
+               "position": {
+               "lat": 48.83549725282465,
+               "long": 2.4061852122149348
+               },
+               "lines": ["8"]
+               }, {
+               "name": "Maisons-Alfort-Stade",
+               "address": "Général Leclerc (26/28 avenue du) - 94046",
+               "position": {
+               "lat": 48.809198,
+               "long": 2.434271
+               },
+               "lines": ["8"]
+               }, {
+               "name": "République",
+               "address": "Voltaire (1 boulevard, en face) - 75111",
+               "position": {
+               "lat": 48.86767151899055,
+               "long": 2.363329120776082
+               },
+               "lines": ["3", "5","8", "9", "11"]
+               }, {
+               "name": "Charenton-Ecoles",
+               "address": "Paris (91 rue de) - 94018",
+               "position": {
+               "lat": 48.821489819145576,
+               "long": 2.4138567623311062
+               },
+               "lines": ["8"]
+               }, {
+               "name": "Strasbourg-Saint-Denis",
+               "address": "Saint-Denis (9 rue, 114 boulevard de Sébastopol) - 75102",
+               "position": {
+               "lat": 48.869380780106006,
+               "long": 2.3540796521963494
+               },
+               "lines": ["8", "9"]
+               }, {
+               "name": "Ecole Vétérinaire de Maisons-Alfort",
+               "address": "General Leclerc (avenue du, cote pair) - 94046",
+               "position": {
+               "lat": 48.81507632012976,
+               "long": 2.4216317667306635
+               },
+               "lines": ["8"]
+               }, {
+               "name": "Invalides",
+               "address": "Université (rue de l') - 75107",
+               "position": {
+               "lat": 48.86109346762053,
+               "long": 2.3146433553464374
+               },
+               "lines": ["8", "13"]
+               }, {
+               "name": "Balard",
+               "address": "Victor (8 boulevard, angle avec l'avenue de la Porte de Sèvres côté pair) - 75115",
+               "position": {
+               "lat": 48.836814988805976,
+               "long": 2.2786833464502703
+               },
+               "lines": ["8"]
+               }, {
+               "name": "Créteil-L'Echat (Hôpital Henri Mondor)",
+               "address": "Eiffel (13 rue) - 94028",
+               "position": {
+               "lat": 48.79660129757846,
+               "long": 2.4495315243760767
+               },
+               "lines": ["8"]
+               }, {
+               "name": "Créteil-Université",
+               "address": "Ferdinand de Lesseps (rue, université et mail des Mêches) - 94028",
+               "position": {
+               "lat": 48.78972431608003,
+               "long": 2.450836106390663
+               },
+               "lines": ["8"]
+               },
+               {
+               "name": "Maisons-Alfort-Les Juilliottes",
+               "address": "Louis Pergaud (2 rue) - 94046",
+               "position": {
+               "lat": 48.80250044183061,
+               "long": 2.4461836185594534
+               },
+               "lines": ["8"]
+               },
+               {
+               "name": "Lourmel",
+               "address": "Félix Faure (41 avenue) - 75115",
+               "position": {
+               "lat": 48.83866812903008,
+               "long": 2.2822484883840986
+               },
+               "lines": ["8"]
+               },
+               {
+               "name": "Opéra",
+               "address": "Scribe (6 rue, angle avec le 2 rue Auber) - 75109",
+               "position": {
+               "lat": 48.87063108014849,
+               "long": 2.331737048361137
+               },
+               "lines": ["3","7","8"]
+               },
+               {
+               "name": "Madeleine",
+               "address": "Tronchet (2 rue, 3 rue Tronchet) - 75108",
+               "position": {
+               "lat": 48.86950712762907,
+               "long": 2.324680199591515
+               },
+               "lines": ["8", "12", "14"]
+               },
+               {
+               "name": "Créteil-Préfecture (Hôtel de Ville)",
+               "address": "Mont Mesly - 94028",
+               "position": {
+               "lat": 48.779757257844594,
+               "long": 2.4593142910788286
+               },
+               "lines": ["8"]
+               }, {
+               "name": "Maubert-Mutualité",
+               "address": "Saint-Germain (62 boulevard) - 75105",
+               "position": {
+               "lat": 48.849716940163574,
+               "long": 2.348925558491872
+               },
+               "lines": ["10"]
+               }, {
+               "name": "Sèvres-Babylone",
+               "address": "Velpeau (rue, face au Bon Marché) - 75107",
+               "position": {
+               "lat": 48.85093928843075,
+               "long": 2.3261146548222844
+               },
+               "lines": ["10", "12"]
+               }, {
+               "name": "Michel-Ange-Auteuil",
+               "address": "Auteuil (55 rue d', angle avec le 1 rue Michel-Ange) - 75116",
+               "position": {
+               "lat": 48.847933946139044,
+               "long": 2.2648350771736747
+               },
+               "lines": ["9", "10"]
+               }, {
+               "name": "Vaneau",
+               "address": "Sèvres (97 rue de) - 75107",
+               "position": {
+               "lat": 48.84870084962003,
+               "long": 2.321239881938573
+               },
+               "lines": ["10"]
+               }, {
+               "name": "Eglise d'Auteuil",
+               "address": "Wilhem (20 rue) - 75116",
+               "position": {
+               "lat": 48.847883216579156,
+               "long": 2.270295892634314
+               },
+               "lines": ["10"]
+               }, {
+               "name": "Ségur",
+               "address": "Suffren (156 avenue de) - 75115",
+               "position": {
+               "lat": 48.84686470206919,
+               "long": 2.307268847578926
+               },
+               "lines": ["10"]
+               }, {
+               "name": "Javel-André-Citroen",
+               "address": "Emile Zola (2 avenue, 1 rue Emile Zola) - 75115",
+               "position": {
+               "lat": 48.84596388048408,
+               "long": 2.2778151263537714
+               },
+               "lines": ["10"]
+               }, {
+               "name": "Boulogne-Jean-Jaurès",
+               "address": "Jean Jaurès (23 boulevard) - 92012",
+               "position": {
+               "lat": 48.84228014352973,
+               "long": 2.238862975367271
+               },
+               "lines": ["10"]
+               },
+               {
+               "name": "Duroc",
+               "address": "Sèvres (88 rue de) - 75107",
+               "position": {
+               "lat": 48.846848768895974,
+               "long": 2.3169373108340854
+               },
+               "lines": ["10", "13"]
+               }, {
+               "name": "Cluny-La Sorbonne",
+               "address": "100 Boulevard Saint-Germain - 75105",
+               "position": {
+               "lat": 48.85079575570429,
+               "long": 2.3450308883652258
+               },
+               "lines": ["10"]
+               }, {
+               "name": "Mirabeau",
+               "address": "Versailles (63 avenue de) - 75116",
+               "position": {
+               "lat": 48.847084858904864,
+               "long": 2.273074914922012
+               },
+               "lines": ["10"]
+               }, {
+               "name": "Michel-Ange-Molitor",
+               "address": "Molitor (34 rue, angle avec le 37 rue Michel-Ange) - 75116",
+               "position": {
+               "lat": 48.84498448667992,
+               "long": 2.26232003903747
+               },
+               "lines": ["9", "10"]
+               }, {
+               "name": "Cardinal-Lemoine",
+               "address": "Monge (28 rue) - 75105",
+               "position": {
+               "lat": 48.84670586906026,
+               "long": 2.351335178972595
+               },
+               "lines": ["10"]
+               }, {
+               "name": "Mabillon",
+               "address": "Four (13 rue du) - 75106",
+               "position": {
+               "lat": 48.85284513365445,
+               "long": 2.335143718516068
+               },
+               "lines": ["10"]
+               }, {
+               "name": "Porte d'Auteuil",
+               "address": "Murat (5 boulevard) - 75116",
+               "position": {
+               "lat": 48.84822598041119,
+               "long": 2.257698885660922
+               },
+               "lines": ["10"]
+               }, {
+               "name": "Odéon",
+               "address": "Saint-Germain (93 boulevard, rue de l'Ecole de Médecine) - 75106",
+               "position": {
+               "lat": 48.85231488119486,
+               "long": 2.338861720336335
+               },
+               "lines": ["10"]
+               }, {
+               "name": "Avenue Emile-Zola",
+               "address": "Emile Zola (154 avenue) - 75115",
+               "position": {
+               "lat": 48.846852151949776,
+               "long": 2.2954488279344742
+               },
+               "lines": ["10"]
+               }, {
+               "name": "Boulogne Pont de Saint-Cloud",
+               "address": "Reine (135 route de la) - 92012",
+               "position": {
+               "lat": 48.84068016312195,
+               "long": 2.228313661724341
+               },
+               "lines": ["10"]
+               }, {
+               "name": "Charles Michels",
+               "address": "Entrepreneurs (36 rue des) - 75115",
+               "position": {
+               "lat": 48.8463629755008,
+               "long": 2.2856310658828742
+               },
+               "lines": ["10"]
+               }, {
+               "name": "Chardon-Lagache",
+               "address": "Chardon Lagache (11 rue) - 75116",
+               "position": {
+               "lat": 48.845104139567006,
+               "long": 2.266936059032254
+               },
+               "lines": ["10"]
+               }, {
+               "name": "Saint-Philippe du Roule",
+               "address": "Franklin D. Roosevelt (71 avenue, angle avec le 73 rue de la BoÍtie) - 75108",
+               "position": {
+               "lat": 48.8724706657937,
+               "long": 2.310769101230354
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Ranelagh",
+               "address": "Mozart (48 avenue, angle avec le 97 rue de Ranelagh) - 75116",
+               "position": {
+               "lat": 48.85550440300199,
+               "long": 2.269959178255765
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Alma-Marceau",
+               "address": "Président Wilson (4 avenue du) - 75116",
+               "position": {
+               "lat": 48.86429867104669,
+               "long": 2.301251410449929
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Robespierre",
+               "address": "Paris (185 rue de) - 93048",
+               "position": {
+               "lat": 48.855680808196944,
+               "long": 2.423659085483019
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Trocadéro",
+               "address": "Trocadéro et Onze-Novembre (place du, avenue Paul Doumer) - 75116",
+               "position": {
+               "lat": 48.8630891350352,
+               "long": 2.286840378494593
+               },
+               "lines": ["9"]
+               }, {
+               "name": "La Muette",
+               "address": "Mozart (5 avenue) - 75116",
+               "position": {
+               "lat": 48.85809504968323,
+               "long": 2.274096448110612
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Exelmans",
+               "address": "Exelmans (73 boulevard, angle avec le 64 rue Michel-Ange) - 75116",
+               "position": {
+               "lat": 48.84290697853592,
+               "long": 2.260144397880895
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Voltaire (Léon Blum)",
+               "address": "Voltaire (130 boulevard) - 75111",
+               "position": {
+               "lat": 48.85766372576006,
+               "long": 2.380036296795506
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Jasmin",
+               "address": "Mozart (85 avenue, angle avec le 47 rue Ribera) - 75116",
+               "position": {
+               "lat": 48.852438519222666,
+               "long": 2.267933923000950
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Mairie de Montreuil",
+               "address": "Rouget de l'Isle (1 boulevard) - 93048",
+               "position": {
+               "lat": 48.862280986339,
+               "long": 2.441827679127713
+               },
+               "lines": ["9"]
+               },
+               {
+               "name": "Billancourt",
+               "address": "Général Leclerc (88 bis avenue du) - 92012",
+               "position": {
+               "lat": 48.832087644282545,
+               "long": 2.238160776875514
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Porte de Saint-Cloud",
+               "address": "Porte de Saint-Cloud (place de la, angle avec le 98 boulevard Murat) - 75116",
+               "position": {
+               "lat": 48.837565334473624,
+               "long": 2.255591274447898
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Croix-de-Chavaux (Jacques Duclos)",
+               "address": "Paul Langevin (1 avenue) - 93048",
+               "position": {
+               "lat": 48.857999073258,
+               "long": 2.435866895674707
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Porte de Montreuil",
+               "address": "Porte de Montreuil (4 avenue de la) - 75120",
+               "position": {
+               "lat": 48.85337987781381,
+               "long": 2.410458187416353
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Miromesnil",
+               "address": "Percier (1 avenue, angle avec le 42 rue de la BoÍtie) - 75108",
+               "position": {
+               "lat": 48.87353214061607,
+               "long": 2.315578024866189
+               },
+               "lines": ["9", "13"]
+               }, {
+               "name": "Porte de Saint-Cloud",
+               "address": "Porte de Saint-Cloud (place de la, angle avec le 98 boulevard Murat) - 75116",
+               "position": {
+               "lat": 48.837565334473624,
+               "long": 2.255591274447898
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Saint-Augustin",
+               "address": "Haussmann (87 boulevard) - 75108",
+               "position": {
+               "lat": 48.87438676021276,
+               "long": 2.320727831964731
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Maraichers",
+               "address": "Pyrénées (67 bis rue des, en face) - 75120",
+               "position": {
+               "lat": 48.8526004024001,
+               "long": 2.406384989566139
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Buzenval",
+               "address": "Buzenval (51 rue de, angle avec le 35 rue d'Avron) - 75120",
+               "position": {
+               "lat": 48.851767474505195,
+               "long": 2.401181483872644
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Marcel Sembat",
+               "address": "Victor Hugo (123 avenue, angle avec le 108 avenue Edouard Vaillant) - 92012",
+               "position": {
+               "lat": 48.833808586980275,
+               "long": 2.243480614417395
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Oberkampf",
+               "address": "Voltaire (43 boulevard) - 75111",
+               "position": {
+               "lat": 48.86429994393239,
+               "long": 2.368762652800585
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Charonne",
+               "address": "Voltaire (188 boulevard) - 75111",
+               "position": {
+               "lat": 48.85464204744478,
+               "long": 2.385032193334828
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Rue des Boulets",
+               "address": "Voltaire (232 boulevard) - 75111",
+               "position": {
+               "lat": 48.8522227131835,
+               "long": 2.389115650927187
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Rue de la Pompe (Avenue Georges Mandel)",
+               "address": "Georges Mandel (56 avenue, angle avec le 86 rue de la Pompe) - 75116",
+               "position": {
+               "lat": 48.864253384403426,
+               "long": 2.277916762028845
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Havre-Caumartin",
+               "address": "Haussmann (boulevard, côté pair et vers la rue Caumartin) - 75109",
+               "position": {
+               "lat": 48.873425976534854,
+               "long": 2.328970973296564
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Pont de Sèvres",
+               "address": "Pont de Sèvres (204 rond-point du) - 92012",
+               "position": {
+               "lat": 48.829690338022736,
+               "long": 2.230528434192334
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Iéna",
+               "address": "Iéna (7 place d', angle avec le 10 avenue d'Iéna) - 75116",
+               "position": {
+               "lat": 48.864350199647255,
+               "long": 2.294045263783090
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Maraichers",
+               "address": "Pyrénées (67 bis rue des, en face) - 75120",
+               "position": {
+               "lat": 48.8526004024001,
+               "long": 2.406384989566139
+               },
+               "lines": ["9"]
+               }, {
+               "name": "Saint-Ambroise",
+               "address": "Voltaire (86 boulevard) - 75111",
+               "position": {
+               "lat": 48.86164742429928,
+               "long": 2.373147140772303
+               },
+               "lines": ["9"]
+               },
+               {
+               "name": "Jourdain",
+               "address": "Palestine (2 rue de) - 75120",
+               "position": {
+               "lat": 48.87524829462498,
+               "long": 2.389329434152641
+               },
+               "lines": ["11"]
+               },
+               {
+               "name": "Place des Fêtes",
+               "address": "Fêtes (place des, rue Compans) - 75119",
+               "position": {
+               "lat": 48.87672946890669,
+               "long": 2.393146031767842
+               },
+               "lines": ["11", "7B"]
+               },
+               {
+               "name": "Goncourt (Hôpital Saint-Louis)",
+               "address": "Parmentier (152 avenue) - 75110",
+               "position": {
+               "lat": 48.87001535524704,
+               "long": 2.3707687990214654
+               },
+               "lines": ["11"]
+               },
+               {
+               "name": "Pyrenees",
+               "address": "Simon Bolivar (4 avenue) - 75120",
+               "position": {
+               "lat": 48.87382117233675,
+               "long": 2.384886372197903
+               },
+               "lines": ["11"]
+               }, {
+               "name": "Porte des Lilas",
+               "address": "Sérurier (Boulevard) - 75120",
+               "position": {
+               "lat": 48.87723471669558,
+               "long": 2.4065268430480917
+               },
+               "lines": ["11"]
+               },
+               {
+               "name": "Rambuteau",
+               "address": "Grenier Saint-Lazare (3 rue) - 75104",
+               "position": {
+               "lat": 48.86119339564163,
+               "long": 2.3532869598707133
+               },
+               "lines": ["11"]
+               },
+               {
+               "name": "Mairie des Lilas",
+               "address": "Liberté (2 boulevard de la) - 93045",
+               "position": {
+               "lat": 48.880051061772676,
+               "long": 2.415660206064229
+               },
+               "lines": ["11"]
+               }, {
+               "name": "Telegraphe",
+               "address": "Belleville (rue de) - 75120",
+               "position": {
+               "lat": 48.87552244924565,
+               "long": 2.3986765111449513
+               },
+               "lines": ["11"]
+               },
+               {
+               "name": "Sentier",
+               "address": "Réaumur (97 rue) - 75102",
+               "position": {
+               "lat": 48.8673503814313,
+               "long": 2.3475672354150805
+               },
+               "lines": ["3"]
+               },{
+               "name": "Wagram",
+               "address": "Villiers (74 avenue de) - 75117",
+               "position": {
+               "lat": 48.884025,
+               "long": 2.303726
+               },
+               "lines": ["3"]
+               },{
+               "name": "Saint-Lazare",
+               "address": "Saint-Lazare (97 rue) - 75108",
+               "position": {
+               "lat": 48.875718,
+               "long": 2.324566
+               },
+               "lines": ["3", "12", "13", "14"]
+               },
+               {
+               "name": "Temple",
+               "address": "Temple (rue du, angle avec la rue Turbigo) - 75103",
+               "position": {
+               "lat": 48.866764167814516,
+               "long": 2.3615713270327316
+               },
+               "lines": ["3"]
+               },
+               {
+               "name": "Vavin",
+               "address": "Montparnasse (108 boulevard du) - 75106",
+               "position": {
+               "lat": 48.84205985758205,
+               "long": 2.328867050437212
+               },
+               "lines": ["4"]
+               },
+               {
+               "name": "Saint-Sulpice",
+               "address": "Rennes (69 rue de) - 75106",
+               "position": {
+               "lat": 48.8511463550549,
+               "long": 2.3309628563664644
+               },
+               "lines": ["4"]
+               },
+               {
+               "name": "Saint-Placide",
+               "address": "Rennes (127 rue de, angle avec le 81 rue Notre-Dame des Champs) - 75106",
+               "position": {
+               "lat": 48.84701184016864,
+               "long": 2.327055111355132
+               },
+               "lines": ["4"]
+               },
+               {
+               "name": "Réaumur-Sébastopol",
+               "address": "Saint-Denis (182 rue) - 75102",
+               "position": {
+               "lat": 48.86604666963103,
+               "long": 2.352620954015186
+               },
+               "lines": ["3","4"]
+               },{
+               "name": "Saint-Germain des Prés",
+               "address": "Saint-Germain (168 bis boulevard) - 75106",
+               "position": {
+               "lat": 48.85344723773834,
+               "long": 2.333046326044867
+               },
+               "lines": ["4"]
+               },{
+               "name": "Saint-Marcel",
+               "address": "Hôpital (boulevard de l', côté impair Salpêtrières) - 75113",
+               "position": {
+               "lat": 48.83944227892068,
+               "long": 2.3616402141234345
+               },
+               "lines": ["5"]
+               },{
+               "name": "Sèvres-Lecourbe",
+               "address": "Garibaldi (terre-plein face au 94 boulevard) - 75115",
+               "position": {
+               "lat": 48.838878378565504,
+               "long": 2.330678419288263
+               },
+               "lines": ["6"]
+               },{
+               "name": "Raspail",
+               "address": "Raspail (234 boulevard, 1 boulevard Edgar Quinet) - 75114",
+               "position": {
+               "lat": 48.839003,
+               "long": 2.330733
+               },
+               "lines": ["4","6"]
+               },{
+               "name": "Montparnasse-Bienvenue",
+               "address": "Raoul Dautry (place, SNCF Montparnasse) - 75114",
+               "position": {
+               "lat": 48.84187033630407,
+               "long": 2.3212283740035646
+               },
+               "lines": ["4","6","12","13"]
+               },
+               {
+               "name": "Saint-Jacques",
+               "address": "Saint-Jacques (terre-plein face au 46 boulevard) - 75114",
+               "position": {
+               "lat": 48.83299169177581,
+               "long": 2.3366828966443496
+               },
+               "lines": ["6"]
+               },{
+               "name": "Villejuif-Paul Vaillant Couturier (Hôpital Paul Brousse)",
+               "address": "Maxime Gorky (boulevard, côté pair) - 94076",
+               "position": {
+               "lat": 48.79599413239317,
+               "long": 2.3682314519156806
+               },
+               "lines": ["7"]
+               },{
+               "name": "Villejuif-Louis Aragon",
+               "address": "Maxime Gorky (boulevard, gare routière) - 94076",
+               "position": {
+               "lat": 48.786638011119834,
+               "long": 2.367110527381649
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Villejuif-Léo Lagrange",
+               "address": "Paris (53 avenue de) - 94076",
+               "position": {
+               "lat": 48.80376966328267,
+               "long": 2.3639093063890435
+               },
+               "lines": ["7"]
+               },{
+               "name": "Tolbiac",
+               "address": "Italie (76 avenue d') - 75113",
+               "position": {
+               "lat": 48.82615945391136,
+               "long": 2.3570194661891253
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Sully-Morland",
+               "address": "Henri IV (8 boulevard) - 75104",
+               "position": {
+               "lat": 48.85079359474211,
+               "long": 2.3612369937142983
+               },
+               "lines": ["7"]
+               },{
+               "name": "Pernéty",
+               "address": "Raymond Losserand (72 rue) - 75114",
+               "position": {
+               "lat": 48.833933819810916,
+               "long": 2.31790897216328
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "Plaisance",
+               "address": "Alésia (211 rue d', 136 rue Raymond Losserand) - 75114",
+               "position": {
+               "lat": 48.83175809378841,
+               "long": 2.3138665498481625
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "Carrefour-Pleyel",
+               "address": "Boulevard Ornano - 93066",
+               "position": {
+               "lat": 48.9199435050834,
+               "long": 2.3439094197858905
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "Gabriel-Péri",
+               "address": "Gare routière - 92004",
+               "position": {
+               "lat": 48.916574835983226,
+               "long": 2.2943289646870606
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "Gaité",
+               "address": "Maine (avenue du, côté pair vers l'hôpital Léopol Bellan) - 75114",
+               "position": {
+               "lat": 48.838751821388634,
+               "long": 2.322509186224712
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "Saint-Denis-Universite",
+               "address": "Gare Routiere - 93066",
+               "position": {
+               "lat": 48.94611087248738,
+               "long": 2.3620451929905992
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "Brochant",
+               "address": "Brochant (47 rue, 129 avenue de Clichy) - 75117",
+               "position": {
+               "lat": 48.89062663302413,
+               "long": 2.320191121275328
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "Varenne",
+               "address": "Invalides (13 boulevard des,  côté du ministère du Travail) - 75107",
+               "position": {
+               "lat": 48.85639306919846,
+               "long": 2.3147543648102884
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "Malakoff-Plateau de Vanves",
+               "address": "Jean Bleuzen (85 rue) - 92020",
+               "position": {
+               "lat": 48.8224426939998,
+               "long": 2.2979321053287274
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "Mairie de Saint-Ouen",
+               "address": "République (place de la, mairie) - 93070",
+               "position": {
+               "lat": 48.91162168038383,
+               "long": 2.3337369648420916
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "Porte de Vanves",
+               "address": "Brune (9 boulevard) - 75114",
+               "position": {
+               "lat": 48.82776532658967,
+               "long": 2.3043123507630607
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "Garibaldi",
+               "address": "Gabriel Péri (avenue, rue Garibaldi) - 93070",
+               "position": {
+               "lat": 48.906382164226436,
+               "long": 2.3319104734589318
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "Porte de Saint-Ouen",
+               "address": "Saint-Ouen (153 avenue de) - 75118",
+               "position": {
+               "lat": 48.89751173277147,
+               "long": 2.329021647212208
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "Saint-Denis-Porte de Paris",
+               "address": "Légion d'Honneur (rue de la) - 93066",
+               "position": {
+               "lat": 48.92992666527093,
+               "long": 2.3561861491888694
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "Basilique de Saint-Denis",
+               "address": "Place du Cacquet - 93066",
+               "position": {
+               "lat": 48.936477492650496,
+               "long": 2.3596397453045825
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "Saint-Francois-Xavier",
+               "address": "Avenue de Villars - 75107",
+               "position": {
+               "lat": 48.8509825598235,
+               "long": 2.31442986460027
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "Malakoff-Rue Etienne Dolet",
+               "address": "Guy Môquet (87 rue) - 92020",
+               "position": {
+               "lat": 48.81470406056698,
+               "long": 2.2972847301706394
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "Les Agnettes",
+               "address": "Angle rue des Bas / Rue Louis Calmel - 92004",
+               "position": {
+               "lat": 48.92291633150906,
+               "long": 2.285963896576634
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "Asnieres-Gennevilliers Les Courtilles",
+               "address": "Angle Boulevard Pierre de Coubertin / Avenue Lucien Lanternier - 92004",
+               "position": {
+               "lat": 48.93029362287076,
+               "long": 2.2837606331952487
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "Guy-Môquet",
+               "address": "Saint-Ouen (86 avenue de) - 75118",
+               "position": {
+               "lat": 48.893009056051206,
+               "long": 2.3274958394904894
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "Liège",
+               "address": "Liège (terre-plein face au 21 rue de) - 75108",
+               "position": {
+               "lat": 48.87953716638082,
+               "long": 2.3268579472729614
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "Mairie de Clichy",
+               "address": "Martre (90 rue, 11 et 14 rue Landy) - 92024",
+               "position": {
+               "lat": 48.90400543242958,
+               "long": 2.3053681208668606
+               },
+               "lines": ["13"]
+               },
+               
+               {
+               "name": "Châtillon Montrouge",
+               "address": "République (220 avenue de la) - 92020",
+               "position": {
+               "lat": 48.810283363510756,
+               "long": 2.3012888709759522
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "La Fourche",
+               "address": "Clichy (66 avenue de, 6 avenue de Saint-Ouen) - 75117",
+               "position": {
+               "lat": 48.8874368425293,
+               "long": 2.3257252220174083
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "Porte de Clichy",
+               "address": "Porte de Clichy (2 avenue de la) - 75117",
+               "position": {
+               "lat": 48.894436060297956,
+               "long": 2.313565665465226
+               },
+               "lines": ["13"]
+               },
+               {
+               "name": "Pyramides",
+               "address": "Rue de l'Echelle - 75101",
+               "position": {
+               "lat": 48.86661383061701,
+               "long": 2.3344075309487886
+               },
+               "lines": ["14", "7"]
+               },
+               {
+               "name": "Cour Saint-Emilion",
+               "address": "Cour Chamonard - 75112",
+               "position": {
+               "lat": 48.83331371557845,
+               "long": 2.387299704383512
+               },
+               "lines": ["14"]
+               },
+               {
+               "name": "Bibliothèque-François Mitterrand",
+               "address": "Face au 62 rue du Chevaleret - 75113",
+               "position": {
+               "lat": 48.829830695271106,
+               "long": 2.376120009344837
+               },
+               "lines": ["14"]
+               },
+               {
+               "name": "Olympiades",
+               "address": "Rue de Tolbiac - 75113",
+               "position": {
+               "lat": 48.82694828196076,
+               "long": 2.367038433387592
+               },
+               "lines": ["14"]
+               },
+               {
+               "name": "Alésia",
+               "address": "Maine (230 avenue du) - 75114",
+               "position": {
+               "lat": 48.82806601968645,
+               "long": 2.326827420050836
+               },
+               "lines": ["4"]
+               },
+               {
+               "name": "Anatole-France",
+               "address": "Général Leclerc (place, côté pair et rue Anatole France et rue Voltaire) - 92044",
+               "position": {
+               "lat": 48.892018626328884,
+               "long": 2.2855174447944844
+               },
+               "lines": ["3"]
+               },
+               {
+               "name": "Arts-et-Métiers",
+               "address": "Vertus (rue des) - 75103",
+               "position": {
+               "lat": 48.865551863634785,
+               "long": 2.356108155120312
+               },
+               "lines": ["3", "11"]
+               },
+               {
+               "name": "Aubervilliers Pantin (4 Chemins)",
+               "address": "République (144 avenue de la) - 93001",
+               "position": {
+               "lat": 48.903898047529474,
+               "long": 2.3924800786724747
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Barbès-Rochechouart",
+               "address": "Rochechouart (2 boulevard de, vers le boulevard Barbès) - 75109",
+               "position": {
+               "lat": 48.883931769934414,
+               "long": 2.3493557085996466
+               },
+               "lines": ["2", "4"]
+               },
+               {
+               "name": "Bel-Air",
+               "address": "Picpus (34 boulevard de) - 75112",
+               "position": {
+               "lat": 48.84217782647567,
+               "long": 2.4011424343057484
+               },
+               "lines": ["6"]
+               },
+               {
+               "name": "Bercy",
+               "address": "Place du Bataillon du Pacifique - 75112",
+               "position": {
+               "lat": 48.84019224440348,
+               "long": 2.3794772572660587
+               },
+               "lines": ["6", "14"]
+               },
+               {
+               "name": "Bir-Hakeim (Grenelle)",
+               "address": "Nélaton (rue) - 75115",
+               "position": {
+               "lat": 48.854327218552356,
+               "long": 2.2888101037361173
+               },
+               "lines": ["6"]
+               },
+               {
+               "name": "Bobigny-Pablo-Picasso",
+               "address": "Préfecture Trésorerie - 93008",
+               "position": {
+               "lat": 48.907147312551565,
+               "long": 2.44945750453114
+               },
+               "lines": ["5"]
+               },
+               {
+               "name": "Bobigny-Pantin (Raymond Queneau)",
+               "address": "Paris (7 rue de, Bobigny Bus) - 93008",
+               "position": {
+               "lat": 48.895799232549,
+               "long": 2.4248572983975945
+               },
+               "lines": ["5"]
+               },
+               {
+               "name": "Boissière",
+               "address": "Kléber (57 avenue) - 75116",
+               "position": {
+               "lat": 48.86685615476034,
+               "long": 2.2900380734450088
+               },
+               "lines": ["6"]
+               },
+               {
+               "name": "Bourse",
+               "address": "Notre-Dame des Victoires (rue) - 75102",
+               "position": {
+               "lat": 48.86876179259638,
+               "long": 2.3406741288121005
+               },
+               "lines": ["3"]
+               },
+               {
+               "name": "Bréguet-Sabin",
+               "address": "Richard Lenoir (21 boulevard) - 75111",
+               "position": {
+               "lat": 48.856767949540505,
+               "long": 2.3707738583843816
+               },
+               "lines": ["5"]
+               },
+               {
+               "name": "Cadet",
+               "address": "La Fayette (terre-plein face au 65 rue) - 75109",
+               "position": {
+               "lat": 48.875825718038186,
+               "long": 2.343345124573273
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Cambronne",
+               "address": "Garibaldi (terre-plein face au 2 boulevard, côté pair) - 75115",
+               "position": {
+               "lat": 48.8476991081708,
+               "long": 2.302039143669263
+               },
+               "lines": ["6"]
+               },
+               {
+               "name": "Campo-Formio",
+               "address": "Hôpital (106/112 boulevard de l') - 75113",
+               "position": {
+               "lat": 48.835551216675434,
+               "long": 2.358752095191401
+               },
+               "lines": ["5"]
+               },
+               {
+               "name": "Censier-Daubenton",
+               "address": "Monge (96 rue) - 75105",
+               "position": {
+               "lat": 48.840594300001605,
+               "long": 2.351755612946688
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Château d'Eau",
+               "address": "Strasbourg (51/53 boulevard de) - 75110",
+               "position": {
+               "lat": 48.8724541509199,
+               "long": 2.3560561681302907
+               },
+               "lines": ["4"]
+               },
+               {
+               "name": "Château Rouge",
+               "address": "Château Rouge (48 place du) - 75118",
+               "position": {
+               "lat": 48.887086283050444,
+               "long": 2.3493700732513783
+               },
+               "lines": ["4"]
+               },
+               {
+               "name": "Château Landon",
+               "address": "Faubourg Saint-Martin (188 rue du) - 75110",
+               "position": {
+               "lat": 48.87845656683119,
+               "long": 2.3620537162488993
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Chaussée d'Antin (La Fayette)",
+               "address": "La Fayette (rue, face aux Galeries La Fayette) - 75109",
+               "position": {
+               "lat": 48.872985824665165,
+               "long": 2.33342622405285
+               },
+               "lines": ["7", "9"]
+               },
+               {
+               "name": "Chevaleret",
+               "address": "Vincent Auriol (terre-plein face au 79 boulevard) - 75113",
+               "position": {
+               "lat": 48.834578798425625,
+               "long": 2.366933899070918
+               },
+               "lines": ["6"]
+               },
+               {
+               "name": "Cité",
+               "address": "Louis Lepine (2 place) - 75104",
+               "position": {
+               "lat": 48.85568485028629,
+               "long": 2.3462029295287157
+               },
+               "lines": ["4"]
+               },
+               {
+               "name": "Corentin-Cariou",
+               "address": "Corentin Cariou (5 avenue) - 75119",
+               "position": {
+               "lat": 48.89468154198812,
+               "long": 2.382302193974242
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Crimée",
+               "address": "Flandre (117 rue de) - 75119",
+               "position": {
+               "lat": 48.89028877504466,
+               "long": 2.3767786489253644
+               },
+               "lines": ["7"]
+               }, {
+               "name": "Daumesnil (Félix Eboué)",
+               "address": "Reuilly (118 rue de) - 75112",
+               "position": {
+               "lat": 48.83937646312499,
+               "long": 2.3957880604156494
+               },
+               "lines": ["6", "8"]
+               },
+               {
+               "name": "Denfert-Rochereau",
+               "address": "Général Leclerc (4 avenue du, 2 rue Daguerre) - 75114",
+               "position": {
+               "lat": 48.83427681284463,
+               "long": 2.332203797304786
+               },
+               "lines": ["4", "6"]
+               },
+               {
+               "name": "Dugommier",
+               "address": "Reuilly (3 boulevard de, boulevard de Bercy) - 75112",
+               "position": {
+               "lat": 48.83887615167852,
+               "long": 2.3893473875702935
+               },
+               "lines": ["6"]
+               },
+               {
+               "name": "Dupleix",
+               "address": "Grenelle (terre-plein face au 65/68 boulevard de) - 75115",
+               "position": {
+               "lat": 48.850742650180216,
+               "long": 2.292463226824505
+               },
+               "lines": ["6"]
+               },
+               {
+               "name": "Edgar-Quinet",
+               "address": "Edgar Quinet (place, face au 11 boulevard Edgar Quinet) - 75114",
+               "position": {
+               "lat": 48.84056772620437,
+               "long": 2.326402815222764
+               },
+               "lines": ["6"]
+               },
+               {
+               "name": "Eglise de Pantin",
+               "address": "Jean Lolive (avenue, côté pair) - 93055",
+               "position": {
+               "lat": 48.89363252797401,
+               "long": 2.41290026603005
+               },
+               "lines": ["5"]
+               },
+               {
+               "name": "Etienne Marcel",
+               "address": "Turbigo (14 rue) - 75101",
+               "position": {
+               "lat": 48.86371036646956,
+               "long": 2.3489831961271017
+               },
+               "lines": ["4"]
+               },
+               {
+               "name": "Europe",
+               "address": "Madrid (1 rue de) - 75108",
+               "position": {
+               "lat": 48.87906043921274,
+               "long": 2.3229746324058937
+               },
+               "lines": ["3"]
+               },
+               {
+               "name": "Fort d'Aubervilliers",
+               "address": "Jean Jaurès (213 avenue) - 93001",
+               "position": {
+               "lat": 48.91405674514657,
+               "long": 2.403576334511007
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Gallieni (Parc de Bagnolet)",
+               "address": "Gare routière - 93006",
+               "position": {
+               "lat": 48.86326252650054,
+               "long": 2.415975368499958
+               },
+               "lines": ["3"]
+               },
+               {
+               "name": "Gambetta",
+               "address": "Père-Lachaise (avenue du, rue des Pyrénées) - 75120",
+               "position": {
+               "lat": 48.864953362603146,
+               "long": 2.398636747345926
+               },
+               "lines": ["3", "3B"]
+               },
+               {
+               "name": "Gare d'Austerlitz",
+               "address": "SNCF/RER C grandes lignes et banlieue - 75113",
+               "position": {
+               "lat": 48.84341422414371,
+               "long": 2.3641883928676424
+               },
+               "lines": ["5", "10"]
+               },
+               {
+               "name": "Gare de l'Est (Verdun)",
+               "address": "Strasbourg (terre plein face au 93 boulevard de) - 75110",
+               "position": {
+               "lat": 48.87669583602489,
+               "long": 2.3579925105504023
+               },
+               "lines": ["4", "5", "7"]
+               },
+               {
+               "name": "Gare du Nord",
+               "address": "Dunkerque (18 rue de, rue du Faubourg Saint-Denis) - 75110",
+               "position": {
+               "lat": 48.87974306422535,
+               "long": 2.3546008104722334
+               },
+               "lines": ["4", "5"]
+               },
+               {
+               "name": "Glacière",
+               "address": "Auguste Blanqui (terre-plein face au 124 boulevard) - 75113",
+               "position": {
+               "lat": 48.8308614053467,
+               "long": 2.344551433303418
+               },
+               "lines": ["6"]
+               },
+               {
+               "name": "Havre-Caumartin",
+               "address": "Haussmann (boulevard, côté pair et vers la rue Caumartin) - 75109",
+               "position": {
+               "lat": 48.8734618906704,
+               "long": 2.3284804844734768
+               },
+               "lines": ["3", "9"]
+               },
+               {
+               "name": "Hoche",
+               "address": "Jean Lolive (60 avenue, rue du Pré Saint-Gervais) - 93055",
+               "position": {
+               "lat": 48.891499383764256,
+               "long": 2.4031249606560765
+               },
+               "lines": ["5"]
+               },
+               {
+               "name": "Jacques-Bonsergent",
+               "address": "Magenta (30 boulevard de, place Jacques Bonsergent) - 75110",
+               "position": {
+               "lat": 48.87070082326957,
+               "long": 2.3605786355872773
+               },
+               "lines": ["5"]
+               },
+               {
+               "name": "Jaurès",
+               "address": "Villette (entrée sous viaduc face au 196 boulevard de la) - 75119",
+               "position": {
+               "lat": 48.88287621621258,
+               "long": 2.3705863361654225
+               },
+               "lines": ["2", "5", "7B"]
+               },
+               {
+               "name": "Jussieu",
+               "address": "Liné (39 rue) - 75105",
+               "position": {
+               "lat": 48.8459684322046,
+               "long": 2.3548073926942186
+               },
+               "lines": ["7", "10"]
+               },
+               {
+               "name": "Kléber",
+               "address": "Kléber (15 avenue) - 75116",
+               "position": {
+               "lat": 48.87130614908782,
+               "long": 2.2933310208962174
+               },
+               "lines": ["6"]
+               },
+               {
+               "name": "La Courneuve-8-Mai-1945",
+               "address": "Jean Jaurès (57 avenue) - 93027",
+               "position": {
+               "lat": 48.92051450668569,
+               "long": 2.410225779120198
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Laumière",
+               "address": "Laumière (43 avenue de) - 75119",
+               "position": {
+               "lat": 48.8849316105461,
+               "long": 2.379091246899838
+               },
+               "lines": ["5"]
+               }, {
+               "name": "Le Kremlin-Bicêtre",
+               "address": "Fontainebleau (92/96 avenue de) - 94043",
+               "position": {
+               "lat": 48.810385125129486,
+               "long": 2.3618306830911315
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Le Peletier",
+               "address": "Victoire (rue de la, angle avec la rue La Fayette) - 75109",
+               "position": {
+               "lat": 48.87496305802612,
+               "long": 2.3401567908492056
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Les Gobelins",
+               "address": "Gobelins (47 avenue des) - 75113",
+               "position": {
+               "lat": 48.83612743975252,
+               "long": 2.3520811178355734
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Les Halles",
+               "address": "Verrières (place des, Forum des Halles) - 75101",
+               "position": {
+               "lat": 48.862011970720516,
+               "long": 2.3464764519062062
+               },
+               "lines": ["4"]
+               },
+               {
+               "name": "Louis Blanc",
+               "address": "Faubourg Saint-Martin (234 rue du) - 75110",
+               "position": {
+               "lat": 48.88090042815109,
+               "long": 2.365107218264337
+               },
+               "lines": ["7", "7B"]
+               },
+               {
+               "name": "Louise Michel",
+               "address": "Louise Michel (30 rue) - 92044",
+               "position": {
+               "lat": 48.889269622246026,
+               "long": 2.2880551248039036
+               },
+               "lines": ["3"]
+               },
+               {
+               "name": "Mairie de Montrouge",
+               "address": "Rue Louis Rolland - 92049",
+               "position": {
+               "lat": 48.81846633711334,
+               "long": 2.319643218617825
+               },
+               "lines": ["4"]
+               },
+               {
+               "name": "Mairie d'Ivry",
+               "address": "Maurice Thorez (213 avenue) - 94041",
+               "position": {
+               "lat": 48.81121453549021,
+               "long": 2.383508928732683
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Maison Blanche",
+               "address": "Italie (162 avenue d') - 75113",
+               "position": {
+               "lat": 48.82287877506322,
+               "long": 2.358079894290851
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Malesherbes",
+               "address": "Villiers (48 avenue de, Musée Henner) - 75117",
+               "position": {
+               "lat": 48.88253647289218,
+               "long": 2.311009243005514
+               },
+               "lines": ["3"]
+               },
+               {
+               "name": "Marcadet-Poissonniers",
+               "address": "Poissonniers (69 rue des) - 75118",
+               "position": {
+               "lat": 48.891543930630554,
+               "long": 2.3493711153819112
+               },
+               "lines": ["4", "12"]
+               },
+               {
+               "name": "Mouton-Duvernet",
+               "address": "Général Leclerc (42 avenue du) - 75114",
+               "position": {
+               "lat": 48.832191599269656,
+               "long": 2.3304069926293205
+               },
+               "lines": ["4"]
+               },
+               {
+               "name": "Nationale",
+               "address": "Vincent Auriol (terre-plein face au 124/143 boulevard) - 75113",
+               "position": {
+               "lat": 48.832881288678834,
+               "long": 2.3619094080161975
+               },
+               "lines": ["6"]
+               },
+               {
+               "name": "Ourcq",
+               "address": "Jean Jaurès (161 avenue, rue des Ardennes) - 75119",
+               "position": {
+               "lat": 48.886618792376986,
+               "long": 2.3854841363848798
+               },
+               "lines": ["5"]
+               },
+               {
+               "name": "Parmentier",
+               "address": "République (48 avenue de la, 87 avenue Parmentier) - 75111",
+               "position": {
+               "lat": 48.86525985667316,
+               "long": 2.3747570817167682
+               },
+               "lines": ["3"]
+               },
+               {
+               "name": "Passy",
+               "address": "Alboni (rue d', square d'Alboni) - 75116",
+               "position": {
+               "lat": 48.857534382513876,
+               "long": 2.28559270581709
+               },
+               "lines": ["6"]
+               },
+               {
+               "name": "Pelleport",
+               "address": "Paul Signac (place, en face du 125 avenue Gambetta) - 75120",
+               "position": {
+               "lat": 48.868223442716754,
+               "long": 2.401147279604314
+               },
+               "lines": ["3B"]
+               },
+               {
+               "name": "Péreire",
+               "address": "Courcelles (184 rue de, angle avec le105 avenue de Villiers) - 75117",
+               "position": {
+               "lat": 48.8850310612536,
+               "long": 2.2971351115061647
+               },
+               "lines": ["3"]
+               },
+               {
+               "name": "Picpus",
+               "address": "Saint-Mandé (46 avenue de) - 75112",
+               "position": {
+               "lat": 48.84532311461395,
+               "long": 2.4017863137606863
+               },
+               "lines": ["6"]
+               },
+               {
+               "name": "Pierre et Marie Curie",
+               "address": "Pierre Curie (1 bis rue) - 94041",
+               "position": {
+               "lat": 48.81591718160038,
+               "long": 2.377878816483871
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Place d'Italie",
+               "address": "Vincent Auriol (182 boulevard) - 75113",
+               "position": {
+               "lat": 48.8312826555064,
+               "long": 2.3554558703645068
+               },
+               "lines": ["5", "6", "7"]
+               },
+               {
+               "name": "Place Monge (Jardin des Plantes)",
+               "address": "Navarre (13 rue de) - 75105",
+               "position": {
+               "lat": 48.843164692766834,
+               "long": 2.3521103624150967
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Poissonnière",
+               "address": "La Fayette (terre-plein face au 96/98 rue) - 75110",
+               "position": {
+               "lat": 48.877353095288015,
+               "long": 2.349381423952599
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Pont de Levallois-Bécon",
+               "address": "Baudin (rue, angle avec la rue Anatole France) - 92044",
+               "position": {
+               "lat": 48.89730990517954,
+               "long": 2.2807686428069003
+               },
+               "lines": ["3"]
+               },
+               {
+               "name": "Pont Neuf",
+               "address": "Louvre (quai du, angle avec le Pont Neuf) - 75101",
+               "position": {
+               "lat": 48.85853410228574,
+               "long": 2.3421172386659985
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Pont Marie (Cité des Arts)",
+               "address": "Hôtel de Ville (quai de l') - 75104",
+               "position": {
+               "lat": 48.85346358569476,
+               "long": 2.357383972809163
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Porte de Bagnolet",
+               "address": "Py (rue de la) - 75120",
+               "position": {
+               "lat": 48.864336535483645,
+               "long": 2.4088253760377283
+               },
+               "lines": ["3"]
+               },
+               {
+               "name": "Porte de Champerret",
+               "address": "Villiers (143 rue de) - 75117",
+               "position": {
+               "lat": 48.88573915969202,
+               "long": 2.2918606206755348
+               },
+               "lines": ["3"]
+               },
+               {
+               "name": "Porte de Choisy",
+               "address": "Masséna (130 boulevard, vers l'avenue de Choisy) - 75113",
+               "position": {
+               "lat": 48.81990244616168,
+               "long": 2.364965598290819
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Porte de Clignancourt",
+               "address": "Ornano (82 boulevard) - 75118",
+               "position": {
+               "lat": 48.89797017040717,
+               "long": 2.3439883834332904
+               },
+               "lines": ["4"]
+               }, {
+               "name": "Porte de la Villette",
+               "address": "Porte de la Villette (avenue de la, terminus PC) - 75119",
+               "position": {
+               "lat": 48.89752915689145,
+               "long": 2.3856442301273044
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Porte de Pantin",
+               "address": "Villette (parc de la, Zénith et Conservatoire) - 75119",
+               "position": {
+               "lat": 48.888583980971895,
+               "long": 2.3924228757185415
+               },
+               "lines": ["5"]
+               },
+               {
+               "name": "Porte d'Italie",
+               "address": "Masséna (boulevard, square Hélène Boucher) - 75113",
+               "position": {
+               "lat": 48.8187170251155,
+               "long": 2.360500832805366
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Porte d'Ivry",
+               "address": "Porte d'Ivry (53 avenue de la) - 75113",
+               "position": {
+               "lat": 48.82135736230755,
+               "long": 2.369308237223248
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Porte d'Orléans (Général Leclerc)",
+               "address": "Légion Etrangère (rue de la) - 75114",
+               "position": {
+               "lat": 48.82281706023495,
+               "long": 2.325072625148001
+               },
+               "lines": ["4"]
+               },
+               {
+               "name": "Quai de la Gare",
+               "address": "Gare (quai de la, quai d'Austerlitz) - 75113",
+               "position": {
+               "lat": 48.83761467578531,
+               "long": 2.373852115680497
+               },
+               "lines": ["6"]
+               },
+               {
+               "name": "Quai de la Rapée",
+               "address": "Rapée (quai de la, place Nazas) - 75112",
+               "position": {
+               "lat": 48.84596603240645,
+               "long": 2.3669131797383116
+               },
+               "lines": ["5"]
+               },
+               {
+               "name": "Quatre Septembre",
+               "address": "Quatre Septembre (20 rue du) - 75102",
+               "position": {
+               "lat": 48.86966057219203,
+               "long": 2.3363282816417112
+               },
+               "lines": ["3"]
+               },
+               {
+               "name": "Richard-Lenoir",
+               "address": "Richard Lenoir (65 boulevard) - 75111",
+               "position": {
+               "lat": 48.86068599199579,
+               "long": 2.372410931880202
+               },
+               "lines": ["5"]
+               },
+               {
+               "name": "Riquet",
+               "address": "Riquet (19 rue) - 75119",
+               "position": {
+               "lat": 48.8883932319013,
+               "long": 2.374433108884994
+               },
+               "lines": ["7"]
+               },
+               {
+               "name": "Rue Saint-Maur",
+               "address": "Servan (71 rue, rue Guillaume Bertrand) - 75111",
+               "position": {
+               "lat": 48.86408940574645,
+               "long": 2.3808997885521195
+               },
+               "lines": ["3"]
+               },
+               {
+               "name": "Saint-Fargeau",
+               "address": "Gambetta (112 avenue) - 75120",
+               "position": {
+               "lat": 48.871744824151975,
+               "long": 2.404162541569556
+               },
+               "lines": ["3B"]
+               },
+               {
+               "name": "Bolivar",
+               "address": "Simon Bolivar (125 avenue) - 75119",
+               "position": {
+               "lat": 48.880790122828465,
+               "long": 2.374155126662647
+               },
+               "lines": ["7B"]
+               },
+               {
+               "name": "Danube",
+               "address": "Rhin et Danube (9 place de) - 75119",
+               "position": {
+               "lat": 48.88195101817822,
+               "long": 2.3932606758573876
+               },
+               "lines": ["7B"]
+               },
+               {
+               "name": "Botzaris",
+               "address": "Botzaris (80 rue) - 75119",
+               "position": {
+               "lat": 48.87960708893313,
+               "long": 2.389415569653207
+               },
+               "lines": ["7B"]
+               }, 
+               {
+               "name": "Pré-Saint-Gervais",
+               "address": "Serrurier (52 boulevard) - 75119",
+               "position": {
+               "lat": 48.88015993211241,
+               "long": 2.3985866218697662
+               },
+               "lines": ["7B"]
+               }, 
+               {
+               "name": "Buttes-Chaumont",
+               "address": "Botzaris (28 rue) - 75119",
+               "position": {
+               "lat": 48.877803956007845,
+               "long": 2.3812110997359883
+               },
+               "lines": ["7B"]
+               }, 
+               {
+               "name": "Bolivar",
+               "address": "Simon Bolivar (125 avenue) - 75119",
+               "position": {
+               "lat": 48.880790122828465,
+               "long": 2.374155126662647
+               },
+               "lines": ["7B"]
+               },
+               {
+               "name": "Mairie d'Issy",
+               "address": "Général Leclerc (rue du) - 92040",
+               "position" : {
+               "lat": 48.82434652601842,
+               "long": 2.2735658296006465
+               },
+               "lines": ["12"]
+               },
+               {
+               "name": "Corentin-Celton",
+               "address": "Paul Vaillant Couturier (place) - 92040",
+               "position" : {
+               "lat": 48.82682988739414,
+               "long": 2.278966861574341
+               },
+               "lines": ["12"]
+               },
+               {
+               "name": "Porte de Versailles",
+               "address": "Victor (73 boulevard) - 75115",
+               "position" : {
+               "lat": 48.832253452749,
+               "long": 2.287864137819189
+               },
+               "lines": ["12"]
+               },
+               {
+               "name": "Convention",
+               "address": "Vaugirard (337 rue de) - 75115",
+               "position" : {
+               "lat": 48.83713694956265,
+               "long": 2.296396090155559
+               },
+               "lines": ["12"]
+               },
+               {
+               "name": "Vaugirard (Adolphe Chérioux)",
+               "address": "Vergenne (square de, vers la rue des Favorites) - 75115",
+               "position" : {
+               "lat": 48.83943928123955,
+               "long": 2.3010780424739252
+               },
+               "lines": ["12"]
+               },
+               {
+               "name": "Volontaires",
+               "address": "Volontaires (25 rue des) - 75115",
+               "position" : {
+               "lat": 48.84141844267774,
+               "long": 2.307993649386661
+               },
+               "lines": ["12"]
+               },
+               {
+               "name": "Pasteur",
+               "address": "Vaugirard (183 rue de) - 75115",
+               "position" : {
+               "lat": 48.8428305421094,
+               "long": 2.3126633077591134
+               },
+               "lines": ["6", "12"]
+               },
+               {
+               "name": "Falguière",
+               "address": "Cherche-Midi (138 rue du) - 75115",
+               "position" : {
+               "lat": 48.84432338300201,
+               "long": 2.317564676180599
+               },
+               "lines": ["12"]
+               },
+               {
+               "name": "Notre-Dame des Champs",
+               "address": "Raspail (terre-plein face au 112 boulevard, 123 bd Raspail/35 r. N-D des Champs) - 75106",
+               "position" : {
+               "lat": 48.84478304833005,
+               "long": 2.3284444832927207
+               },
+               "lines": ["12"]
+               },
+               {
+               "name": "Rennes",
+               "address": "Rennes (115 rue de) - 75106",
+               "position" : {
+               "lat": 48.848198268824774,
+               "long": 2.3280217486281134
+               },
+               "lines": ["12"]
+               },
+               {
+               "name": "Rue du Bac",
+               "address": "Raspail (terre-plein face au 2 boulevard) - 75107",
+               "position" : {
+               "lat": 48.85589133781551,
+               "long": 2.325704993899314
+               },
+               "lines": ["12"]
+               },
+               {
+               "name": "Solférino",
+               "address": "Saint-Germain (223 boulevard) - 75107",
+               "position" : {
+               "lat": 48.858533359508236,
+               "long": 2.323089248787209
+               },
+               "lines": ["12"]
+               },
+               {
+               "name": "Assemblée Nationale",
+               "address": "Saint-Germain (233 boulevard, angle avec la rue de l'Université) - 75107",
+               "position" : {
+               "lat": 48.86145390429487,
+               "long": 2.3203096905073557
+               },
+               "lines": ["12"]
+               },
+               {
+               "name": "Trinité-d'Estienne d'Orves",
+               "address": "Estienne d'Orves (2 place d') - 75109",
+               "position" : {
+               "lat": 48.8763290374387,
+               "long": 2.331804568510596
+               },
+               "lines": ["12"]
+               },
+               {
+               "name": "Notre-Dame de Lorette",
+               "address": "Bourdaloué (1 rue, en face) - 75109",
+               "position" : {
+               "lat": 48.876796487741856,
+               "long": 2.3390259847951667
+               },
+               "lines": ["12"]
+               },
+               {
+               "name": "Saint-Georges",
+               "address": "Saint-Georges (place, côté pair) - 75109",
+               "position" : {
+               "lat": 48.878593955236205,
+               "long": 2.3378269689170192
+               },
+               "lines": ["12"]
+               },
+               {
+               "name": "Abbesses",
+               "address": "Abbesses (place des, face au 2 rue de la Vieuville) - 75118",
+               "position" : {
+               "lat": 48.8843997149084,
+               "long": 2.338399384171042
+               },
+               "lines": ["12"]
+               },
+               {
+               "name": "Lamarck-Caulaincourt",
+               "address": "Lamarck (53/53 bis rue) - 75118",
+               "position" : {
+               "lat": 48.8897381077178,
+               "long": 2.339149086674118
+               },
+               "lines": ["12"]
+               },
+               {
+               "name": "Jules Joffrin",
+               "address": "Ordener (115 rue) - 75118",
+               "position" : {
+               "lat": 48.89249697693026,
+               "long": 2.3443284105515048
+               },
+               "lines": ["12"]
+               },
+               {
+               "name": "Marx-Dormoy",
+               "address": "Chapelle (4 rue de la) - 75118",
+               "position" : {
+               "lat": 48.890374081221125,
+               "long": 2.3597970086706117
+               },
+               "lines": ["12"]
+               },
+               {
+               "name": "Porte de la Chapelle",
+               "address": "Chapelle (93 rue de la) - 75118",
+               "position" : {
+               "lat": 48.89795934324147,
+               "long": 2.3592550695796524
+               },
+               "lines": ["12"]
+               },
+               {
+               "name": "Front Populaire",
+               "address": "Place du Front Populaire, côté rue Waldeck Rochet face à la rue des Gardinoux - 93001",
+               "position" : {
+               "lat": 48.90666658787472,
+               "long": 2.3652301358543797
+               },
+               "lines": ["12"]
+               }
+               
+               ]
 }
