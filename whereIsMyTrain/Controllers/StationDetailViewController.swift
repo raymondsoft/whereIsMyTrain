@@ -10,7 +10,6 @@ import UIKit
 
 class StationDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    @IBOutlet weak var stationNameLabel: UILabel!
     
     @IBOutlet weak var scheduleTableView: UITableView!
     
@@ -60,10 +59,12 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
     override func viewWillAppear(_ animated: Bool) {
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
+        
         print(self.station.description)
         
-        self.stationNameLabel.text = self.station.name
+        self.title = self.station.name
         
+        self.stationSchedules.removeAll()
         buildSchedules()
         /*
         var lines = station.lines?.allObjects as! [Line]

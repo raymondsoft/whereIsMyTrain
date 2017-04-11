@@ -37,32 +37,27 @@
                     <navigationItem key="navigationItem" id="OFu-7d-XeU"/>
                     <connections>
                         <outlet property="mapView" destination="r7x-sz-mMi" id="MUn-As-wN7"/>
+                        <segue destination="C6t-pS-ZlM" kind="show" identifier="MapToDetailStation" id="5w7-u1-lsN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2008.8" y="46.326836581709152"/>
         </scene>
-        <!--Station Detail View Controller-->
+        <!--Station-->
         <scene sceneID="Dgw-fs-PZa">
             <objects>
-                <viewController id="C6t-pS-ZlM" customClass="StationDetailViewController" customModule="whereIsMyTrain" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Station" automaticallyAdjustsScrollViewInsets="NO" id="C6t-pS-ZlM" customClass="StationDetailViewController" customModule="whereIsMyTrain" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kmD-od-TnL"/>
                         <viewControllerLayoutGuide type="bottom" id="2o7-rr-Iz2"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="W7O-pB-J0V">
-                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom Station" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" translatesAutoresizingMaskIntoConstraints="NO" id="pFN-fq-tGF">
-                                <rect key="frame" x="0.0" y="5" width="375" height="57.5"/>
-                                <fontDescription key="fontDescription" type="system" weight="thin" pointSize="48"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="140" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4kw-jW-6sd">
-                                <rect key="frame" x="0.0" y="62.5" width="375" height="491.5"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="StationScheduleCell" rowHeight="140" id="M2e-Y6-aQR" customClass="StationScheduleTableViewCell" customModule="whereIsMyTrain" customModuleProvider="target">
@@ -73,7 +68,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="buv-jp-TXI">
-                                                    <rect key="frame" x="68" y="13" width="305" height="118.5"/>
+                                                    <rect key="frame" x="68" y="13" width="305" height="119"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="5Wc-PJ-eqs">
                                                             <rect key="frame" x="0.0" y="0.0" width="305" height="29"/>
@@ -82,7 +77,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kgQ-dd-UXR">
-                                                            <rect key="frame" x="0.0" y="104" width="305" height="14.5"/>
+                                                            <rect key="frame" x="0.0" y="104.5" width="305" height="14.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="56.5" placeholderIntrinsicHeight="14.5" text="1er dép" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OKH-eX-xlC">
                                                                     <rect key="frame" x="0.0" y="0.0" width="56.5" height="14.5"/>
@@ -136,7 +131,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0QY-pA-xNL">
-                                                    <rect key="frame" x="68" y="13" width="305" height="118.5"/>
+                                                    <rect key="frame" x="68" y="13" width="305" height="119"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Destination" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="erS-01-63C">
                                                             <rect key="frame" x="0.0" y="0.0" width="305" height="29"/>
@@ -145,7 +140,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <stackView opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="pJD-cc-dDo">
-                                                            <rect key="frame" x="0.0" y="104" width="305" height="14.5"/>
+                                                            <rect key="frame" x="0.0" y="104.5" width="305" height="14.5"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="56.5" placeholderIntrinsicHeight="14.5" text="1er dép" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjc-2N-FmE">
                                                                     <rect key="frame" x="0.0" y="0.0" width="56.5" height="14.5"/>
@@ -196,24 +191,19 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4kw-jW-6sd" firstAttribute="top" secondItem="pFN-fq-tGF" secondAttribute="bottom" id="7JV-dM-Lka"/>
-                            <constraint firstItem="pFN-fq-tGF" firstAttribute="centerX" secondItem="W7O-pB-J0V" secondAttribute="centerX" id="G5K-6G-lRO"/>
+                            <constraint firstItem="4kw-jW-6sd" firstAttribute="top" secondItem="kmD-od-TnL" secondAttribute="bottom" id="OqZ-H5-x27"/>
                             <constraint firstItem="4kw-jW-6sd" firstAttribute="width" secondItem="W7O-pB-J0V" secondAttribute="width" id="Uyk-Bd-afs"/>
                             <constraint firstItem="2o7-rr-Iz2" firstAttribute="top" secondItem="4kw-jW-6sd" secondAttribute="bottom" id="Z9R-qv-aZl"/>
                             <constraint firstItem="4kw-jW-6sd" firstAttribute="centerX" secondItem="W7O-pB-J0V" secondAttribute="centerX" id="ecr-1m-i4X"/>
-                            <constraint firstItem="pFN-fq-tGF" firstAttribute="width" secondItem="W7O-pB-J0V" secondAttribute="width" id="hlK-hs-Qqz"/>
-                            <constraint firstItem="pFN-fq-tGF" firstAttribute="top" secondItem="kmD-od-TnL" secondAttribute="bottom" constant="5" id="mPj-Dc-Ncg"/>
                         </constraints>
                     </view>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="scheduleTableView" destination="4kw-jW-6sd" id="sbt-85-nya"/>
-                        <outlet property="stationNameLabel" destination="pFN-fq-tGF" id="iOF-VP-d7F"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vHf-wr-uu8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4258.3999999999996" y="402.54872563718146"/>
+            <point key="canvasLocation" x="3423" y="433"/>
         </scene>
         <!--Station List View Controller-->
         <scene sceneID="QZr-cG-JDS">
@@ -235,7 +225,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="114"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="D6H-42-nQl" id="mdZ-Ym-OdB">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="113"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom Station" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fw-CP-3Fe">
@@ -244,7 +234,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="32" distribution="equalSpacing" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vMy-cu-d0m">
+                                                <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="32" distribution="equalSpacing" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vMy-cu-d0m">
                                                     <rect key="frame" x="8" y="85.5" width="359" height="15"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="metro" translatesAutoresizingMaskIntoConstraints="NO" id="bD0-dH-gEU">
@@ -283,7 +273,7 @@
                                         <rect key="frame" x="0.0" y="142" width="375" height="114"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="llE-sV-zjb" id="dVr-RI-tHy">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="113"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="114"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom Station" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqT-jy-ghF">
@@ -292,7 +282,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleAspectFit" semanticContentAttribute="forceLeftToRight" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="32" distribution="equalSpacing" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9VD-Il-OSA">
+                                                <stackView autoresizesSubviews="NO" opaque="NO" contentMode="scaleToFill" semanticContentAttribute="forceLeftToRight" placeholderIntrinsicWidth="359" placeholderIntrinsicHeight="32" distribution="equalSpacing" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9VD-Il-OSA">
                                                     <rect key="frame" x="8" y="85.5" width="359" height="15"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="metro" translatesAutoresizingMaskIntoConstraints="NO" id="y4i-Lc-EDP">
@@ -422,4 +412,7 @@
         <image name="geo-fence" width="30" height="30"/>
         <image name="metro" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="3pX-e1-GCv"/>
+    </inferredMetricsTieBreakers>
 </document>

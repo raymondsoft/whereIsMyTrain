@@ -252,7 +252,7 @@
                "lines": ["2"]
                },
                {
-               "name": "Porte Dauphine",
+               "name": "Porte Dauphine (Maréchal de Lattre de Tassigny)",
                "address": "Foch (avenue, côté impair) - 75116",
                "position": {
                "lat": 48.87179221641751,
@@ -404,14 +404,6 @@
                "position": {
                "lat": 48.844142731120996,
                "long": 2.389625012848426
-               },
-               "lines": ["8"]
-               }, {
-               "name": "Porte Dorée",
-               "address": "Poniatowsky (95 boulevard) - 75112",
-               "position": {
-               "lat": 48.83549725282465,
-               "long": 2.4061852122149348
                },
                "lines": ["8"]
                }, {
@@ -909,15 +901,7 @@
                "long": 2.238160776875514
                },
                "lines": ["9"]
-               }, {
-               "name": "Porte de Saint-Cloud",
-               "address": "Porte de Saint-Cloud (place de la, angle avec le 98 boulevard Murat) - 75116",
-               "position": {
-               "lat": 48.837565334473624,
-               "long": 2.255591274447898
-               },
-               "lines": ["9"]
-               }, {
+               },  {
                "name": "Croix-de-Chavaux (Jacques Duclos)",
                "address": "Paul Langevin (1 avenue) - 93048",
                "position": {
@@ -1014,14 +998,6 @@
                },
                "lines": ["9"]
                }, {
-               "name": "Havre-Caumartin",
-               "address": "Haussmann (boulevard, côté pair et vers la rue Caumartin) - 75109",
-               "position": {
-               "lat": 48.873425976534854,
-               "long": 2.328970973296564
-               },
-               "lines": ["9"]
-               }, {
                "name": "Pont de Sèvres",
                "address": "Pont de Sèvres (204 rond-point du) - 92012",
                "position": {
@@ -1037,15 +1013,8 @@
                "long": 2.294045263783090
                },
                "lines": ["9"]
-               }, {
-               "name": "Maraichers",
-               "address": "Pyrénées (67 bis rue des, en face) - 75120",
-               "position": {
-               "lat": 48.8526004024001,
-               "long": 2.406384989566139
                },
-               "lines": ["9"]
-               }, {
+               {
                "name": "Saint-Ambroise",
                "address": "Voltaire (86 boulevard) - 75111",
                "position": {
@@ -1213,8 +1182,8 @@
                "name": "Sèvres-Lecourbe",
                "address": "Garibaldi (terre-plein face au 94 boulevard) - 75115",
                "position": {
-               "lat": 48.838878378565504,
-               "long": 2.330678419288263
+               "lat": 48.845316,
+               "long": 2.310359
                },
                "lines": ["6"]
                },{
@@ -1770,14 +1739,6 @@
                "long": 2.3767786489253644
                },
                "lines": ["7"]
-               }, {
-               "name": "Daumesnil (Félix Eboué)",
-               "address": "Reuilly (118 rue de) - 75112",
-               "position": {
-               "lat": 48.83937646312499,
-               "long": 2.3957880604156494
-               },
-               "lines": ["6", "8"]
                },
                {
                "name": "Denfert-Rochereau",
@@ -2395,15 +2356,6 @@
                "position": {
                "lat": 48.877803956007845,
                "long": 2.3812110997359883
-               },
-               "lines": ["7B"]
-               }, 
-               {
-               "name": "Bolivar",
-               "address": "Simon Bolivar (125 avenue) - 75119",
-               "position": {
-               "lat": 48.880790122828465,
-               "long": 2.374155126662647
                },
                "lines": ["7B"]
                },

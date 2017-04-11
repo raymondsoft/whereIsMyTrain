@@ -26,6 +26,9 @@ class StationListViewController: UIViewController, UITableViewDataSource, UITabl
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.title = "Liste"
+        
+        
         self.stationsTableView.delegate = self
         self.stationsTableView.dataSource = self
         initializeSearchController()
@@ -38,6 +41,21 @@ class StationListViewController: UIViewController, UITableViewDataSource, UITabl
         self.stationsTableView.setNeedsLayout()
         self.stationsTableView.layoutIfNeeded()
         // Do any additional setup after loading the view.
+        
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let stationsRequest : NSFetchRequest<Station> =  Station.fetchRequest()
+        stationsRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+        //        stationsRequest.sortDescriptors?.append(NSSortDescriptor(key: "name", ascending: true))
+        do {
+            self.stations = try context.fetch(stationsRequest)
+        } catch {
+            print("Error while getting Stations From CoreData")
+        }
+        
+
     }
 
     func initializeSearchController() {
@@ -87,20 +105,7 @@ class StationListViewController: UIViewController, UITableViewDataSource, UITabl
         self.navigationController?.setNavigationBarHidden(true, animated: true)
 //        self.navigationController?.setToolbarHidden(true, animated: true)
         
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        
-        let stationsRequest : NSFetchRequest<Station> =  Station.fetchRequest()
-        stationsRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
-//        stationsRequest.sortDescriptors?.append(NSSortDescriptor(key: "name", ascending: true))
-        do {
-            self.stations = try context.fetch(stationsRequest)
-        } catch {
-            print("Error while getting Stations From CoreData")
-        }
-        
-    }
+            }
     
     // MARK: - TABLEVIEW delegate & datasource
     

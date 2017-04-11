@@ -22,10 +22,23 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Map"
+        
         self.mapView.delegate = self
         requestLocationAccess()
         
         // Do any additional setup after loading the view.
+        
+        self.initUserLocation()
+        self.mapView.showsUserLocation = true
+        
+        readStation()
+        
+        centerView(at: self.locationManager.location!, radius: 0.1)
+        self.locationManager.stopUpdatingLocation()
+        
+        addStationsAnnotations()
     }
     
     
@@ -38,15 +51,6 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
         
         self.navigationController?.setNavigationBarHidden(true, animated: true)
         
-        self.initUserLocation()
-        self.mapView.showsUserLocation = true
-        
-        readStation()
-        
-        centerView(at: self.locationManager.location!, radius: 0.1)
-        self.locationManager.stopUpdatingLocation()
-        
-        addStationsAnnotations()
     }
     
     
@@ -91,6 +95,14 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
      }
      */
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destination as? StationDetailViewController {
+            if let selectedAnnotation = self.mapView.selectedAnnotations.first as? StationAnnotation {
+                destinationVC.station = selectedAnnotation.station
+        }
+        }
+    }
+    
     
     // MARK: - ANNOTATIONS
     
@@ -109,18 +121,23 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is StationAnnotation {
             let annotationView = self.mapView.dequeueReusableAnnotationView(withIdentifier: "stationAnnotation") ?? MKAnnotationView(annotation: annotation, reuseIdentifier: "stationAnnotation")
-            annotationView.image = #imageLiteral(resourceName: "marker-normal")
+            annotationView.image = #imageLiteral(resourceName: "metro").resizeImage(newWidth: 15)
             annotationView.canShowCallout = true
+            annotationView.rightCalloutAccessoryView = UIButton(type: .infoLight) as UIView
             return annotationView
         } else {
             return nil
         }
     }
     
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+            performSegue(withIdentifier: "MapToDetailStation", sender: self)
+    }
+    
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         if let annotation = view.annotation as? StationAnnotation {
             print("station : \(annotation.title)")
-            view.image = #imageLiteral(resourceName: "marker-fav")
+            view.image = #imageLiteral(resourceName: "metro").maskWithColor(color: UIColor.red)?.resizeImage(newWidth: 20)
             self.mapView.setCenter(
                 CLLocationCoordinate2D(
                     latitude : annotation.station.latitude,
@@ -133,7 +150,7 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
     func mapView(_ mapView: MKMapView, didDeselect view: MKAnnotationView) {
         if let annotation = view.annotation as? StationAnnotation {
             print("station : \(annotation.title)")
-            view.image = #imageLiteral(resourceName: "marker-normal")
+            view.image = #imageLiteral(resourceName: "metro").resizeImage(newWidth: 15)
         }
         self.mapView.removeOverlays(self.mapView.overlays)
     }
