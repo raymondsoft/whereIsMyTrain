@@ -20,13 +20,15 @@ class LaunchScreenViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        self.view.backgroundColor?.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
+        /*
         if (self.view.backgroundColor?.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha))! {
             print(hue)
             print(brightness)
             print(saturation)
             print(alpha)
-        }
+ 
+        } */
 //        self.timer = Timer(timeInterval: 0.1, target: self, selector: #selector(LaunchScreenViewController.lighterBackground), userInfo: nil, repeats: true)
         self.timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: lighterBackground(with: ))
 //        self.timer.fire()
@@ -52,7 +54,7 @@ class LaunchScreenViewController: UIViewController {
     func lighterBackground(with timer : Timer) {
         self.saturation = self.saturation - 0.1
         self.view.backgroundColor = UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
-        print("yo \(self.hue)")
+//        print("yo \(self.hue)")
         if self.saturation < 0 {
             self.timer.invalidate()
             self.performSegue(withIdentifier: "LaunchToTabBar", sender: self)

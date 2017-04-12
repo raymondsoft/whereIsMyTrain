@@ -25,7 +25,7 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
             var refreshing = false
             for (key, refreshingState) in refreshState/*.values*/ {
                 refreshing = refreshing || refreshingState
-                print("\t \(key) \(refreshingState)")
+//                print("\t \(key) \(refreshingState)")
             }
             self.isRefreshing = refreshing
         }
@@ -34,13 +34,13 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
         didSet {
             if (oldValue && !isRefreshing) {
                 self.scheduleTableView.refreshControl?.endRefreshing()
-                print("END")
+//                print("END")
             }
             if(!oldValue && isRefreshing) {
                 self.scheduleTableView.refreshControl?.beginRefreshing()
-                print("START")
+//                print("START")
             }
-            print("\(oldValue) \(isRefreshing)")
+//            print("\(oldValue) \(isRefreshing)")
         }
     }
     
@@ -200,10 +200,5 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
         scheduleCell.build(from: self.stationSchedules[indexPath.row])
         return scheduleCell
     }
-    /*
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        print("heightForRowAt")
-        return 100.0
-    }
-    */
+
 }

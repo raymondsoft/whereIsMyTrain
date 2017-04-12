@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 import SwiftyJSON
+import CoreLocation
 
 
 public class Station: NSManagedObject {
@@ -22,6 +23,9 @@ public class Station: NSManagedObject {
                 .lowercased()
         }
     }
+    
+    // distance in meter
+    public var distanceToUser : Double = 0.0
     
     /*
      {
@@ -87,5 +91,10 @@ public class Station: NSManagedObject {
         catch {
             print("Error while getting line from Core Data")
         }
+    }
+    
+    func computeDistanceToUser(from userLocation : CLLocation){
+        let stationLocation = CLLocation(latitude: self.latitude, longitude: self.longitude)
+        self.distanceToUser = stationLocation.distance(from: userLocation)
     }
 }

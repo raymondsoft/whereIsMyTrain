@@ -39,17 +39,17 @@
 /* Begin PBXFileReference section */
 		25E30D9B682B246637482A51 /* Pods-whereIsMyTrain.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whereIsMyTrain.release.xcconfig"; path = "Pods/Target Support Files/Pods-whereIsMyTrain/Pods-whereIsMyTrain.release.xcconfig"; sourceTree = "<group>"; };
 		45ADDB6EA0AAFD57245CC050 /* Pods_whereIsMyTrain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_whereIsMyTrain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C8067FAC1E9685F0002F9385 /* StationImageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationImageHelper.swift; sourceTree = "<group>"; };
+		C8067FAC1E9685F0002F9385 /* StationImageHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StationImageHelper.swift; path = ../Utilities/StationImageHelper.swift; sourceTree = "<group>"; };
 		C8067FAE1E97B04D002F9385 /* StationDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationDetailViewController.swift; sourceTree = "<group>"; };
 		C8067FB01E97C89C002F9385 /* StationScheduleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationScheduleTableViewCell.swift; sourceTree = "<group>"; };
 		C8067FB21E97C9A7002F9385 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		C8067FB41E97C9EE002F9385 /* RATPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RATPHelper.swift; sourceTree = "<group>"; };
+		C8067FB41E97C9EE002F9385 /* RATPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RATPHelper.swift; path = ../Utilities/RATPHelper.swift; sourceTree = "<group>"; };
 		C8067FB81E97D292002F9385 /* StationSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationSchedule.swift; sourceTree = "<group>"; };
-		C8067FBA1E9B7F26002F9385 /* UIColor+hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+hex.swift"; sourceTree = "<group>"; };
+		C8067FBA1E9B7F26002F9385 /* UIColor+hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+hex.swift"; path = "../Utilities/UIColor+hex.swift"; sourceTree = "<group>"; };
 		C824650A1E9BA0B100912BB6 /* StationAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationAnnotation.swift; sourceTree = "<group>"; };
 		C824650C1E9BCCA600912BB6 /* RATPPolyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RATPPolyline.swift; sourceTree = "<group>"; };
-		C8299B3C1E9CF2F70095B4E6 /* UIImage+Colorize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Colorize.swift"; sourceTree = "<group>"; };
-		C8299B3E1E9CF4DC0095B4E6 /* UIImage+resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+resize.swift"; sourceTree = "<group>"; };
+		C8299B3C1E9CF2F70095B4E6 /* UIImage+Colorize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Colorize.swift"; path = "../Utilities/UIImage+Colorize.swift"; sourceTree = "<group>"; };
+		C8299B3E1E9CF4DC0095B4E6 /* UIImage+resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+resize.swift"; path = "../Utilities/UIImage+resize.swift"; sourceTree = "<group>"; };
 		C86136B51E9D20AC00F2868E /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		C8ABF9C61E96386500F8F80C /* Line+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Line+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C8ABF9C71E96386500F8F80C /* Line+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Line+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -100,6 +100,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C86136B71E9E1EB700F2868E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C8067FBA1E9B7F26002F9385 /* UIColor+hex.swift */,
+				C8299B3C1E9CF2F70095B4E6 /* UIImage+Colorize.swift */,
+				C8299B3E1E9CF4DC0095B4E6 /* UIImage+resize.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C86136B81E9E1EDA00F2868E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C8067FAC1E9685F0002F9385 /* StationImageHelper.swift */,
+				C8067FB41E97C9EE002F9385 /* RATPHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		C8ABF9CE1E96396100F8F80C /* Ressources */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +148,8 @@
 		C8B0BBD11E9395BD00AC2EA6 /* whereIsMyTrain */ = {
 			isa = PBXGroup;
 			children = (
+				C86136B81E9E1EDA00F2868E /* Helpers */,
+				C86136B71E9E1EB700F2868E /* Extensions */,
 				C8ABF9CE1E96396100F8F80C /* Ressources */,
 				C8B0BBEB1E9396FD00AC2EA6 /* json */,
 				C8B0BBE71E93964400AC2EA6 /* Controllers */,
@@ -174,12 +195,7 @@
 		C8B0BBE91E93964400AC2EA6 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				C8067FAC1E9685F0002F9385 /* StationImageHelper.swift */,
 				C8067FB21E97C9A7002F9385 /* NetworkManager.swift */,
-				C8067FB41E97C9EE002F9385 /* RATPHelper.swift */,
-				C8067FBA1E9B7F26002F9385 /* UIColor+hex.swift */,
-				C8299B3C1E9CF2F70095B4E6 /* UIImage+Colorize.swift */,
-				C8299B3E1E9CF4DC0095B4E6 /* UIImage+resize.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";

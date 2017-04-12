@@ -110,7 +110,7 @@ class StationListViewController: UIViewController, UITableViewDataSource, UITabl
     // MARK: - TABLEVIEW delegate & datasource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("nb stations : \(self.stations.count)")
+//        print("nb stations : \(self.stations.count)")
         
         if self.searchController.isActive && self.searchController.searchBar.text != "" {
             return filteredStations.count

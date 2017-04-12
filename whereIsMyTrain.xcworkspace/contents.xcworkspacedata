@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:whereIsMyTrain/Models/Station+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:whereIsMyTrain.xcodeproj">
    </FileRef>
    <FileRef

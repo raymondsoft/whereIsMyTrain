@@ -9,7 +9,7 @@
 import UIKit
 
 class StationScheduleTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var destinationLabel: UILabel!
     
     @IBOutlet weak var departureStackView: UIStackView!
@@ -21,13 +21,13 @@ class StationScheduleTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    
     
     func build(from schedule: StationSchedule) {
         
@@ -58,26 +58,26 @@ class StationScheduleTableViewCell: UITableViewCell {
             self.departureStackView.addArrangedSubview(departureLabel)
             self.departureStackView.addArrangedSubview(trafficLabel)
         } else {
-        
-        for departure in schedule.departures{
-            let departureLabel = UILabel()
-            if departure == schedule.departures.first {
-//                departureLabel.font =  departureLabel.font.withSize(16)
-                departureLabel.font = UIFont.boldSystemFont(ofSize: 16)
-            } else {
-                departureLabel.font = UIFont.systemFont(ofSize: 12)
+            
+            for departure in schedule.departures{
+                let departureLabel = UILabel()
+                if departure == schedule.departures.first {
+                    //                departureLabel.font =  departureLabel.font.withSize(16)
+                    departureLabel.font = UIFont.boldSystemFont(ofSize: 16)
+                } else {
+                    departureLabel.font = UIFont.systemFont(ofSize: 12)
+                }
+                departureLabel.text = departure
+                departureLabel.textColor = textColor
+                //            print(" ... \(departure)")
+                self.departureStackView.addSubview(departureLabel)
+                self.departureStackView.addArrangedSubview(departureLabel)
+//                print(self.departureStackView.debugDescription)
             }
-            departureLabel.text = departure
-            departureLabel.textColor = textColor
-//            print(" ... \(departure)")
-            self.departureStackView.addSubview(departureLabel)
-            self.departureStackView.addArrangedSubview(departureLabel)
-            print(self.departureStackView.debugDescription)
         }
-        }
-//        self.firstDepartureLabel.text = schedule.firstDeparture
-//        self.secondDepartureLabel.text = schedule.secondDeparture
-//        self.lineImageView.image = StationImageHelper.getImage(from: schedule.lineCode)
+        //        self.firstDepartureLabel.text = schedule.firstDeparture
+        //        self.secondDepartureLabel.text = schedule.secondDeparture
+        //        self.lineImageView.image = StationImageHelper.getImage(from: schedule.lineCode)
         
         self.backgroundColor = RATPHelper.getLineColor(from: schedule.lineCode)
     }
