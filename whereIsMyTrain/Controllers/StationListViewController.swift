@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreData
+import CoreLocation
 
-class StationListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating {
+class StationListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchResultsUpdating, CLLocationManagerDelegate {
     
     var stations = [Station]() {
         didSet {
@@ -20,6 +21,9 @@ class StationListViewController: UIViewController, UITableViewDataSource, UITabl
     var filteredStations = [Station]()
     
     var searchController = UISearchController(searchResultsController: nil)
+    
+    let locationManager = CLLocationManager()
+    var locationUpdateTimer : Timer!
     
     @IBOutlet weak var stationsTableView: UITableView!
 
@@ -33,14 +37,15 @@ class StationListViewController: UIViewController, UITableViewDataSource, UITabl
         self.stationsTableView.dataSource = self
         initializeSearchController()
         
-        self.searchController.searchBar.barTintColor = UIColor.lightGray
-        self.view.backgroundColor = UIColor.lightGray
+//        self.searchController.searchBar.barTintColor = UIColor.lightGray
+//        self.view.backgroundColor = UIColor.lightGray
         
         self.stationsTableView.rowHeight = UITableViewAutomaticDimension
         self.stationsTableView.estimatedRowHeight = 80
         self.stationsTableView.setNeedsLayout()
         self.stationsTableView.layoutIfNeeded()
-        // Do any additional setup after loading the view.
+        
+        self.locationManager.delegate = self
         
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -104,8 +109,14 @@ class StationListViewController: UIViewController, UITableViewDataSource, UITabl
 //        self.navigationController?.navigationBar.isHidden = true
         self.navigationController?.setNavigationBarHidden(true, animated: true)
 //        self.navigationController?.setToolbarHidden(true, animated: true)
-        
+        initUserLocation()
             }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if self.locationUpdateTimer.isValid {
+            self.locationUpdateTimer.invalidate()
+        }
+    }
     
     // MARK: - TABLEVIEW delegate & datasource
     
@@ -182,6 +193,43 @@ class StationListViewController: UIViewController, UITableViewDataSource, UITabl
         let searchBar = searchController.searchBar
         let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
         filterStationsForSearchText(searchText: self.searchController.searchBar.text!, scope: scope)
+    }
+    
+    // MARK: - Location Management
+    
+    
+    func initUserLocation() {
+        locationManager.delegate = self
+        
+        locationManager.requestWhenInUseAuthorization()
+        
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.distanceFilter = 10
+        
+//        self.locationUpdateTimer = Timer.scheduledTimer(timeInterval: 10, invocation: self.locationManager.requestLocation(), repeats: true)
+        // Note : The Timer will be invalidated at viewWillDisapear
+        self.locationUpdateTimer = Timer.scheduledTimer(withTimeInterval: 10, repeats: true, block: updateUserLocation(with:))
+        locationManager.requestLocation()
+        //        locationManager.requestLocation()
+//        locationManager.startUpdatingLocation()
+    }
+    
+    func updateUserLocation(with timer : Timer) {
+        self.locationManager.requestLocation()
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let lastLocation = locations.last {
+            self.stations.forEach({$0.computeDistanceToUser(from : lastLocation)})
+            self.stations.sort(by: Station.sort )
+           // self.stationsTableView.reloadData()
+        }
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Error while getting user's location")
+        print(error.localizedDescription)
     }
     
 }

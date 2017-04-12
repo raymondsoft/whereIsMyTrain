@@ -1,9 +1,9 @@
 //
 //  Station+CoreDataProperties.swift
-//  
+//  whereIsMyTrain
 //
 //  Created by etudiant-09 on 12/04/2017.
-//
+//  Copyright © 2017 etudiant-09. All rights reserved.
 //
 
 import Foundation
@@ -20,6 +20,7 @@ extension Station {
     @NSManaged public var latitude: Double
     @NSManaged public var longitude: Double
     @NSManaged public var name: String
+    @NSManaged public var distanceToUser: Double
     @NSManaged public var lines: NSSet?
 
 }

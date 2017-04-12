@@ -24,8 +24,15 @@ public class Station: NSManagedObject {
         }
     }
     
-    // distance in meter
-    public var distanceToUser : Double = 0.0
+    var formattedDistanceToUser : String {
+        get {
+            let numberFormatter = NumberFormatter()
+            numberFormatter.minimumFractionDigits = 0
+            let distanceString = numberFormatter.string(from: NSNumber(value: self.distanceToUser))
+            return distanceString! + " m"
+        }
+    }
+    
     
     /*
      {
@@ -97,4 +104,17 @@ public class Station: NSManagedObject {
         let stationLocation = CLLocation(latitude: self.latitude, longitude: self.longitude)
         self.distanceToUser = stationLocation.distance(from: userLocation)
     }
+    
+    // Sort by distance. If the distances are equals, sort by name. 
+    // (If the distance to user are not computed, they are all 0.0)
+    public static func sort(station1 : Station, station2 : Station) -> Bool {
+        let distance1 = station1.distanceToUser
+        let distance2 = station2.distanceToUser
+        if distance1 != distance2 {
+            return distance1 < distance2
+        } else {
+            return station1.name < station2.name
+        }
+    }
+    
 }

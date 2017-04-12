@@ -14,6 +14,7 @@ class StationTableViewCell: UITableViewCell {
     
     @IBOutlet weak var imagesStackView: UIStackView!
     
+    @IBOutlet weak var distanceLabel: UILabel!
     
     
     
@@ -56,6 +57,7 @@ class StationTableViewCell: UITableViewCell {
             
             self.imagesStackView.addArrangedSubview(lineImage)
         }
+        self.distanceLabel.text = station.formattedDistanceToUser
         /*
         for lineEntity in station.lines! {
             let line = lineEntity as! Line

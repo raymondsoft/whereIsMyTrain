@@ -6,6 +6,7 @@
     </entity>
     <entity name="Station" representedClassName=".Station" syncable="YES">
         <attribute name="address" attributeType="String" syncable="YES"/>
+        <attribute name="distanceToUser" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="latitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="longitude" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="name" attributeType="String" syncable="YES"/>
@@ -13,6 +14,6 @@
     </entity>
     <elements>
         <element name="Line" positionX="295" positionY="-90" width="128" height="73"/>
-        <element name="Station" positionX="7" positionY="-108" width="128" height="118"/>
+        <element name="Station" positionX="7" positionY="-108" width="128" height="133"/>
     </elements>
 </model>
