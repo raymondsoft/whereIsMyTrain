@@ -35,7 +35,7 @@ struct RATPHelper {
             if sens != nil {
                 requestUrl += "/"  + sens!.rawValue
             }
-            print("URL : \(requestUrl)")
+//            print("URL : \(requestUrl)")
         }
         NetworkManager.sharedInstance.getInfo(endPoint: requestUrl, extensionEndPoint: nil, parameters: [:] ){ (json: JSON?, error: Error? ) in
             guard error	== nil else {

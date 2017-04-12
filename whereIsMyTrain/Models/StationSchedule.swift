@@ -21,6 +21,10 @@ struct StationSchedule {
         
         let id1 = Int(schedule1.lineCode.components(separatedBy: .letters).joined())
         let id2 = Int(schedule2.lineCode.components(separatedBy: .letters).joined())
-        return id1! < id2!
+        if id1 != id2 {
+            return id1! < id2!
+        } else {
+            return schedule1.destination < schedule2.destination
+        }
     }
 }

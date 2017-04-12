@@ -20,6 +20,30 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
         }
     }
     
+    var refreshState = [String : Bool]() {
+        didSet {
+            var refreshing = false
+            for (key, refreshingState) in refreshState/*.values*/ {
+                refreshing = refreshing || refreshingState
+                print("\t \(key) \(refreshingState)")
+            }
+            self.isRefreshing = refreshing
+        }
+    }
+    var isRefreshing = false {
+        didSet {
+            if (oldValue && !isRefreshing) {
+                self.scheduleTableView.refreshControl?.endRefreshing()
+                print("END")
+            }
+            if(!oldValue && isRefreshing) {
+                self.scheduleTableView.refreshControl?.beginRefreshing()
+                print("START")
+            }
+            print("\(oldValue) \(isRefreshing)")
+        }
+    }
+    
     // station given by the segue
     var station : Station!
     
@@ -63,7 +87,7 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
         
-        print(self.station.description)
+//        print(self.station.description)
         
         self.title = self.station.name
         
@@ -82,22 +106,36 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
     
     func buildSchedules() {
         
-        self.scheduleTableView.refreshControl?.beginRefreshing()
+//        self.scheduleTableView.refreshControl?.beginRefreshing()
         
         self.stationSchedules.removeAll()
         var lines = station.lines?.allObjects as! [Line]
         lines = lines.sorted(by: Line.sortLine)
+        self.initializeRefreshDict(from: self.station, lines: lines)
         for line in lines {
             buildSchedule(lineId: line.id)
         }
 //        self.stationSchedules.sort(by: {$0.lineCode < $1.lineCode})
-        self.scheduleTableView.refreshControl?.endRefreshing()
+//        self.scheduleTableView.refreshControl?.endRefreshing()
+    }
+    
+    func initializeRefreshDict(from station: Station, lines : [Line]) {
+        for line in lines {
+            let refreshKeyA = self.station.name + line.id + RATPWay.aller.rawValue
+            self.refreshState[refreshKeyA] = true
+            let refreshKeyR = self.station.name + line.id + RATPWay.retour.rawValue
+            self.refreshState[refreshKeyR] = true
+            
+        }
     }
     
     func buildSchedule(lineId : String) {
-        print("Calcul de la ligne n° \(lineId)")
+//        print("Calcul de la ligne n° \(lineId)")
         RATPHelper.getRATPSchedule(station: self.station.name, line: lineId, way: .aller) {
             json in
+            let refreshKey = self.station.name + lineId + RATPWay.aller.rawValue
+//            self.refreshState[refreshKey] = true
+            
             let departuresJson = json["result"]["schedules"].arrayValue
             
             let destination = departuresJson[0]["destination"].stringValue
@@ -105,17 +143,26 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
             var departures = [String]()
             for departureJson in departuresJson {
                 departures.append(departureJson["message"].stringValue)
+                
             }
             
             RATPHelper.getRATPTraffic(station: self.station.name, line: lineId) {
                 json in
+                
                 let traffic = json["result"]["title"].stringValue
                 self.stationSchedules.append(StationSchedule(lineCode: lineId, destination: destination, departures: departures, traffic: traffic))
+                
             }
             
+            self.refreshState[refreshKey] = false
         }
+        
+        
         RATPHelper.getRATPSchedule(station: self.station.name, line: lineId, way: .retour) {
             json in
+            let refreshKey = self.station.name + lineId + RATPWay.retour.rawValue
+//            self.refreshState[refreshKey] = true
+            
             let departuresJson = json["result"]["schedules"].arrayValue
             
             let destination = departuresJson[0]["destination"].stringValue
@@ -123,7 +170,7 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
             var departures = [String]()
             for departureJson in departuresJson {
                 departures.append(departureJson["message"].stringValue)
-                print(departureJson["message"].stringValue)
+//                print(departureJson["message"].stringValue)
             }
             
             RATPHelper.getRATPTraffic(station: self.station.name, line: lineId) {
@@ -131,6 +178,7 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
                 let traffic = json["result"]["title"].stringValue
                 self.stationSchedules.append(StationSchedule(lineCode: lineId, destination: destination, departures: departures, traffic: traffic))
             }
+            self.refreshState[refreshKey] = false
         }
         
         
