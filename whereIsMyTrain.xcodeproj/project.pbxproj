@@ -21,6 +21,7 @@
 		C8299B3F1E9CF4DC0095B4E6 /* UIImage+resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8299B3E1E9CF4DC0095B4E6 /* UIImage+resize.swift */; };
 		C86136B41E9D0EE500F2868E /* metros.json in Resources */ = {isa = PBXBuildFile; fileRef = C8ABF9CF1E96397F00F8F80C /* metros.json */; };
 		C86136B61E9D20AC00F2868E /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86136B51E9D20AC00F2868E /* LaunchScreenViewController.swift */; };
+		C86136BC1E9E40ED00F2868E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86136BB1E9E40ED00F2868E /* TabBarController.swift */; };
 		C8ABF9CA1E96386500F8F80C /* Line+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ABF9C61E96386500F8F80C /* Line+CoreDataClass.swift */; };
 		C8ABF9CB1E96386500F8F80C /* Line+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ABF9C71E96386500F8F80C /* Line+CoreDataProperties.swift */; };
 		C8ABF9CC1E96386500F8F80C /* Station+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ABF9C81E96386500F8F80C /* Station+CoreDataClass.swift */; };
@@ -51,6 +52,7 @@
 		C8299B3C1E9CF2F70095B4E6 /* UIImage+Colorize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Colorize.swift"; path = "../Utilities/UIImage+Colorize.swift"; sourceTree = "<group>"; };
 		C8299B3E1E9CF4DC0095B4E6 /* UIImage+resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+resize.swift"; path = "../Utilities/UIImage+resize.swift"; sourceTree = "<group>"; };
 		C86136B51E9D20AC00F2868E /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		C86136BB1E9E40ED00F2868E /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		C8ABF9C61E96386500F8F80C /* Line+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Line+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C8ABF9C71E96386500F8F80C /* Line+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Line+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C8ABF9C81E96386500F8F80C /* Station+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Station+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				C8ABF9D51E96721C00F8F80C /* StationListViewController.swift */,
 				C8067FAE1E97B04D002F9385 /* StationDetailViewController.swift */,
 				C86136B51E9D20AC00F2868E /* LaunchScreenViewController.swift */,
+				C86136BB1E9E40ED00F2868E /* TabBarController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				C8067FB11E97C89C002F9385 /* StationScheduleTableViewCell.swift in Sources */,
 				C824650B1E9BA0B100912BB6 /* StationAnnotation.swift in Sources */,
 				C8299B3F1E9CF4DC0095B4E6 /* UIImage+resize.swift in Sources */,
+				C86136BC1E9E40ED00F2868E /* TabBarController.swift in Sources */,
 				C8B0BBD31E9395BD00AC2EA6 /* AppDelegate.swift in Sources */,
 				C8ABF9D41E966E7F00F8F80C /* StationTableViewCell.swift in Sources */,
 				C8067FB51E97C9EE002F9385 /* RATPHelper.swift in Sources */,

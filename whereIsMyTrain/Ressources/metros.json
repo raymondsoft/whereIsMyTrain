@@ -779,7 +779,7 @@
                "lat": 48.85231488119486,
                "long": 2.338861720336335
                },
-               "lines": ["10"]
+               "lines": ["4", "10"]
                }, {
                "name": "Avenue Emile-Zola",
                "address": "Emile Zola (154 avenue) - 75115",
@@ -1065,7 +1065,7 @@
                "lat": 48.87723471669558,
                "long": 2.4065268430480917
                },
-               "lines": ["11"]
+               "lines": ["3B", "11"]
                },
                {
                "name": "Rambuteau",
@@ -2556,6 +2556,15 @@
                "long": 2.3652301358543797
                },
                "lines": ["12"]
+               },
+               {
+               "name": "Saint-Michel",
+               "address": "Saint-Michel (place, vers le 5 boulevard Saint-Michel) - 75105",
+               "position": {
+               "lat": 48.853599907885794,
+               "long": 2.3439962410940125
+               },
+               "lines": ["4"]
                }
                
                ]

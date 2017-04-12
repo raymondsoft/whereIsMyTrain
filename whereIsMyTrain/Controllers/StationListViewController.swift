@@ -32,7 +32,6 @@ class StationListViewController: UIViewController, UITableViewDataSource, UITabl
         
         self.title = "Liste"
         
-        
         self.stationsTableView.delegate = self
         self.stationsTableView.dataSource = self
         initializeSearchController()
