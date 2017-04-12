@@ -21,7 +21,7 @@ struct RATPHelper {
         lineCode        : String,
         station         : String?,
         sens            : RATPWay?,
-        _ completion    : @escaping (JSON) -> Void
+        _ completion    : @escaping (JSON?) -> Void
         ) {
         
         var requestUrl = endPoint + "/" + requestType.rawValue + "/" + transportType.rawValue + "/" + lineCode
@@ -40,6 +40,7 @@ struct RATPHelper {
         NetworkManager.sharedInstance.getInfo(endPoint: requestUrl, extensionEndPoint: nil, parameters: [:] ){ (json: JSON?, error: Error? ) in
             guard error	== nil else {
                 print("error lors de la récuppération des Informations JCDecaux")
+                completion(nil)
                 return
             }
             if let json = json {
@@ -49,7 +50,7 @@ struct RATPHelper {
         
     }
     
-    public static func getRATPSchedule(station : String,line : String, way: RATPWay, _ completion : @escaping (JSON) -> Void) {
+    public static func getRATPSchedule(station : String,line : String, way: RATPWay, _ completion : @escaping (JSON?) -> Void) {
         getRATPInfos(
             endPoint        : baseEndPoint,
             requestType     : .schedules,
@@ -60,7 +61,7 @@ struct RATPHelper {
             completion)
     }
     
-    public static func getRATPTraffic(station : String,line : String, _ completion : @escaping (JSON) -> Void) {
+    public static func getRATPTraffic(station : String,line : String, _ completion : @escaping (JSON?) -> Void) {
         getRATPInfos(
             endPoint        : baseEndPoint,
             requestType     : .traffic,
@@ -72,7 +73,7 @@ struct RATPHelper {
     }
     
     
-    public static func getRATPStations(for line : Line, _ completion : @escaping (JSON) -> Void) {
+    public static func getRATPStations(for line : Line, _ completion : @escaping (JSON?) -> Void) {
         getRATPInfos(
             endPoint        : baseEndPoint,
             requestType     : .stations,

@@ -23,7 +23,7 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
     var refreshState = [String : Bool]() {
         didSet {
             var refreshing = false
-            for (key, refreshingState) in refreshState/*.values*/ {
+            for refreshingState in refreshState.values {
                 refreshing = refreshing || refreshingState
 //                print("\t \(key) \(refreshingState)")
             }
@@ -134,6 +134,7 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
         RATPHelper.getRATPSchedule(station: self.station.name, line: lineId, way: .aller) {
             json in
             let refreshKey = self.station.name + lineId + RATPWay.aller.rawValue
+            if let json = json {
 //            self.refreshState[refreshKey] = true
             
             let departuresJson = json["result"]["schedules"].arrayValue
@@ -148,12 +149,13 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
             
             RATPHelper.getRATPTraffic(station: self.station.name, line: lineId) {
                 json in
-                
+                if let json = json {
                 let traffic = json["result"]["title"].stringValue
                 self.stationSchedules.append(StationSchedule(lineCode: lineId, destination: destination, departures: departures, traffic: traffic))
+                }
                 
             }
-            
+            }
             self.refreshState[refreshKey] = false
         }
         
@@ -161,6 +163,7 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
         RATPHelper.getRATPSchedule(station: self.station.name, line: lineId, way: .retour) {
             json in
             let refreshKey = self.station.name + lineId + RATPWay.retour.rawValue
+            if let json = json {
 //            self.refreshState[refreshKey] = true
             
             let departuresJson = json["result"]["schedules"].arrayValue
@@ -175,8 +178,11 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
             
             RATPHelper.getRATPTraffic(station: self.station.name, line: lineId) {
                 json in
+                if let json = json {
                 let traffic = json["result"]["title"].stringValue
                 self.stationSchedules.append(StationSchedule(lineCode: lineId, destination: destination, departures: departures, traffic: traffic))
+                }
+            }
             }
             self.refreshState[refreshKey] = false
         }

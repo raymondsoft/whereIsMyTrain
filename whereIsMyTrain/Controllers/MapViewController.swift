@@ -142,7 +142,7 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
             }
         }
     }
- 
+    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if let annotation = annotation as? StationAnnotation {
             let annotationView = self.mapView.dequeueReusableAnnotationView(withIdentifier: "stationAnnotation") ?? MKAnnotationView(annotation: annotation, reuseIdentifier: "stationAnnotation")
@@ -188,14 +188,16 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
             var stationOrdered = [Station]()
             RATPHelper.getRATPStations(for: line) {
                 json in
-                let stations = json["result"]["stations"].arrayValue
-                for stationJson in stations {
-                    if let index = self.stations.index(where: {$0.slugName == stationJson["slug"].stringValue}) {
-                        stationOrdered.append(self.stations[index])
+                if let json = json {
+                    let stations = json["result"]["stations"].arrayValue
+                    for stationJson in stations {
+                        if let index = self.stations.index(where: {$0.slugName == stationJson["slug"].stringValue}) {
+                            stationOrdered.append(self.stations[index])
+                        }
                     }
+                    //                print("Draw Line \(line.id)")
+                    self.drawLine(from: stationOrdered, line: line)
                 }
-                //                print("Draw Line \(line.id)")
-                self.drawLine(from: stationOrdered, line: line)
             }
         }
         
@@ -352,10 +354,10 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
     //        } catch {
     //            print("Error while deleting Stations")
     //        }
-    //        
-    //        
-    //        
-    //        
+    //
+    //
+    //
+    //
     //        let requestLine = NSBatchDeleteRequest(fetchRequest: Line.fetchRequest())
     //        do {
     //            try context.execute(requestLine)
