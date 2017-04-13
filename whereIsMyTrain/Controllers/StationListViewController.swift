@@ -47,6 +47,7 @@ class StationListViewController: UIViewController, UITableViewDataSource, UITabl
         self.locationManager.delegate = self
         
         
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
@@ -107,6 +108,7 @@ class StationListViewController: UIViewController, UITableViewDataSource, UITabl
         
 //        self.navigationController?.navigationBar.isHidden = true
         self.navigationController?.setNavigationBarHidden(true, animated: true)
+        self.tabBarController?.tabBar.barTintColor = UIColor(rgbHex: 0xFFFFFF)
 //        self.navigationController?.setToolbarHidden(true, animated: true)
         initUserLocation()
             }
@@ -193,6 +195,8 @@ class StationListViewController: UIViewController, UITableViewDataSource, UITabl
         let scope = searchBar.scopeButtonTitles![searchBar.selectedScopeButtonIndex]
         filterStationsForSearchText(searchText: self.searchController.searchBar.text!, scope: scope)
     }
+    
+    
     
     // MARK: - Location Management
     

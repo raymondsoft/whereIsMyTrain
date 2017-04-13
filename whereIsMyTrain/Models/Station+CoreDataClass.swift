@@ -30,6 +30,7 @@ public class Station: NSManagedObject {
             numberFormatter.minimumFractionDigits = 0
             let distanceString = numberFormatter.string(from: NSNumber(value: self.distanceToUser))
             return distanceString! + " m"
+            
         }
     }
     
