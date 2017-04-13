@@ -10,6 +10,7 @@ import Foundation
 import CoreData
 import SwiftyJSON
 import CoreLocation
+import MapKit
 
 
 public class Station: NSManagedObject {
@@ -26,10 +27,14 @@ public class Station: NSManagedObject {
     
     var formattedDistanceToUser : String {
         get {
-            let numberFormatter = NumberFormatter()
-            numberFormatter.minimumFractionDigits = 0
-            let distanceString = numberFormatter.string(from: NSNumber(value: self.distanceToUser))
-            return distanceString! + " m"
+            let distanceFormatter = MKDistanceFormatter()
+            distanceFormatter.units = MKDistanceFormatterUnits.metric
+            return distanceFormatter.string(fromDistance: self.distanceToUser)
+//            
+//            let numberFormatter = NumberFormatter()
+//            numberFormatter.minimumFractionDigits = 0
+//            let distanceString = numberFormatter.string(from: NSNumber(value: self.distanceToUser))
+//            return distanceString! + " m"
             
         }
     }
