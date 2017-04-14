@@ -22,12 +22,12 @@ public class Route: NSManagedObject {
         let routeArray = json.arrayValue
         var index = 0
         for routePointJson in routeArray {
-            print("\t \(routePointJson)")
+//            print("\t \(routePointJson)")
             let routePoint = RoutePoint(
                 context: context,
                 index: Int16(index),
-                latitude: routePointJson[0].doubleValue,
-                longitude: routePointJson[1].doubleValue)
+                latitude: routePointJson[1].doubleValue,
+                longitude: routePointJson[0].doubleValue)
             self.addToRoutePoints(routePoint)
             index = index + 1
         }

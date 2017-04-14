@@ -15,8 +15,11 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
     
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var transportModeSegmentedControl: UISegmentedControl!
     
     var stations = [Station]()
+    
+    var lines = [Line]()
     
     let locationManager = CLLocationManager()
     
@@ -35,13 +38,35 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
         self.initUserLocation()
         self.mapView.showsUserLocation = true
         
-        readStation()
+        //        readStation()
+        readNavitiaLines()
+        drawNavitiaLines(transportMode: NavitiaPhysicalMode.metro)
         
         centerView(at: self.locationManager.location!, radius: 0.1)
         
-        addStationsAnnotations()
+        //        addStationsAnnotations()
     }
     
+    @IBAction func transportModeChanged(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            // Metro
+            self.mapView.overlays.forEach({self.mapView.remove($0)})
+            self.drawNavitiaLines(transportMode: .metro)
+        case 1:
+            // Metro
+            self.mapView.overlays.forEach({self.mapView.remove($0)})
+            self.drawNavitiaLines(transportMode: .RER)
+        case 2:
+            // Metro
+            self.mapView.overlays.forEach({self.mapView.remove($0)})
+            self.drawNavitiaLines(transportMode: .tramway)
+        default:
+            // Metro
+            self.mapView.overlays.forEach({self.mapView.remove($0)})
+            self.drawNavitiaLines(transportMode: .metro)
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -203,6 +228,40 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
         
     }
     
+    
+    func drawNavitiaLines(transportMode : NavitiaPhysicalMode){
+        for line in self.lines {
+//            print("line n° \(line.code)")
+            if line.physicalMode == transportMode.rawValue {
+                if let routes = line.routes?.allObjects as? [Route]{
+                    for route in routes {
+                        
+                        drawNavitiaRoute(route, color: UIColor(hexString: line.color))
+                    }
+                }
+            }
+        }
+    }
+    
+    func drawNavitiaRoute(_ route : Route, color : UIColor) {
+//        print("\t drawNavitiaRoute")
+        var mapPoints = [MKMapPoint]()
+        if let routePoints = route.routePoints?.allObjects as? [RoutePoint] {
+            let routePointsSorted = routePoints.sorted(by: {$0.index < $1.index})
+            for routePoint in routePointsSorted {
+//                routePoint.describe()
+                mapPoints.append(
+                    MKMapPointForCoordinate(CLLocationCoordinate2D(
+                        latitude: routePoint.latitude,
+                        longitude: routePoint.longitude)
+                ))
+            }
+        }
+        let polyline = NavitiaRoutePolyline(points: mapPoints, count: mapPoints.count)
+        polyline.color = color
+        self.mapView.add(polyline)
+    }
+    
     func drawLine(from stations : [Station], line : Line) {
         var mapPoints = [MKMapPoint]()
         for station in stations {
@@ -234,7 +293,17 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
             }
             return polylinerenderer
         } else {
-            return MKOverlayRenderer(overlay: overlay)
+            
+            if overlay is NavitiaRoutePolyline {
+                let navitiaPolyline = overlay as! NavitiaRoutePolyline
+                let polylineRenderer = MKPolylineRenderer(overlay: navitiaPolyline)
+                polylineRenderer.strokeColor = navitiaPolyline.color
+                polylineRenderer.lineWidth = 4
+                return polylineRenderer
+            } else {
+                
+                return MKOverlayRenderer(overlay: overlay)
+            }
         }
     }
     
@@ -291,6 +360,23 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
             print("Error While getting stations from Core Data")
         }
         
+    }
+    
+    func readNavitiaLines() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        do {
+            let lines = try context.fetch(Line.fetchRequest()) as? [Line]
+            for line in lines! {
+                //                station.printDescription()
+                self.lines.append(line)
+            }
+            print("nb lines : \(self.lines.count)")
+        }
+        catch {
+            print("Error While getting stations from Core Data")
+        }
     }
     
     //

@@ -15,6 +15,7 @@
 		C8067FB51E97C9EE002F9385 /* RATPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8067FB41E97C9EE002F9385 /* RATPHelper.swift */; };
 		C8067FB91E97D292002F9385 /* StationSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8067FB81E97D292002F9385 /* StationSchedule.swift */; };
 		C8067FBB1E9B7F26002F9385 /* UIColor+hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8067FBA1E9B7F26002F9385 /* UIColor+hex.swift */; };
+		C811E06E1EA119DF00409182 /* NavitiaRoutePolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C811E06D1EA119DF00409182 /* NavitiaRoutePolyline.swift */; };
 		C824650B1E9BA0B100912BB6 /* StationAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C824650A1E9BA0B100912BB6 /* StationAnnotation.swift */; };
 		C824650D1E9BCCA600912BB6 /* RATPPolyline.swift in Sources */ = {isa = PBXBuildFile; fileRef = C824650C1E9BCCA600912BB6 /* RATPPolyline.swift */; };
 		C8299B3D1E9CF2F70095B4E6 /* UIImage+Colorize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8299B3C1E9CF2F70095B4E6 /* UIImage+Colorize.swift */; };
@@ -56,6 +57,7 @@
 		C8067FB41E97C9EE002F9385 /* RATPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RATPHelper.swift; path = ../Utilities/RATPHelper.swift; sourceTree = "<group>"; };
 		C8067FB81E97D292002F9385 /* StationSchedule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationSchedule.swift; sourceTree = "<group>"; };
 		C8067FBA1E9B7F26002F9385 /* UIColor+hex.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+hex.swift"; path = "../Utilities/UIColor+hex.swift"; sourceTree = "<group>"; };
+		C811E06D1EA119DF00409182 /* NavitiaRoutePolyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavitiaRoutePolyline.swift; sourceTree = "<group>"; };
 		C824650A1E9BA0B100912BB6 /* StationAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StationAnnotation.swift; sourceTree = "<group>"; };
 		C824650C1E9BCCA600912BB6 /* RATPPolyline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RATPPolyline.swift; sourceTree = "<group>"; };
 		C8299B3C1E9CF2F70095B4E6 /* UIImage+Colorize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+Colorize.swift"; path = "../Utilities/UIImage+Colorize.swift"; sourceTree = "<group>"; };
@@ -218,6 +220,7 @@
 				C8067FB81E97D292002F9385 /* StationSchedule.swift */,
 				C824650A1E9BA0B100912BB6 /* StationAnnotation.swift */,
 				C824650C1E9BCCA600912BB6 /* RATPPolyline.swift */,
+				C811E06D1EA119DF00409182 /* NavitiaRoutePolyline.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				C824650D1E9BCCA600912BB6 /* RATPPolyline.swift in Sources */,
 				C8ABF9CA1E96386500F8F80C /* Line+CoreDataClass.swift in Sources */,
 				C8ABF9D21E963B5400F8F80C /* MapViewController.swift in Sources */,
+				C811E06E1EA119DF00409182 /* NavitiaRoutePolyline.swift in Sources */,
 				C8067FAD1E9685F0002F9385 /* StationImageHelper.swift in Sources */,
 				C8D585721EA0C7DD007868B6 /* Region+CoreDataProperties.swift in Sources */,
 				C8D585711EA0C7DD007868B6 /* Region+CoreDataClass.swift in Sources */,

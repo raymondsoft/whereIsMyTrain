@@ -57,24 +57,25 @@ public class Station: NSManagedObject {
         self.init(context: context)
         
         self.name = json["name"].stringValue
-        self.address = json["address"].stringValue
-        self.latitude = json["position"]["lat"].doubleValue
-        self.longitude = json["position"]["long"].doubleValue
+        self.latitude = json["coord"]["lat"].doubleValue
+        self.longitude = json["coord"]["lon"].doubleValue
+        self.id = json["id"].stringValue
+        self.label = json["label"].stringValue
         
-        let lines = json["lines"].arrayValue.map({$0.stringValue})
-        for lineId in lines {
-            self.linkStationToLine(id: lineId, with: context)
-        }
+        
         
         self.distanceToUser = 0.0
         
         
     }
     
+    func describe() {
+        print("Station : \(name), \(id), (\(latitude),\(longitude)), \(label)")
+    }
     
     func printDescription() {
         print("----------------------")
-        print("Station: \(self.name), address : \(self.address), coord: (\(self.latitude),\(self.longitude))")
+  //      print("Station: \(self.name), address : \(self.address), coord: (\(self.latitude),\(self.longitude))")
         var linesDesc = ""
         for line in self.lines?.allObjects as! [Line]{
             linesDesc += line.id + ","

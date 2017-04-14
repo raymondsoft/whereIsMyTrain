@@ -28,7 +28,7 @@ public class Line: NSManagedObject {
         let routeArray = json["geojson"]["coordinates"].arrayValue
         print ("creation des route de la ligne \(self.code)")
         for routeJson in routeArray {
-            print(routeJson)
+//            print(routeJson)
             let route = Route(context: context, route: routeJson)
             self.addToRoutes(route)
         }
@@ -39,7 +39,7 @@ public class Line: NSManagedObject {
         print("Line : \(self.name), \(self.code), \(self.color), \(self.textColor), \(self.id), \(self.physicalMode)")
         if let routes = self.routes?.allObjects as? [Route] {
             for route in routes {
-                route.describe()
+//                route.describe()
             }
         }
     }

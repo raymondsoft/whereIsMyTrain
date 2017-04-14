@@ -24,7 +24,7 @@ class StationAnnotation: NSObject, MKAnnotation {
     init(_ station: Station) {
         self.coordinate = CLLocationCoordinate2D(latitude: station.latitude, longitude: station.longitude)
         self.title = station.name
-        self.subtitle = station.address
+//        self.subtitle = station.address
         self.station = station
         
         self.color = UIColor.black

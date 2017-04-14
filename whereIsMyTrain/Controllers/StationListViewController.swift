@@ -176,7 +176,7 @@ class StationListViewController: UIViewController, UITableViewDataSource, UITabl
                 )
             case StationScope.address.rawValue :
 //                print("ADDRESS")
-                let stationAddress = station.address.folding(options: [.diacriticInsensitive, .caseInsensitive], locale: .current)
+                let stationAddress = "toto" //station.address.folding(options: [.diacriticInsensitive, .caseInsensitive], locale: .current)
                 return stationAddress.contains(searchTerm)
                 
             default :

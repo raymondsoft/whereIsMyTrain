@@ -74,6 +74,17 @@ struct NavitiaHelper {
         
     }
     
+    static func getNavitiaStation(for regionId : String, line : Line, _ completion : @escaping (JSON?) -> Void) {
+        let extensionParameters = [
+            NavitiaArgument(command: .region, argument: regionId),
+            NavitiaArgument(command: .physicalMode, argument: line.physicalMode),
+            NavitiaArgument(command: .line, argument: line.id),
+            NavitiaArgument(command: .station, argument: nil)
+            
+        ]
+        getNavitiaInfo(extensionParameters: extensionParameters, parameters: [NavitiaOption.GeoJson.rawValue:"true"], completion)
+    }
+    
 }
 
 struct NavitiaArgument {

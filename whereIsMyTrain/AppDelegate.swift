@@ -126,9 +126,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //        loadNavitiaRegionData(context)
 //        loadNavitiaPhysicalModes(context)
-//        loadNavitiaLines(context)
+        loadNavitiaLines(context)
+//        loadNavitiaStations(context)
         
-        fetchNavitia(context)
+//        fetchNavitia(context)
         
         self.saveContext()
     }
@@ -169,15 +170,76 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         NavitiaHelper.getNavitiaLines(for: "fr-idf", transportMode: .metro) {
             json in
             if let json = json {
-//                print(json)
+                //                print(json)
+                let lineArray = json["lines"].arrayValue
+                for lineJson in lineArray {
+                    let line = Line(context: context, line: lineJson)
+                    NavitiaHelper.getNavitiaStation(for: "fr-idf", line: line ) {
+                        json in
+                        if let json = json {
+                            let stationArray = json["stop_areas"].arrayValue
+                            for stationJson in stationArray {
+                                let station = Station(context: context, station: stationJson)
+                                station.describe()
+                            }
+                        }
+                    }
+                    print("\(line.code)")
+                }
+//                self.saveContext()
+            }
+        }
+        NavitiaHelper.getNavitiaLines(for: "fr-idf", transportMode: .RER) {
+            json in
+            if let json = json {
+                //                print(json)
                 let lineArray = json["lines"].arrayValue
                 for lineJson in lineArray {
                     let line = Line(context: context, line: lineJson)
                     print("\(line.code)")
                 }
-                self.saveContext()
+//                self.saveContext()
             }
         }
+        NavitiaHelper.getNavitiaLines(for: "fr-idf", transportMode: .tramway) {
+            json in
+            if let json = json {
+                //                print(json)
+                let lineArray = json["lines"].arrayValue
+                for lineJson in lineArray {
+                    let line = Line(context: context, line: lineJson)
+                    print("\(line.code)")
+                }
+//                self.saveContext()
+            }
+        }
+    }
+    
+    
+    func loadNavitiaStations(for line: Line,_ context : NSManagedObjectContext) {
+        print("trying to load stations")
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        do {
+            let lines = try context.fetch(Line.fetchRequest()) as? [Line]
+            for line in lines! {
+                line.describe()
+                if line.physicalMode == NavitiaPhysicalMode.metro.rawValue {
+                NavitiaHelper.getNavitiaStation(for: "fr-idf", line: line) {
+                    json in
+                    print(json)
+                }
+                
+                }
+            }
+        }
+        catch {
+            print("Error While getting stations from Core Data")
+        }
+        
+        
     }
     
     func loadNavitiaPhysicalModes(_ context : NSManagedObjectContext) {
