@@ -48,4 +48,33 @@ class NetworkManager {
             }
         }
     }
+    func getInfo(endPoint: String, extensionEndPoint: String?,  parameters: [String: String],user: String, password: String, _ completion: @escaping ServiceResponse) {
+        
+        var url = endPoint
+        if let extensionEndPoint = extensionEndPoint {
+            url = url + extensionEndPoint
+        }
+        if (parameters.count > 0) {
+            var parametersUrl : [String] = []
+            for (key , value) in parameters {
+                parametersUrl.append("\(key)=\(value)")
+            }
+            let concatenedParametersUrl = parametersUrl.joined(separator: "&")
+            url = "\(url)?\(concatenedParametersUrl)"
+        }
+        print("URL : \(url)")
+        Alamofire.request(url).authenticate(user: user, password: password).validate().responseJSON() { response in
+            switch response.result {
+            case .success:
+                if let value = response.result.value {
+                    let json = JSON(value)
+                    completion(json, nil)
+                }
+            case .failure(let error):
+                print("Erreur lors de la transformation en JSON de l'url : \(url)")
+                print(error)
+                completion(nil, error)
+            }
+        }
+    }
 }

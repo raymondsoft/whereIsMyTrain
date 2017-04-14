@@ -61,4 +61,31 @@ class LaunchScreenViewController: UIViewController {
         }
     }
     
+//    override func viewWillAppear(_ animated: Bool) {
+//        
+//        NavitiaHelper.getNavitiaRegions() {
+//             json in
+//            if let json = json {
+//            print (json)
+//            }
+//        
+//        }
+//     
+////        let networkManager = NetworkManager.sharedInstance
+////        
+////        networkManager.getInfo(endPoint: "https://api.navitia.io/v1/", extensionEndPoint: "coverage/fr-idf/lines", parameters: [:], user: "ead72df8-7e1a-4ecf-a325-3e779f5326fd", password: "" ) {
+////            (json, error) in
+////            guard error	== nil else {
+////                print("error lors de la récuppération des Informations JCDecaux")
+////                return
+////            }
+////            if let json = json {
+////                print(json)
+////            }
+////            
+////        }
+//     }
+ 
+    
+    
 }

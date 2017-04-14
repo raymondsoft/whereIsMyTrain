@@ -22,6 +22,7 @@
 		C86136B41E9D0EE500F2868E /* metros.json in Resources */ = {isa = PBXBuildFile; fileRef = C8ABF9CF1E96397F00F8F80C /* metros.json */; };
 		C86136B61E9D20AC00F2868E /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86136B51E9D20AC00F2868E /* LaunchScreenViewController.swift */; };
 		C86136BC1E9E40ED00F2868E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86136BB1E9E40ED00F2868E /* TabBarController.swift */; };
+		C86136BE1E9FD81800F2868E /* NavitiaHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86136BD1E9FD81800F2868E /* NavitiaHelper.swift */; };
 		C8ABF9CA1E96386500F8F80C /* Line+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ABF9C61E96386500F8F80C /* Line+CoreDataClass.swift */; };
 		C8ABF9CB1E96386500F8F80C /* Line+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ABF9C71E96386500F8F80C /* Line+CoreDataProperties.swift */; };
 		C8ABF9CC1E96386500F8F80C /* Station+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8ABF9C81E96386500F8F80C /* Station+CoreDataClass.swift */; };
@@ -35,6 +36,14 @@
 		C8B0BBDB1E9395BD00AC2EA6 /* whereIsMyTrain.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C8B0BBD91E9395BD00AC2EA6 /* whereIsMyTrain.xcdatamodeld */; };
 		C8B0BBDD1E9395BD00AC2EA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8B0BBDC1E9395BD00AC2EA6 /* Assets.xcassets */; };
 		C8B0BBE01E9395BD00AC2EA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8B0BBDE1E9395BD00AC2EA6 /* LaunchScreen.storyboard */; };
+		C8D585711EA0C7DD007868B6 /* Region+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5856F1EA0C7DD007868B6 /* Region+CoreDataClass.swift */; };
+		C8D585721EA0C7DD007868B6 /* Region+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D585701EA0C7DD007868B6 /* Region+CoreDataProperties.swift */; };
+		C8D585791EA0DB6B007868B6 /* PhysicalMode+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D585771EA0DB6B007868B6 /* PhysicalMode+CoreDataClass.swift */; };
+		C8D5857A1EA0DB6B007868B6 /* PhysicalMode+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D585781EA0DB6B007868B6 /* PhysicalMode+CoreDataProperties.swift */; };
+		C8D585811EA1062C007868B6 /* RoutePoint+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5857D1EA1062C007868B6 /* RoutePoint+CoreDataClass.swift */; };
+		C8D585821EA1062C007868B6 /* RoutePoint+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5857E1EA1062C007868B6 /* RoutePoint+CoreDataProperties.swift */; };
+		C8D585831EA1062C007868B6 /* Route+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5857F1EA1062C007868B6 /* Route+CoreDataClass.swift */; };
+		C8D585841EA1062C007868B6 /* Route+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D585801EA1062C007868B6 /* Route+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +62,7 @@
 		C8299B3E1E9CF4DC0095B4E6 /* UIImage+resize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImage+resize.swift"; path = "../Utilities/UIImage+resize.swift"; sourceTree = "<group>"; };
 		C86136B51E9D20AC00F2868E /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		C86136BB1E9E40ED00F2868E /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		C86136BD1E9FD81800F2868E /* NavitiaHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavitiaHelper.swift; sourceTree = "<group>"; };
 		C8ABF9C61E96386500F8F80C /* Line+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Line+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C8ABF9C71E96386500F8F80C /* Line+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Line+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C8ABF9C81E96386500F8F80C /* Station+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Station+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -70,6 +80,14 @@
 		C8B0BBDF1E9395BD00AC2EA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8B0BBE11E9395BD00AC2EA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8B0BBEC1E9396FD00AC2EA6 /* metros.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = metros.json; sourceTree = "<group>"; };
+		C8D5856F1EA0C7DD007868B6 /* Region+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Region+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C8D585701EA0C7DD007868B6 /* Region+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Region+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C8D585771EA0DB6B007868B6 /* PhysicalMode+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PhysicalMode+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C8D585781EA0DB6B007868B6 /* PhysicalMode+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PhysicalMode+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C8D5857D1EA1062C007868B6 /* RoutePoint+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RoutePoint+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C8D5857E1EA1062C007868B6 /* RoutePoint+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RoutePoint+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		C8D5857F1EA1062C007868B6 /* Route+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Route+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C8D585801EA1062C007868B6 /* Route+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Route+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		DD413BC6EBA6334D96C5601A /* Pods-whereIsMyTrain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whereIsMyTrain.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whereIsMyTrain/Pods-whereIsMyTrain.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,6 +135,7 @@
 			children = (
 				C8067FAC1E9685F0002F9385 /* StationImageHelper.swift */,
 				C8067FB41E97C9EE002F9385 /* RATPHelper.swift */,
+				C86136BD1E9FD81800F2868E /* NavitiaHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -184,6 +203,14 @@
 		C8B0BBE81E93964400AC2EA6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				C8D5857D1EA1062C007868B6 /* RoutePoint+CoreDataClass.swift */,
+				C8D5857E1EA1062C007868B6 /* RoutePoint+CoreDataProperties.swift */,
+				C8D5857F1EA1062C007868B6 /* Route+CoreDataClass.swift */,
+				C8D585801EA1062C007868B6 /* Route+CoreDataProperties.swift */,
+				C8D585771EA0DB6B007868B6 /* PhysicalMode+CoreDataClass.swift */,
+				C8D585781EA0DB6B007868B6 /* PhysicalMode+CoreDataProperties.swift */,
+				C8D5856F1EA0C7DD007868B6 /* Region+CoreDataClass.swift */,
+				C8D585701EA0C7DD007868B6 /* Region+CoreDataProperties.swift */,
 				C8ABF9C61E96386500F8F80C /* Line+CoreDataClass.swift */,
 				C8ABF9C71E96386500F8F80C /* Line+CoreDataProperties.swift */,
 				C8ABF9C81E96386500F8F80C /* Station+CoreDataClass.swift */,
@@ -346,6 +373,8 @@
 			files = (
 				C8067FAF1E97B04D002F9385 /* StationDetailViewController.swift in Sources */,
 				C8ABF9CB1E96386500F8F80C /* Line+CoreDataProperties.swift in Sources */,
+				C86136BE1E9FD81800F2868E /* NavitiaHelper.swift in Sources */,
+				C8D585841EA1062C007868B6 /* Route+CoreDataProperties.swift in Sources */,
 				C8ABF9D61E96721C00F8F80C /* StationListViewController.swift in Sources */,
 				C8ABF9CD1E96386500F8F80C /* Station+CoreDataProperties.swift in Sources */,
 				C8B0BBD51E9395BD00AC2EA6 /* ViewController.swift in Sources */,
@@ -353,19 +382,26 @@
 				C8067FB11E97C89C002F9385 /* StationScheduleTableViewCell.swift in Sources */,
 				C824650B1E9BA0B100912BB6 /* StationAnnotation.swift in Sources */,
 				C8299B3F1E9CF4DC0095B4E6 /* UIImage+resize.swift in Sources */,
+				C8D585811EA1062C007868B6 /* RoutePoint+CoreDataClass.swift in Sources */,
 				C86136BC1E9E40ED00F2868E /* TabBarController.swift in Sources */,
 				C8B0BBD31E9395BD00AC2EA6 /* AppDelegate.swift in Sources */,
+				C8D585791EA0DB6B007868B6 /* PhysicalMode+CoreDataClass.swift in Sources */,
+				C8D5857A1EA0DB6B007868B6 /* PhysicalMode+CoreDataProperties.swift in Sources */,
 				C8ABF9D41E966E7F00F8F80C /* StationTableViewCell.swift in Sources */,
 				C8067FB51E97C9EE002F9385 /* RATPHelper.swift in Sources */,
 				C8B0BBDB1E9395BD00AC2EA6 /* whereIsMyTrain.xcdatamodeld in Sources */,
+				C8D585831EA1062C007868B6 /* Route+CoreDataClass.swift in Sources */,
 				C8299B3D1E9CF2F70095B4E6 /* UIImage+Colorize.swift in Sources */,
 				C8067FB31E97C9A7002F9385 /* NetworkManager.swift in Sources */,
 				C824650D1E9BCCA600912BB6 /* RATPPolyline.swift in Sources */,
 				C8ABF9CA1E96386500F8F80C /* Line+CoreDataClass.swift in Sources */,
 				C8ABF9D21E963B5400F8F80C /* MapViewController.swift in Sources */,
 				C8067FAD1E9685F0002F9385 /* StationImageHelper.swift in Sources */,
+				C8D585721EA0C7DD007868B6 /* Region+CoreDataProperties.swift in Sources */,
+				C8D585711EA0C7DD007868B6 /* Region+CoreDataClass.swift in Sources */,
 				C8067FBB1E9B7F26002F9385 /* UIColor+hex.swift in Sources */,
 				C86136B61E9D20AC00F2868E /* LaunchScreenViewController.swift in Sources */,
+				C8D585821EA1062C007868B6 /* RoutePoint+CoreDataProperties.swift in Sources */,
 				C8067FB91E97D292002F9385 /* StationSchedule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
