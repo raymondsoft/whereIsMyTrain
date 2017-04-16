@@ -23,6 +23,12 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
     
     let locationManager = CLLocationManager()
     
+    var transportMode = NavitiaPhysicalMode.metro {
+        didSet {
+            self.addStationsAnnotations()
+        }
+    }
+    
     private var myContext = 0
     
     override func viewDidLoad() {
@@ -40,31 +46,41 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
         
         //        readStation()
         readNavitiaLines()
-        drawNavitiaLines(transportMode: NavitiaPhysicalMode.metro)
+        //        drawNavitiaLines(transportMode: NavitiaPhysicalMode.metro)
+        if let stations = NavitiaHelper.getStations() {
+            self.stations = stations
+            print("Station ok")
+        }
         
         centerView(at: self.locationManager.location!, radius: 0.1)
         
-        //        addStationsAnnotations()
+        addStationsAnnotations()
     }
     
     @IBAction func transportModeChanged(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
             // Metro
-            self.mapView.overlays.forEach({self.mapView.remove($0)})
-            self.drawNavitiaLines(transportMode: .metro)
+            self.transportMode = .metro
+            //            self.mapView.overlays.forEach({self.mapView.remove($0)})
+        //            self.drawNavitiaLines(transportMode: .metro)
         case 1:
-            // Metro
-            self.mapView.overlays.forEach({self.mapView.remove($0)})
-            self.drawNavitiaLines(transportMode: .RER)
+            // RER
+            self.transportMode = .RER
+            //            self.mapView.overlays.forEach({self.mapView.remove($0)})
+        //            self.drawNavitiaLines(transportMode: .RER)
         case 2:
-            // Metro
-            self.mapView.overlays.forEach({self.mapView.remove($0)})
-            self.drawNavitiaLines(transportMode: .tramway)
+            // Tram
+            self.transportMode = .tramway
+            //            self.mapView.overlays.forEach({self.mapView.remove($0)})
+        //            self.drawNavitiaLines(transportMode: .tramway)
+        case 3:
+            self.transportMode = .bus
         default:
             // Metro
-            self.mapView.overlays.forEach({self.mapView.remove($0)})
-            self.drawNavitiaLines(transportMode: .metro)
+            self.transportMode = .metro
+            //            self.mapView.overlays.forEach({self.mapView.remove($0)})
+            //            self.drawNavitiaLines(transportMode: .metro)
         }
     }
     
@@ -146,7 +162,9 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
     func addStationsAnnotations() {
         self.mapView.annotations.forEach({self.mapView.removeAnnotation($0)})
         for station in stations {
-            addStationAnnotation(station)
+            if station.has(transportMode: self.transportMode.rawValue) {
+                addStationAnnotation(station)
+            }
         }
     }
     
@@ -210,20 +228,21 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
         
         let lines = station.lines?.allObjects as! [Line]
         for line in lines {
-            var stationOrdered = [Station]()
-            RATPHelper.getRATPStations(for: line) {
-                json in
-                if let json = json {
-                    let stations = json["result"]["stations"].arrayValue
-                    for stationJson in stations {
-                        if let index = self.stations.index(where: {$0.slugName == stationJson["slug"].stringValue}) {
-                            stationOrdered.append(self.stations[index])
-                        }
-                    }
-                    //                print("Draw Line \(line.id)")
-                    self.drawLine(from: stationOrdered, line: line)
-                }
-            }
+            drawNavitiaLine(line: line)
+//            var stationOrdered = [Station]()
+//            RATPHelper.getRATPStations(for: line) {
+//                json in
+//                if let json = json {
+//                    let stations = json["result"]["stations"].arrayValue
+//                    for stationJson in stations {
+//                        if let index = self.stations.index(where: {$0.slugName == stationJson["slug"].stringValue}) {
+//                            stationOrdered.append(self.stations[index])
+//                        }
+//                    }
+//                    //                print("Draw Line \(line.id)")
+//                    self.drawLine(from: stationOrdered, line: line)
+//                }
+//            }
         }
         
     }
@@ -231,25 +250,32 @@ class MapViewController: UIViewController , CLLocationManagerDelegate, MKMapView
     
     func drawNavitiaLines(transportMode : NavitiaPhysicalMode){
         for line in self.lines {
-//            print("line n° \(line.code)")
+            //            print("line n° \(line.code)")
             if line.physicalMode == transportMode.rawValue {
-                if let routes = line.routes?.allObjects as? [Route]{
-                    for route in routes {
-                        
-                        drawNavitiaRoute(route, color: UIColor(hexString: line.color))
-                    }
-                }
+                drawNavitiaLine(line: line)
             }
         }
     }
     
+    
+    func drawNavitiaLine(line : Line)
+    {
+        print("Draw Line \(line.code). Color : \(line.color)")
+        if let routes = line.routes?.allObjects as? [Route]{
+            print("\t nb routes : ")
+            for route in routes {
+                
+                drawNavitiaRoute(route, color: UIColor(hexString: line.color))
+            }
+        }
+    }
     func drawNavitiaRoute(_ route : Route, color : UIColor) {
-//        print("\t drawNavitiaRoute")
+        //        print("\t drawNavitiaRoute")
         var mapPoints = [MKMapPoint]()
         if let routePoints = route.routePoints?.allObjects as? [RoutePoint] {
             let routePointsSorted = routePoints.sorted(by: {$0.index < $1.index})
             for routePoint in routePointsSorted {
-//                routePoint.describe()
+                //                routePoint.describe()
                 mapPoints.append(
                     MKMapPointForCoordinate(CLLocationCoordinate2D(
                         latitude: routePoint.latitude,

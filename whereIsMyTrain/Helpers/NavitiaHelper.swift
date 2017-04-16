@@ -8,6 +8,7 @@
 
 import Foundation
 import SwiftyJSON
+import CoreData
 
 struct NavitiaHelper {
     
@@ -74,7 +75,7 @@ struct NavitiaHelper {
         
     }
     
-    static func getNavitiaStation(for regionId : String, line : Line, _ completion : @escaping (JSON?) -> Void) {
+    static func getNavitiaStation(for regionId : String, line : Line, startPage : Int = 0, _ completion : @escaping (JSON?) -> Void) {
         let extensionParameters = [
             NavitiaArgument(command: .region, argument: regionId),
             NavitiaArgument(command: .physicalMode, argument: line.physicalMode),
@@ -82,8 +83,99 @@ struct NavitiaHelper {
             NavitiaArgument(command: .station, argument: nil)
             
         ]
-        getNavitiaInfo(extensionParameters: extensionParameters, parameters: [NavitiaOption.GeoJson.rawValue:"true"], completion)
+        
+        let parameters = [
+            NavitiaOption.GeoJson.rawValue : "true",
+            NavitiaOption.startPage.rawValue : String(startPage)
+            ]
+        print("getNavitiaStation(for \(regionId), line : \(line.code), startPage : \(startPage)")
+        getNavitiaInfo(extensionParameters: extensionParameters, parameters: parameters) {
+            // manage pagination
+            json in
+            if let json = json {
+                // this json result is pagined.
+                
+                // First, we process the data of the current json page
+                completion(json)
+                
+                // Next we look to know if there is an other page
+                let currentPage = json["pagination"]["start_page"].intValue
+                let itemsOnPage = json["pagination"]["items_on_page"].intValue
+                let itemsPerPage = json["pagination"]["items_per_page"].intValue
+                let totalItems = json["pagination"]["total_result"].intValue
+                
+                let numberOfItemsRead = currentPage * itemsPerPage + itemsOnPage
+                
+                // if the number of items read is less than the total number of items, then we call the next page
+                if( numberOfItemsRead < totalItems) {
+                    getNavitiaStation(for: regionId, line: line, startPage: startPage + 1, completion)
+                }
+                
+            }
+        }
     }
+    
+    // MARK: - Fetch Helpers
+    
+    static func getLines() -> [Line]? {
+        
+        return getManagedOjects()
+        
+    }
+    
+    
+    static func getStations() -> [Station]? {
+        return getManagedOjects()
+    }
+    
+    static func getManagedOjects<T : NSManagedObject>() -> [T]? {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        do {
+            let objects = try context.fetch(T.fetchRequest()) as? [T]
+            return objects
+        } catch {
+            print("Error While getting objects from Core Data")
+            return nil
+        }
+    }
+    
+    
+    
+    static func getLine(fromId objectId: String) -> Line? {
+        return getManagedObject(fromId: objectId)
+    }
+    
+    static func getStation(fromId objectId: String) -> Station? {
+        return getManagedObject(fromId: objectId)
+    }
+    
+    private static func getManagedObject<T : NSManagedObject>(fromId objectId: String) -> T?  {
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        
+        let request  = T.fetchRequest()
+        let predicat = NSPredicate(format: "id = %@", objectId)
+        request.predicate = predicat
+        do {
+            let collection = try context.fetch(request)
+            return collection.first as! T?
+            
+        } catch {
+            print("Error while getting object from Core Data")
+        }
+        return nil
+        
+    }
+//
+//    static getManagedObject<T : NSManagedObject>(fromId objectId: String) -> T?  {
+//    
+//    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//    let context = appDelegate.persistentContainer.viewContext
+//    
+//    }
     
 }
 
@@ -103,6 +195,7 @@ enum NavitiaCommand : String {
 
 enum NavitiaOption : String {
     case GeoJson = "disable_geojson"
+    case startPage = "start_page"
 }
 
 

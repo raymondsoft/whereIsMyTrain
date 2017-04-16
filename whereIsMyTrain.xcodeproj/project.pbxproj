@@ -45,6 +45,7 @@
 		C8D585821EA1062C007868B6 /* RoutePoint+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5857E1EA1062C007868B6 /* RoutePoint+CoreDataProperties.swift */; };
 		C8D585831EA1062C007868B6 /* Route+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D5857F1EA1062C007868B6 /* Route+CoreDataClass.swift */; };
 		C8D585841EA1062C007868B6 /* Route+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D585801EA1062C007868B6 /* Route+CoreDataProperties.swift */; };
+		CA9FE1C11EA26E4700DCDD75 /* NSManagedObjectHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9FE1C01EA26E4700DCDD75 /* NSManagedObjectHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +91,7 @@
 		C8D5857E1EA1062C007868B6 /* RoutePoint+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "RoutePoint+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C8D5857F1EA1062C007868B6 /* Route+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Route+CoreDataClass.swift"; sourceTree = "<group>"; };
 		C8D585801EA1062C007868B6 /* Route+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Route+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CA9FE1C01EA26E4700DCDD75 /* NSManagedObjectHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSManagedObjectHelper.swift; sourceTree = "<group>"; };
 		DD413BC6EBA6334D96C5601A /* Pods-whereIsMyTrain.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-whereIsMyTrain.debug.xcconfig"; path = "Pods/Target Support Files/Pods-whereIsMyTrain/Pods-whereIsMyTrain.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +140,7 @@
 				C8067FAC1E9685F0002F9385 /* StationImageHelper.swift */,
 				C8067FB41E97C9EE002F9385 /* RATPHelper.swift */,
 				C86136BD1E9FD81800F2868E /* NavitiaHelper.swift */,
+				CA9FE1C01EA26E4700DCDD75 /* NSManagedObjectHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -385,6 +388,7 @@
 				C8067FB11E97C89C002F9385 /* StationScheduleTableViewCell.swift in Sources */,
 				C824650B1E9BA0B100912BB6 /* StationAnnotation.swift in Sources */,
 				C8299B3F1E9CF4DC0095B4E6 /* UIImage+resize.swift in Sources */,
+				CA9FE1C11EA26E4700DCDD75 /* NSManagedObjectHelper.swift in Sources */,
 				C8D585811EA1062C007868B6 /* RoutePoint+CoreDataClass.swift in Sources */,
 				C86136BC1E9E40ED00F2868E /* TabBarController.swift in Sources */,
 				C8B0BBD31E9395BD00AC2EA6 /* AppDelegate.swift in Sources */,

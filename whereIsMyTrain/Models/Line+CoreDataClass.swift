@@ -37,11 +37,11 @@ public class Line: NSManagedObject {
     
     func describe(){
         print("Line : \(self.name), \(self.code), \(self.color), \(self.textColor), \(self.id), \(self.physicalMode)")
-        if let routes = self.routes?.allObjects as? [Route] {
-            for route in routes {
+//        if let routes = self.routes?.allObjects as? [Route] {
+//            for route in routes {
 //                route.describe()
-            }
-        }
+//            }
+//        }
     }
     
     

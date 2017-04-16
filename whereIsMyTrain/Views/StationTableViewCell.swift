@@ -45,17 +45,57 @@ class StationTableViewCell: UITableViewCell {
         
         var lines = station.lines?.allObjects as! [Line]
 //        lines = lines.sorted(by: {$0.id < $1.id})
-        lines = lines.sorted(by: Line.sortLine)
+        lines = lines.sorted(by: {$0.code < $1.code})
         
 //        let stackViewHeight = self.imagesStackView.frame.size.height
         
         for line in lines {
 //            print(line.id)
-            let lineImage = UIImageView(image: StationImageHelper.getImage(from: line.id))
+            let lineName = UILabel()
+            lineName.text = line.code
+            lineName.textAlignment = .center
+//            lineName.widthAnchor.constraint(equalToConstant: 20).isActive = true
+            lineName.widthAnchor.constraint(greaterThanOrEqualToConstant: 20).isActive = true
             
-            lineImage.contentMode = .scaleAspectFit
+            switch line.physicalMode {
+            case NavitiaPhysicalMode.RER.rawValue:
+                lineName.textColor = UIColor(hexString: line.color)
+                print("\(line.code) : \(line.textColor)")
+                lineName.backgroundColor = UIColor(hexString: line.textColor)
+                lineName.layer.cornerRadius = 10
+                lineName.layer.borderColor = UIColor(hexString: line.color).cgColor
+                lineName.layer.borderWidth = 1
+                lineName.layer.masksToBounds = true
+                
+            case NavitiaPhysicalMode.tramway.rawValue:
+                lineName.textColor = UIColor(hexString: line.color)
+                print("\(line.code) : \(line.textColor)")
+                lineName.backgroundColor = UIColor(hexString: line.textColor)
+                lineName.layer.cornerRadius = 4
+                lineName.layer.borderColor = UIColor(hexString: line.color).cgColor
+                lineName.layer.borderWidth = 1
+                lineName.layer.masksToBounds = true
+                
+            default:
+                // Metro
+                lineName.textColor = UIColor(hexString: line.textColor)
+                print("\(line.code) : \(line.textColor)")
+                lineName.backgroundColor = UIColor(hexString: line.color)
+                lineName.layer.cornerRadius = 10
+                lineName.layer.borderColor = UIColor(hexString: line.textColor).cgColor
+                lineName.layer.borderWidth = 1
+                lineName.layer.masksToBounds = true
+            }
             
-            self.imagesStackView.addArrangedSubview(lineImage)
+            
+            self.imagesStackView.addArrangedSubview(lineName)
+            
+            
+//            let lineImage = UIImageView(image: StationImageHelper.getImage(from: line.code))
+            
+//            lineImage.contentMode = .scaleAspectFit
+            
+//            self.imagesStackView.addArrangedSubview(lineImage)
         }
         self.distanceLabel.text = station.formattedDistanceToUser
         /*

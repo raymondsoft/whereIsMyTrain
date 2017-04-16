@@ -46,19 +46,22 @@ class StationListViewController: UIViewController, UITableViewDataSource, UITabl
         
         self.locationManager.delegate = self
         
-        
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        
-        let stationsRequest : NSFetchRequest<Station> =  Station.fetchRequest()
-        stationsRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
-        //        stationsRequest.sortDescriptors?.append(NSSortDescriptor(key: "name", ascending: true))
-        do {
-            self.stations = try context.fetch(stationsRequest)
-        } catch {
-            print("Error while getting Stations From CoreData")
+        if let stations = NavitiaHelper.getStations() {
+            self.stations = stations
         }
+//        
+//        
+//        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+//        let context = appDelegate.persistentContainer.viewContext
+//        
+//        let stationsRequest : NSFetchRequest<Station> =  Station.fetchRequest()
+//        stationsRequest.sortDescriptors = [NSSortDescriptor(key: "name", ascending: true)]
+//        //        stationsRequest.sortDescriptors?.append(NSSortDescriptor(key: "name", ascending: true))
+//        do {
+//            self.stations = try context.fetch(stationsRequest)
+//        } catch {
+//            print("Error while getting Stations From CoreData")
+//        }
         
 
     }
@@ -169,10 +172,10 @@ class StationListViewController: UIViewController, UITableViewDataSource, UITabl
             case StationScope.line.rawValue :
 //                print("LINE")
                 let lines = station.lines?.allObjects as! [Line]
-//                return lines.contains(where:
-//                    {$0.id.lowercased().contains(searchTerm)}
-                    return lines.contains(where:
-                    {$0.id.lowercased() == (searchTerm)}
+                return lines.contains(where:
+                    {$0.code.folding(options: [.diacriticInsensitive, .caseInsensitive], locale: .current).contains(searchTerm)}
+//                    return lines.contains(where:
+//                    {$0.code == (searchTerm)}
                 )
             case StationScope.address.rawValue :
 //                print("ADDRESS")

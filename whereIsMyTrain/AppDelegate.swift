@@ -99,7 +99,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
-    
+    /*
     func loadData() {
         
         let context = persistentContainer.viewContext
@@ -119,19 +119,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.saveContext()
     }
-    
+    */
     func loadNavitiaData() {
         let context = persistentContainer.viewContext
 //        removeNavitiaData(context)
         
 //        loadNavitiaRegionData(context)
 //        loadNavitiaPhysicalModes(context)
-        loadNavitiaLines(context)
+//        loadNavitiaLines(context)
 //        loadNavitiaStations(context)
         
 //        fetchNavitia(context)
         
-        self.saveContext()
+//        self.saveContext()
     }
     
     func fetchNavitia(_ context : NSManagedObjectContext) {
@@ -165,82 +165,83 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+    
     func loadNavitiaLines(_ context : NSManagedObjectContext) {
         print("rtying to load Lines")
-        NavitiaHelper.getNavitiaLines(for: "fr-idf", transportMode: .metro) {
-            json in
-            if let json = json {
-                //                print(json)
-                let lineArray = json["lines"].arrayValue
-                for lineJson in lineArray {
-                    let line = Line(context: context, line: lineJson)
-                    NavitiaHelper.getNavitiaStation(for: "fr-idf", line: line ) {
+        
+        let transportModes = [NavitiaPhysicalMode.metro, .RER, .tramway, .bus]
+        
+        for transportMode in transportModes {
+            NavitiaHelper.getNavitiaLines(for: "fr-idf", transportMode: transportMode) {
+                json in
+                if let json = json {
+                    //                print(json)
+                    let lineArray = json["lines"].arrayValue
+                    for lineJson in lineArray {
+                        let line = Line(context: context, line: lineJson)
+                        print("\(line.code)")
+                    }
+                    self.saveContext()
+                }
+            }
+        }
+    }
+
+    
+    
+    func loadNavitiaStations(_ context : NSManagedObjectContext) {
+        print("trying to load stations")
+        if let lines = NavitiaHelper.getLines() {
+//        if let lines = NSManagedObjectHelper.getManagedOjects()<Line> {
+            for line in lines {
+                line.describe()
+//                if line.physicalMode == NavitiaPhysicalMode.metro.rawValue {
+                    NavitiaHelper.getNavitiaStation(for: "fr-idf", line: line) {
                         json in
                         if let json = json {
                             let stationArray = json["stop_areas"].arrayValue
                             for stationJson in stationArray {
-                                let station = Station(context: context, station: stationJson)
-                                station.describe()
+                                let stationId = stationJson["id"].stringValue
+                                if let station = NavitiaHelper.getStation(fromId: stationId) {
+                                    // The station already exist. We link it to the line
+                                    station.addToLines(line)
+//                                    print ("Station ADDD !!")
+                                } else {
+                                    let station = Station(context: context, station: stationJson, line: line)
+//                                    station.describe()
+                                    
+                                }
+                                
                             }
                         }
+                                                self.saveContext()
                     }
-                    print("\(line.code)")
-                }
-//                self.saveContext()
+                    
+//                }
             }
         }
-        NavitiaHelper.getNavitiaLines(for: "fr-idf", transportMode: .RER) {
-            json in
-            if let json = json {
-                //                print(json)
-                let lineArray = json["lines"].arrayValue
-                for lineJson in lineArray {
-                    let line = Line(context: context, line: lineJson)
-                    print("\(line.code)")
-                }
-//                self.saveContext()
-            }
-        }
-        NavitiaHelper.getNavitiaLines(for: "fr-idf", transportMode: .tramway) {
-            json in
-            if let json = json {
-                //                print(json)
-                let lineArray = json["lines"].arrayValue
-                for lineJson in lineArray {
-                    let line = Line(context: context, line: lineJson)
-                    print("\(line.code)")
-                }
-//                self.saveContext()
-            }
-        }
+        
     }
     
     
-    func loadNavitiaStations(for line: Line,_ context : NSManagedObjectContext) {
-        print("trying to load stations")
+    private func stationExist(with stationId: String, in context : NSManagedObjectContext) -> Bool{
         
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
+        var exist = false
         
+        let request : NSFetchRequest<Station> = Station.fetchRequest()
+        let predicat = NSPredicate(format: "id = %@", stationId)
+        request.predicate = predicat
         do {
-            let lines = try context.fetch(Line.fetchRequest()) as? [Line]
-            for line in lines! {
-                line.describe()
-                if line.physicalMode == NavitiaPhysicalMode.metro.rawValue {
-                NavitiaHelper.getNavitiaStation(for: "fr-idf", line: line) {
-                    json in
-                    print(json)
-                }
-                
-                }
-            }
-        }
-        catch {
-            print("Error While getting stations from Core Data")
-        }
+            let stations = try context.fetch(request)
+            exist = (stations.count > 0)
         
-        
+        } catch {
+            print("Error while getting station from Core Data")
+        }
+        print("station \(stationId) exist ?  \(exist)")
+        return exist
     }
+    
     
     func loadNavitiaPhysicalModes(_ context : NSManagedObjectContext) {
         print("Trying to load Physical Modes datas")
@@ -282,7 +283,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func removeNavitiaData(_ context : NSManagedObjectContext) {
-        let entitiesToDelete = ["Region", "PhysicalMode", "Line", "Route", "RoutePoint"]
+        let entitiesToDelete = ["Region", "PhysicalMode", "Line", "Route", "RoutePoint", "Station"]
         
         
         for entityToDelete in entitiesToDelete {

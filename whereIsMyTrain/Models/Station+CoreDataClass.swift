@@ -53,7 +53,7 @@ public class Station: NSManagedObject {
      
      */
     
-    convenience init(context: NSManagedObjectContext, station json: JSON) {
+    convenience init(context: NSManagedObjectContext, station json: JSON, line : Line) {
         self.init(context: context)
         
         self.name = json["name"].stringValue
@@ -66,6 +66,7 @@ public class Station: NSManagedObject {
         
         self.distanceToUser = 0.0
         
+        self.addToLines(line)
         
     }
     
@@ -81,6 +82,22 @@ public class Station: NSManagedObject {
             linesDesc += line.id + ","
         }
         print(linesDesc)
+    }
+    
+    func has(transportMode : NavitiaPhysicalMode.RawValue) -> Bool {
+        return self.getTransportModes().contains(transportMode)
+    }
+    
+    func getTransportModes() -> [NavitiaPhysicalMode.RawValue] {
+        var transportModes : [NavitiaPhysicalMode.RawValue] = []
+        for line in self.lines?.allObjects as! [Line] {
+            let transportMode = line.physicalMode
+            if !transportModes.contains(transportMode) {
+                transportModes.append(transportMode)
+            }
+            
+        }
+        return transportModes
     }
     
     
