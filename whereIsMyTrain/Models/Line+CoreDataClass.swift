@@ -26,7 +26,7 @@ public class Line: NSManagedObject {
         self.physicalMode = json["physical_modes"][0]["id"].stringValue
         
         let routeArray = json["geojson"]["coordinates"].arrayValue
-        print ("creation des route de la ligne \(self.code) couleur de ligne : \(self.color)")
+//        print ("creation des route de la ligne \(self.code) couleur de ligne : \(self.color)")
         for routeJson in routeArray {
 //            print(routeJson)
             let route = Route(context: context, route: routeJson)

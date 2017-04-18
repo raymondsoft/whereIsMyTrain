@@ -32,7 +32,7 @@ class StationScheduleTableViewCell: UITableViewCell {
     func build(from schedule: StationSchedule) {
         
         
-        let textColor = RATPHelper.getLineInnerColor(from: schedule.lineCode)
+        let textColor = UIColor(hexString: schedule.textColor)// RATPHelper.getLineInnerColor(from: schedule.lineCode)
         
         self.destinationLabel.text = schedule.destination
         self.destinationLabel.textColor = textColor
@@ -48,7 +48,11 @@ class StationScheduleTableViewCell: UITableViewCell {
         if self.reuseIdentifier! == "StationScheduleCellAlternative" {
             let departureLabel = UILabel()
             if let departure = schedule.departures.first {
-                departureLabel.text = departure
+//                let timeRemaining =  departure.timeIntervalSinceNow
+                let formatter = DateComponentsFormatter()
+                formatter.allowedUnits = [.minute]
+                
+                departureLabel.text =  formatter.string(from: Date() , to: departure)!  + " min" 
                 departureLabel.textColor = textColor
             }
             let trafficLabel = UILabel()
@@ -67,7 +71,7 @@ class StationScheduleTableViewCell: UITableViewCell {
                 } else {
                     departureLabel.font = UIFont.systemFont(ofSize: 12)
                 }
-                departureLabel.text = departure
+                departureLabel.text = "12mn" //departure
                 departureLabel.textColor = textColor
                 //            print(" ... \(departure)")
                 self.departureStackView.addSubview(departureLabel)
@@ -79,6 +83,6 @@ class StationScheduleTableViewCell: UITableViewCell {
         //        self.secondDepartureLabel.text = schedule.secondDeparture
         //        self.lineImageView.image = StationImageHelper.getImage(from: schedule.lineCode)
         
-        self.backgroundColor = RATPHelper.getLineColor(from: schedule.lineCode)
+        self.backgroundColor = UIColor(hexString: schedule.color) // RATPHelper.getLineColor(from: schedule.lineCode)
     }
 }

@@ -12,8 +12,10 @@ import Foundation
 struct StationSchedule {
     var lineCode : String
     var destination : String
-    var departures : [String]
-    var traffic : String
+    var departures : [Date]
+    var traffic : String = "OK"
+    var color : String
+    var textColor : String
 //    var firstDeparture : String
 //    var secondDeparture : String
     
@@ -25,6 +27,14 @@ struct StationSchedule {
             return id1! < id2!
         } else {
             return schedule1.destination < schedule2.destination
+        }
+    }
+    
+    public func isNextDepartureInLess(than minutes: Double) -> Bool {
+        if let nextDeparture = departures.first {
+            return nextDeparture.timeIntervalSinceNow < minutes * 60
+        } else {
+            return false
         }
     }
 }

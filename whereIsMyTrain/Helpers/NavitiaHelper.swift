@@ -16,7 +16,7 @@ struct NavitiaHelper {
     static private let user = "ead72df8-7e1a-4ecf-a325-3e779f5326fd"
     static private let password = ""
     
-    private static func getNavitiaInfo(extensionParameters extensionParametersList : [NavitiaArgument], parameters : [String:String], _ completion    : @escaping (JSON?) -> Void){
+    private static func getNavitiaInfo(extensionParameters extensionParametersList : [NavitiaArgument], parameters : [String:String], firstTry : Bool = true, _ completion    : @escaping (JSON?) -> Void){
         var extensionParameters = ""
         for argument in extensionParametersList {
             extensionParameters = extensionParameters + argument.command.rawValue + "/"
@@ -36,7 +36,10 @@ struct NavitiaHelper {
         networkManager.getInfo(endPoint: baseEndPoint, extensionEndPoint: extensionParameters, parameters: parameters, user: "ead72df8-7e1a-4ecf-a325-3e779f5326fd", password: "" ) {
             (json, error) in
             guard error	== nil else {
-                print("error lors de la récuppération des Informations JCDecaux")
+                print("error lors de la récuppération des Informations Navitia")
+                if firstTry {
+                    getNavitiaInfo(extensionParameters: extensionParametersList, parameters: parameters, firstTry: false, completion)
+                } 
                 return
             }
             completion(json)
@@ -61,17 +64,41 @@ struct NavitiaHelper {
         getNavitiaInfo(extensionParameters: extensionParameters, parameters: [:], completion)
     }
     
-    static func getNavitiaLines(for regionId : String, transportMode : NavitiaPhysicalMode, _ completion : @escaping (JSON?) -> Void) {
-//        let extensionParameters : [NavitiaCommand : String?] = [
-//            NavitiaCommand.region : regionId,
-//            NavitiaCommand.line : nil
-//        ]
+    static func getNavitiaLines(for regionId : String, transportMode : NavitiaPhysicalMode, startPage : Int = 0, _ completion : @escaping (JSON?) -> Void) {
+        
+        let parameters = [
+            NavitiaOption.startPage.rawValue : String(startPage)
+        ]
         let extensionParameters = [
             NavitiaArgument(command: NavitiaCommand.region, argument: regionId),
             NavitiaArgument(command: NavitiaCommand.physicalMode, argument: transportMode.rawValue),
             NavitiaArgument(command: NavitiaCommand.line, argument: nil)
         ]
-        getNavitiaInfo(extensionParameters: extensionParameters, parameters: [:], completion)
+        getNavitiaInfo(extensionParameters: extensionParameters, parameters: parameters) {
+            // manage pagination
+            json in
+            if let json = json {
+                // this json result is pagined.
+                
+                // First, we process the data of the current json page
+                completion(json)
+                
+                // Next we look to know if there is an other page
+                let currentPage = json["pagination"]["start_page"].intValue
+                let itemsOnPage = json["pagination"]["items_on_page"].intValue
+                let itemsPerPage = json["pagination"]["items_per_page"].intValue
+                let totalItems = json["pagination"]["total_result"].intValue
+                
+                print("page : \(currentPage) / \(totalItems/itemsPerPage) mode : \(transportMode.rawValue)")
+                let numberOfItemsRead = currentPage * itemsPerPage + itemsOnPage
+                
+                // if the number of items read is less than the total number of items, then we call the next page
+                if( numberOfItemsRead < totalItems) {
+                    getNavitiaLines(for: regionId, transportMode: transportMode, startPage: (startPage + 1), completion)
+                }
+                
+            }
+        }
         
     }
     
@@ -87,7 +114,7 @@ struct NavitiaHelper {
         let parameters = [
             NavitiaOption.GeoJson.rawValue : "true",
             NavitiaOption.startPage.rawValue : String(startPage)
-            ]
+        ]
         print("getNavitiaStation(for \(regionId), line : \(line.code), startPage : \(startPage)")
         getNavitiaInfo(extensionParameters: extensionParameters, parameters: parameters) {
             // manage pagination
@@ -109,6 +136,46 @@ struct NavitiaHelper {
                 // if the number of items read is less than the total number of items, then we call the next page
                 if( numberOfItemsRead < totalItems) {
                     getNavitiaStation(for: regionId, line: line, startPage: startPage + 1, completion)
+                }
+                
+            }
+        }
+    }
+    
+    
+    static func getNavitiaSchedules(for regionId : String, station : Station, startPage : Int = 0, _ completion : @escaping (JSON?) -> Void) {
+        let extensionParameters = [
+            NavitiaArgument(command: .region, argument: regionId),
+            NavitiaArgument(command: .station, argument: station.id),
+            NavitiaArgument(command: .schedules, argument: nil)
+            
+        ]
+        
+        let parameters = [
+            NavitiaOption.startPage.rawValue : String(startPage),
+            NavitiaOption.itemsPerSchedules.rawValue : String(2)
+        ]
+        print("getNavitiaStation(for \(regionId), line : \(station.label), startPage : \(startPage)")
+        getNavitiaInfo(extensionParameters: extensionParameters, parameters: parameters) {
+            // manage pagination
+            json in
+            if let json = json {
+                // this json result is pagined.
+                
+                // First, we process the data of the current json page
+                completion(json)
+                
+                // Next we look to know if there is an other page
+                let currentPage = json["pagination"]["start_page"].intValue
+                let itemsOnPage = json["pagination"]["items_on_page"].intValue
+                let itemsPerPage = json["pagination"]["items_per_page"].intValue
+                let totalItems = json["pagination"]["total_result"].intValue
+                
+                let numberOfItemsRead = currentPage * itemsPerPage + itemsOnPage
+                
+                // if the number of items read is less than the total number of items, then we call the next page
+                if( numberOfItemsRead < totalItems) {
+                    getNavitiaSchedules(for: regionId, station: station, startPage: startPage + 1 , completion)
                 }
                 
             }
@@ -191,11 +258,13 @@ enum NavitiaCommand : String {
     case line = "lines"
     case station = "stop_areas"
     case departure = "departures"
+    case schedules = "stop_schedules"
 }
 
 enum NavitiaOption : String {
     case GeoJson = "disable_geojson"
     case startPage = "start_page"
+    case itemsPerSchedules = "items_per_schedule"
 }
 
 

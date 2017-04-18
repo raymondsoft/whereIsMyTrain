@@ -283,7 +283,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func removeNavitiaData(_ context : NSManagedObjectContext) {
-        let entitiesToDelete = ["Region", "PhysicalMode", "Line", "Route", "RoutePoint", "Station"]
+//        let entitiesToDelete = ["Region", "PhysicalMode", "Line", "Route", "RoutePoint", "Station"]
+        let entitiesToDelete = ["Station"]
         
         
         for entityToDelete in entitiesToDelete {
