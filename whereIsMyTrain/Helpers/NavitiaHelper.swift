@@ -143,7 +143,7 @@ struct NavitiaHelper {
     }
     
     
-    static func getNavitiaSchedules(for regionId : String, station : Station, startPage : Int = 0, _ completion : @escaping (JSON?) -> Void) {
+    static func getNavitiaSchedules(for regionId : String, station : Station, startPage : Int = 0, _ processing : @escaping (JSON?) -> Void, _ completion : @escaping () -> Void) {
         let extensionParameters = [
             NavitiaArgument(command: .region, argument: regionId),
             NavitiaArgument(command: .station, argument: station.id),
@@ -156,6 +156,7 @@ struct NavitiaHelper {
             NavitiaOption.itemsPerSchedules.rawValue : String(2)
         ]
         print("getNavitiaStation(for \(regionId), line : \(station.label), startPage : \(startPage)")
+        var shouldComplete = false
         getNavitiaInfo(extensionParameters: extensionParameters, parameters: parameters) {
             // manage pagination
             json in
@@ -163,7 +164,7 @@ struct NavitiaHelper {
                 // this json result is pagined.
                 
                 // First, we process the data of the current json page
-                completion(json)
+                processing(json)
                 
                 // Next we look to know if there is an other page
                 let currentPage = json["pagination"]["start_page"].intValue
@@ -175,9 +176,15 @@ struct NavitiaHelper {
                 
                 // if the number of items read is less than the total number of items, then we call the next page
                 if( numberOfItemsRead < totalItems) {
-                    getNavitiaSchedules(for: regionId, station: station, startPage: startPage + 1 , completion)
+                    getNavitiaSchedules(for: regionId, station: station, startPage: startPage + 1 , processing, completion)
+                } else {
+                    shouldComplete = true
                 }
                 
+            }
+            print(shouldComplete)
+            if shouldComplete {
+                completion()
             }
         }
     }

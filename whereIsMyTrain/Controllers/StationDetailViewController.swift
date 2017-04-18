@@ -15,7 +15,7 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
     
     var stationSchedules  = [StationSchedule]() {
         didSet {
-            self.stationSchedules = self.stationSchedules.sorted(by: {$0.lineCode < $1.lineCode})
+            self.stationSchedules = self.stationSchedules.sorted(by: StationSchedule.sortSchedule  )//{$0.lineCode < $1.lineCode})
         }
     }
      /*
@@ -109,16 +109,17 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
         //        self.scheduleTableView.refreshControl?.beginRefreshing()
         
         self.stationSchedules.removeAll()
+        self.scheduleTableView.reloadData()
         self.scheduleTableView.refreshControl?.beginRefreshing()
-        NavitiaHelper.getNavitiaSchedules(for: "fr-idf", station: station ) {
+        NavitiaHelper.getNavitiaSchedules(for: "fr-idf", station: station, {
             json in
             if let json = json {
                 for jsonSchedule in json["stop_schedules"].arrayValue {
-                    let lineCode = jsonSchedule["display_informations"]["code"].stringValue
-                    let destination = jsonSchedule["display_informations"]["direction"].stringValue
-                    let color = jsonSchedule["display_informations"]["color"].stringValue
-                    let textColor = jsonSchedule["display_informations"]["text_color"].stringValue
-                    let traffic = "OK"
+                    let lineCode        = jsonSchedule["display_informations"]["code"].stringValue
+                    let destination     = jsonSchedule["display_informations"]["direction"].stringValue
+                    let color           = jsonSchedule["display_informations"]["color"].stringValue
+                    let textColor       = jsonSchedule["display_informations"]["text_color"].stringValue
+                    let traffic         = "OK"
                     let departuresJson = jsonSchedule["date_times"].arrayValue
                     var departuresString = [String]()
                     for departureJson in departuresJson {
@@ -139,10 +140,11 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
                     }
                 }
                 
-                self.scheduleTableView.reloadData()
-                self.scheduleTableView.refreshControl?.endRefreshing()
             }
-        }
+        }) {
+            
+            self.scheduleTableView.reloadData()
+            self.scheduleTableView.refreshControl?.endRefreshing()}
         /*
          var lines = station.lines?.allObjects as! [Line]
          lines = lines.sorted(by: Line.sortLine)
@@ -231,6 +233,7 @@ class StationDetailViewController: UIViewController, UITableViewDelegate, UITabl
     // MARK: - TABLEVIEW methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print("count : \(self.stationSchedules.count)")
         return self.stationSchedules.count
     }
     

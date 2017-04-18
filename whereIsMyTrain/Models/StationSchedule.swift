@@ -20,14 +20,21 @@ struct StationSchedule {
 //    var secondDeparture : String
     
     public static func sortSchedule(schedule1 : StationSchedule , schedule2 : StationSchedule) -> Bool {
+//        
+//        let id1 = Int(schedule1.lineCode.components(separatedBy: .letters).joined())
+//        let id2 = Int(schedule2.lineCode.components(separatedBy: .letters).joined())
+//        if id1 != id2 {
+//            return id1! < id2!
+//        } else {
+//            return schedule1.destination < schedule2.destination
+//        }
         
-        let id1 = Int(schedule1.lineCode.components(separatedBy: .letters).joined())
-        let id2 = Int(schedule2.lineCode.components(separatedBy: .letters).joined())
-        if id1 != id2 {
-            return id1! < id2!
-        } else {
+        if schedule1.lineCode == schedule2.lineCode {
             return schedule1.destination < schedule2.destination
+        } else {
+            return schedule1.lineCode < schedule2.lineCode
         }
+        
     }
     
     public func isNextDepartureInLess(than minutes: Double) -> Bool {
